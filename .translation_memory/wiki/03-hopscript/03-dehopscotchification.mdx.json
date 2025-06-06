@@ -1,0 +1,102 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "wiki/03-hopscript/03-dehopscotchification.mdx",
+  "source_file_content_hash": "451bd3513d53195a6856d76ab569b4bba39444a2848c8948fc9d69c9e17a3334",
+  "segments": [
+    {
+      "segment_id": "76e4a56a",
+      "source_content": "# Dehopscotchification",
+      "source_content_hash": "8841b7b19bbd2ad3be9ba3e4fefc55bee5e3e8fbbb312438c3354ce298f3b46d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "# デホップスコッチ化"
+      }
+    },
+    {
+      "segment_id": "faebdc62",
+      "source_content": "It would be very nice to have 1 to 1 dehopscotchification, where any hopscotch project could be dehopscotchified into hopscript code that will hopscotchify into indistinguishable code.",
+      "source_content_hash": "9c39d554f40898da4168d8d3b48252c91c46f400b7d05a4fe24c6a92f66fa6a9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "1対1のデホップスコッチ化が実現されると非常に便利です。任意のホップスコッチプロジェクトをデホップスコッチ化し、そのホップスクリプトコードが再ホップスコッチ化された際に元のコードと見分けがつかない状態にできることが理想です。"
+      }
+    },
+    {
+      "segment_id": "e7ec8f99",
+      "source_content": "The hopscript compiler should provide a dehopscotchification function. It should be able to dehopscotchify completely unknown projects. it would also be nice to dehopscotchify something that was hopscotchified over the existing files, even if it was a multi-file project and modified in hopscotch, to improve interoperability with non-hopscript users in collaborations, for example.",
+      "source_content_hash": "84087d9cbc7bbf8aa3f3c6443334806a9543dd0aae66f3bd39ed30215a3ba301",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "ホップスクリプトコンパイラはデホップスコッチ化機能を提供するべきです。完全に未知のプロジェクトでもデホップスコッチ化できる必要があります。また、既存のファイル上でホップスコッチ化されたものや、マルチファイルプロジェクトでホップスコッチ上で変更されたものであってもデホップスコッチ化できると便利です。これにより、非ホップスクリプトユーザーとの共同作業における相互運用性が向上します。"
+      }
+    },
+    {
+      "segment_id": "a703643c",
+      "source_content": "## Name dehopscotchification",
+      "source_content_hash": "1cff7fd78023e2ec32b25f328a22911c8394a49a2b24129de7f04d6e62e139e4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## 名前のデホップスコッチ化"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "Names will be dehopscotchified in the reverse of what is described in [name hopscotchification](/wiki/hopscript/basic-syntax#name-hopscotchification). If the dehopscotchified name will not be rehopscotchified to the same name, then it will use the string literal form of the name.",
+      "source_content_hash": "db9eaf2f3c5449f821b6a99a50b6c133341846be0016d45c1bca3859eaf6b326",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "名前は[名前のホップスコッチ化](/wiki/hopscript/basic-syntax#name-hopscotchification)で説明されている処理の逆の方法でデホップスコッチ化されます。デホップスコッチ化された名前が再ホップスコッチ化時に同じ名前に戻らない場合、その名前は文字列リテラルの形式で使用されます。"
+      }
+    },
+    {
+      "segment_id": "8a5f6a7b",
+      "source_content": "## Binary operators",
+      "source_content_hash": "91fb8376f8d599d12f33d2584ad4209af9bbe1b5ac93ee3cff0ad4e3c6fd40f1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## 二項演算子"
+      }
+    },
+    {
+      "segment_id": "180bddb1",
+      "source_content": "If a block has a binary operator associated with it, it will dehopscotchify to that binary operator instead of the parenthetical form. This can optionally be turned off.",
+      "source_content_hash": "444dd8f0c119564de39dd2ae8063f2f2fc9363c6014859a6720382ec374033fe",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "ブロックに関連付けられた二項演算子がある場合、そのブロックは括弧形式ではなく二項演算子としてデホップスコッチ化されます。この動作はオプションで無効にすることも可能です。"
+      }
+    },
+    {
+      "segment_id": "e14c9928",
+      "source_content": "## Custom block definitions",
+      "source_content_hash": "900f870e962c9e15a1900ec629a8213bfefc3c2357c26de79e532e2146c394c0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## カスタムブロック定義"
+      }
+    },
+    {
+      "segment_id": "42ad8e83",
+      "source_content": "If the project being dehopscotchified contains a block that does not exactly match one that hopscript knows about, it will include the relevant code to define it. See the section on basic type definitions for more on how.",
+      "source_content_hash": "e5520af467fcb119984ecab54f18c31bf76daf4233f5d9e6d2b80c8d3ed1cfb2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "デホップスコッチ化対象のプロジェクトに、ホップスクリプトが認識しないブロックが含まれている場合、そのブロックを定義するための関連コードが含まれます。詳細については基本型定義のセクションを参照してください。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/03-hopscript/03-dehopscotchification.mdx",
+  "last_updated_timestamp": "2025-06-06T09:44:52.877156+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "ja": "451bd3513d53195a6856d76ab569b4bba39444a2848c8948fc9d69c9e17a3334"
+  }
+}

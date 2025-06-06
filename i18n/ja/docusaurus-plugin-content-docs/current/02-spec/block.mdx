@@ -1,0 +1,106 @@
+import {PropertyData} from '/src/components/PropertyData.tsx';
+import Undocumented from '/src/components/Undocumented.tsx';
+import Note from '/src/components/Note.tsx';
+
+# ブロック
+
+ブロックは[アビリティ](/wiki/spec/ability)や[パラメータ](/wiki/spec/parameter)の[`datum`](/wiki/spec/parameter#datum)プロパティ内のオブジェクトであり、これらのコンテキスト間には[1つの小さな違い](#parameters--params)があります。
+
+## 共通プロパティ
+
+### `block_class`
+
+<PropertyData type="string" />
+
+ブロックのクラスタイプを表します。
+
+取り得る値は以下の通りです：<Note note="要詳細説明" />
+
+- `"method"`: ループのないブロック（例：前進、変数設定、コメントなど）
+- `"conditionalControl"`: Check OnceやCheck If Elseループ
+- `"control"`: Draw a Trailなどのループブロック<Note note="要検証" />
+- `"conditionalOperator"`: 条件演算子（`=`, `≠`, `<`, `>`など）
+- `"operator"`: 数学演算子や文字列演算子（`+`, `-`, `×`, `÷`, Random, HSBなど）
+
+未使用<Note note="要調査" />
+
+```json
+"block_class": "conditionalControl"
+```
+
+### `description`
+
+<PropertyData type="string" />
+
+[ブロックタイプ](#type)のラベル
+
+*未使用*<Note note="要調査" />
+
+```json
+"description": "Draw a Trail"
+```
+
+### `keyboardName`
+
+<PropertyData type="string" />
+
+*常に使用されるわけではありません*。特定の演算子ブロックにのみ存在するようです。ブロックの拡張名で、ブロックを検索する際に入力する可能性のある名前です。<Note note="要調査" />
+
+```json
+"keyboardName": "Add"
+```
+
+### `type`
+
+<PropertyData type="number" />
+
+ブロックのタイプと動作に対応するマジックナンバー<Note note="要検証" />
+
+取り得る値の完全なリストについては、[タイプの表示](/wiki/spec/overview#viewing-types)を参照してください。
+
+```json
+"type": 41
+```
+
+### `parameters` / `params`
+
+<PropertyData type="array" />
+
+ブロックの[パラメータ](/wiki/spec/parameter)オブジェクトを含みます。
+
+#### ニュアンス
+
+- ブロックが[アビリティ](/wiki/spec/ability)内にある場合、キーは`parameters`と呼ばれます
+- ブロックがパラメータの[`datum`](/wiki/spec/parameter#datum)プロパティ内にある場合、キーは代わりに`params`と呼ばれます
+
+## ループ
+
+以下のプロパティは、Check Once IfやDraw a Trailなど、内部ループを持つブロックにのみ存在します：
+
+### `controlScript`
+
+<PropertyData type="object" />
+
+ループの内容を含む[アビリティ](/wiki/spec/ability)を参照する[`abilityID`](/wiki/spec/ability#abilityid)プロパティを含みます。
+
+```json
+"controlScript": {
+          "abilityID": "F4911EE3-010E-F139-55C3-9B5D7F4B140B"
+}
+```
+
+### `controlFalseScript`
+
+<Undocumented />
+
+<PropertyData type="object" />
+
+Check If Elseブロックにのみ存在します。
+
+ループの`Else`内容を含む[アビリティ](/wiki/spec/ability)を参照する[`abilityID`](/wiki/spec/ability#abilityid)プロパティを含みます。
+
+```json
+"controlFalseScript": {
+          "abilityID": "F4911EE3-010E-F139-55C3-9B5D7F4B140B"
+}
+```

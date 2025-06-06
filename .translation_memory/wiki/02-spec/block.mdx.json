@@ -1,0 +1,432 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "wiki/02-spec/block.mdx",
+  "source_file_content_hash": "f153af65bfdc6159179a37e11702b6d7af1daeccbeea28f5e58dc8edf27fa1aa",
+  "segments": [
+    {
+      "segment_id": "a9b642df",
+      "source_content": "import {PropertyData} from '/src/components/PropertyData.tsx';\nimport Undocumented from '/src/components/Undocumented.tsx';\nimport Note from '/src/components/Note.tsx';",
+      "source_content_hash": "8ae9bbbb2e33e1a10e141b1f00c70b16f30026b385f611abda0af54dc96c382a",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_a9b642df"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "# Block",
+      "source_content_hash": "59a02b6d404b094012d0a28bf2e6bca52f97d290e15ec9ddb9aedf43a02a251b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "# ブロック"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "Blocks are objects in [abilities](/wiki/spec/ability) and the\n[`datum`](/wiki/spec/parameter#datum) property of [parameters](/wiki/spec/parameter), with\n[one minor difference](#parameters--params) between these contexts.",
+      "source_content_hash": "387534d2a27e048ac4a438716a2a54813ffdec50b05ecc7d1e73ae6c2d70d0e1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "ブロックは[アビリティ](/wiki/spec/ability)や[パラメータ](/wiki/spec/parameter)の[`datum`](/wiki/spec/parameter#datum)プロパティ内のオブジェクトであり、これらのコンテキスト間には[1つの小さな違い](#parameters--params)があります。"
+      }
+    },
+    {
+      "segment_id": "ba4f48ff",
+      "source_content": "## Common Properties",
+      "source_content_hash": "ae4214abd5b460b893ba6bd5ce7a0e9b36315153805b17b1c35f2272d519356d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## 共通プロパティ"
+      }
+    },
+    {
+      "segment_id": "e14c9928",
+      "source_content": "### `block_class`",
+      "source_content_hash": "4b5d0f509b5926e7abd87ae73e15861027e70e851828e8bb3dbd223dc1ddc49d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `block_class`"
+      }
+    },
+    {
+      "segment_id": "514644bf",
+      "source_content": "<PropertyData type=\"string\" />",
+      "source_content_hash": "5a914b4a6d6fb58cc4e0a720243742dcd538cf38cf44c91ffb71a8c2d6a93971",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_514644bf"
+      }
+    },
+    {
+      "segment_id": "f6168993",
+      "source_content": "Represents the block's class type.",
+      "source_content_hash": "1340e47bb935acca5ab1cc51dee27b7835ac3e83801df04ee887ebd6ced21c6d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "ブロックのクラスタイプを表します。"
+      }
+    },
+    {
+      "segment_id": "f5f6d2ce",
+      "source_content": "Possible values include:<Note note=\"needs elaboration\" />",
+      "source_content_hash": "7261b2b1f4385e82c5da75bb6401eb45ff6b3533bb8b9a044654258d8d3479ec",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "取り得る値は以下の通りです：<Note note=\"要詳細説明\" />"
+      }
+    },
+    {
+      "segment_id": "1b8c1887",
+      "source_content": "- `\"method\"`: for loopless blocks, such as Move Forward, Set Variable, Comment, etc.\n- `\"conditionalControl\"`: for Check Once and Check If Else loops.\n- `\"control\"`: for Draw a Trail and other loop blocks.<Note note=\"needs verification\" />\n- `\"conditionalOperator\"`: for conditional operators, including `=`, `≠`, `<` and `>`.\n- `\"operator\"`: for math and string operators, such as `+`, `-`, `×`, `÷`, Random, and HSB.",
+      "source_content_hash": "240e1cbb5282157d013dafbc3153415af81ee8196fe95805cdf733ea72a25628",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "ja": "- `\"method\"`: ループのないブロック（例：前進、変数設定、コメントなど）\n- `\"conditionalControl\"`: Check OnceやCheck If Elseループ\n- `\"control\"`: Draw a Trailなどのループブロック<Note note=\"要検証\" />\n- `\"conditionalOperator\"`: 条件演算子（`=`, `≠`, `<`, `>`など）\n- `\"operator\"`: 数学演算子や文字列演算子（`+`, `-`, `×`, `÷`, Random, HSBなど）"
+      }
+    },
+    {
+      "segment_id": "4b1d2d7d",
+      "source_content": "Unused.<Note note=\"needs research\" />",
+      "source_content_hash": "e650b66bb31d7946b568136ba1ecac562a16ab6686e6d7a0ec77e7472d37dac2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "未使用<Note note=\"要調査\" />"
+      }
+    },
+    {
+      "segment_id": "cb57d798",
+      "source_content": "```json\n\"block_class\": \"conditionalControl\"\n```",
+      "source_content_hash": "a8ca071435c47fc2ddb97596796a3ef0238322717e83a4c2627fcd0960733aff",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_cb57d798"
+      }
+    },
+    {
+      "segment_id": "109ace10",
+      "source_content": "### `description`",
+      "source_content_hash": "938c79195a6f2fc35c06da798ca1403616df473530a187da2f28410834faa8aa",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `description`"
+      }
+    },
+    {
+      "segment_id": "720d606f",
+      "source_content": "<PropertyData type=\"string\" />",
+      "source_content_hash": "5a914b4a6d6fb58cc4e0a720243742dcd538cf38cf44c91ffb71a8c2d6a93971",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_720d606f"
+      }
+    },
+    {
+      "segment_id": "33331f27",
+      "source_content": "The label of the [block type](#type).",
+      "source_content_hash": "7314cac6300f86195f06c450bfec394bea557f3a6a1a3341d070d2a3cbdfe305",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "[ブロックタイプ](#type)のラベル"
+      }
+    },
+    {
+      "segment_id": "50746522",
+      "source_content": "*Unused.*<Note note=\"needs research\" />",
+      "source_content_hash": "8863e23c21e759f3247a311f39473a27e54cc01615764b48dcd35722a7ef7249",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "*未使用*<Note note=\"要調査\" />"
+      }
+    },
+    {
+      "segment_id": "45022e4f",
+      "source_content": "```json\n\"description\": \"Draw a Trail\"\n```",
+      "source_content_hash": "27917388e4a14328de336aa625514d3cbef58fde8b2368b68a26115b61b8d0f8",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_45022e4f"
+      }
+    },
+    {
+      "segment_id": "6f930b2f",
+      "source_content": "### `keyboardName`",
+      "source_content_hash": "10e7088d508cf6c528068dc2f5c637ee10370c5b478f7e7c9566816f5a956804",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `keyboardName`"
+      }
+    },
+    {
+      "segment_id": "8e90ad3a",
+      "source_content": "<PropertyData type=\"string\" />",
+      "source_content_hash": "5a914b4a6d6fb58cc4e0a720243742dcd538cf38cf44c91ffb71a8c2d6a93971",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_8e90ad3a"
+      }
+    },
+    {
+      "segment_id": "98d26038",
+      "source_content": "*Not always used.* Only seems to exist in certain operator blocks. The extended name of a block,\nas one might type in a search for the block.<Note note=\"needs research\" />",
+      "source_content_hash": "a4fe1d7f6d68baa21985160d9cdfd042c1af24dd561584ff4f31f7a3e25c3713",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "*常に使用されるわけではありません*。特定の演算子ブロックにのみ存在するようです。ブロックの拡張名で、ブロックを検索する際に入力する可能性のある名前です。<Note note=\"要調査\" />"
+      }
+    },
+    {
+      "segment_id": "eb80afe1",
+      "source_content": "```json\n\"keyboardName\": \"Add\"\n```",
+      "source_content_hash": "bd29e257b13f1f9b90ed951c2e716513baa63aeae1658ef4a06f8f4dcba2a83b",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_eb80afe1"
+      }
+    },
+    {
+      "segment_id": "e912d935",
+      "source_content": "### `type`",
+      "source_content_hash": "bff0bf0ed9cfa7df3fe199f01cf2c37d802b3f0cf8b59fe6d4f6b46dcba8c50c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `type`"
+      }
+    },
+    {
+      "segment_id": "abc45ff5",
+      "source_content": "<PropertyData type=\"number\" />",
+      "source_content_hash": "f4b234343b40b541c898334d8ed741dee04ca4677e6739b6c890abff052df6bf",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_abc45ff5"
+      }
+    },
+    {
+      "segment_id": "5dae11e3",
+      "source_content": "A magic number that corresponds to the block's type and behavior.<Note note=\"needs verification\" />",
+      "source_content_hash": "36d524488f4b8fdbdbe97780b7ff7b344dcd5604dc9a926ee410868cdff6a7e9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "ブロックのタイプと動作に対応するマジックナンバー<Note note=\"要検証\" />"
+      }
+    },
+    {
+      "segment_id": "0bb95128",
+      "source_content": "For a full list of possible values, see [Viewing Types](/wiki/spec/overview#viewing-types).",
+      "source_content_hash": "572863c733b7c5b2fc43c5ee3b98a205de89e40288ae3f027c1072382e2b4856",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "取り得る値の完全なリストについては、[タイプの表示](/wiki/spec/overview#viewing-types)を参照してください。"
+      }
+    },
+    {
+      "segment_id": "29ad5b0e",
+      "source_content": "```json\n\"type\": 41\n```",
+      "source_content_hash": "4fce1d931f975e2d0b8905da0e391a823d38aae36215b2beac5d0f108a273113",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_29ad5b0e"
+      }
+    },
+    {
+      "segment_id": "daed5acb",
+      "source_content": "### `parameters` / `params`",
+      "source_content_hash": "47fd31249fd6c19e4fbb02d2fd75bc542ab879fc8c88d1cc694b7f06d5ec79ba",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `parameters` / `params`"
+      }
+    },
+    {
+      "segment_id": "091b48eb",
+      "source_content": "<PropertyData type=\"array\" />",
+      "source_content_hash": "f82d6f49d0cc24b7fa09300e9122dfa0e79ec983960430f714b43daedd023fe5",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_091b48eb"
+      }
+    },
+    {
+      "segment_id": "d0dd855b",
+      "source_content": "Contains the block's [parameter](/wiki/spec/parameter) objects.",
+      "source_content_hash": "b55e9fedfb54cbf327808f96456ebeecde4abc64c732e33214dc859300e64dd1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "ブロックの[パラメータ](/wiki/spec/parameter)オブジェクトを含みます。"
+      }
+    },
+    {
+      "segment_id": "2fd0be2a",
+      "source_content": "#### Nuances",
+      "source_content_hash": "f32bcfdaf8a0cc60d3941a41034152c705e4f948675552b109f66f2e3350e49e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "#### ニュアンス"
+      }
+    },
+    {
+      "segment_id": "5efe9dee",
+      "source_content": "- If the block is inside of an [ability](/wiki/spec/ability), the key is called `parameters`.\n- If the block is inside of a parameter's [`datum`](/wiki/spec/parameter#datum) property, the key is instead called `params`.",
+      "source_content_hash": "6f7cddd0ca4bdc0b82dd650e9a106040bfddfb6c9448fcc9a4e286c57ff1460a",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "ja": "- ブロックが[アビリティ](/wiki/spec/ability)内にある場合、キーは`parameters`と呼ばれます\n- ブロックがパラメータの[`datum`](/wiki/spec/parameter#datum)プロパティ内にある場合、キーは代わりに`params`と呼ばれます"
+      }
+    },
+    {
+      "segment_id": "0a103a02",
+      "source_content": "## Loops",
+      "source_content_hash": "98a40227baf0915a523aeff4af13610ef848ab372268d8a861148d5ed889f8c2",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## ループ"
+      }
+    },
+    {
+      "segment_id": "8126f763",
+      "source_content": "The following properties only exist in blocks with inner loops, such as\nCheck Once If and Draw a Trail:",
+      "source_content_hash": "0720779d3e9a637ca1f021cae799c11ea9533ba8efe67ade1104bcc05732a749",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "以下のプロパティは、Check Once IfやDraw a Trailなど、内部ループを持つブロックにのみ存在します："
+      }
+    },
+    {
+      "segment_id": "90d35b51",
+      "source_content": "### `controlScript`",
+      "source_content_hash": "35c087e6f28c9319387638bc225cd4e041464ba0238077d751efcd133197bd96",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `controlScript`"
+      }
+    },
+    {
+      "segment_id": "9cb0b344",
+      "source_content": "<PropertyData type=\"object\" />",
+      "source_content_hash": "d25f96e79ff52a1fe839c831dcf0fdd39e14940a06eae2d9b2be99cb3a5a6243",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_9cb0b344"
+      }
+    },
+    {
+      "segment_id": "6b77b644",
+      "source_content": "Contains an [`abilityID`](/wiki/spec/ability#abilityid) property, referencing the\n[ability](/wiki/spec/ability) with the loop's contents.",
+      "source_content_hash": "7b6961cff2723498ce45a4ddde11c483618ddf6e143cce9465122cbab369f18b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "ループの内容を含む[アビリティ](/wiki/spec/ability)を参照する[`abilityID`](/wiki/spec/ability#abilityid)プロパティを含みます。"
+      }
+    },
+    {
+      "segment_id": "ec99e704",
+      "source_content": "```json\n\"controlScript\": {\n          \"abilityID\": \"F4911EE3-010E-F139-55C3-9B5D7F4B140B\"\n}\n```",
+      "source_content_hash": "7b37410659e37afcd73df2d3d18035eb31fa5a242001c9264b29b5fc3121079a",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_ec99e704"
+      }
+    },
+    {
+      "segment_id": "71169a2d",
+      "source_content": "### `controlFalseScript`",
+      "source_content_hash": "ab53927ba12664c51c336fc2ffc8d14c2b14a3c6620f03d0f9e9846552b41e62",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `controlFalseScript`"
+      }
+    },
+    {
+      "segment_id": "440823bd",
+      "source_content": "<Undocumented />",
+      "source_content_hash": "54a8eb1e66ea7817b1ccc114f80204ec97c8b398f6755d941e87335ed8b665f4",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_440823bd"
+      }
+    },
+    {
+      "segment_id": "a3da9b2d",
+      "source_content": "<PropertyData type=\"object\" />",
+      "source_content_hash": "d25f96e79ff52a1fe839c831dcf0fdd39e14940a06eae2d9b2be99cb3a5a6243",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_a3da9b2d"
+      }
+    },
+    {
+      "segment_id": "f0984c2a",
+      "source_content": "Only present on Check If Else blocks.",
+      "source_content_hash": "c64271d093097365d32593e660143ac17773b2c6b070744346fbe03870e85ef7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "Check If Elseブロックにのみ存在します。"
+      }
+    },
+    {
+      "segment_id": "a81544fd",
+      "source_content": "Contains an [`abilityID`](/wiki/spec/ability#abilityid) property, referencing the\n[ability](/wiki/spec/ability) with the loop's `Else` contents.",
+      "source_content_hash": "a89a931f781af5768594eed4d9643964a23c76b9d3f6ad30ec97f21477255dcf",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "ループの`Else`内容を含む[アビリティ](/wiki/spec/ability)を参照する[`abilityID`](/wiki/spec/ability#abilityid)プロパティを含みます。"
+      }
+    },
+    {
+      "segment_id": "f39e109c",
+      "source_content": "```json\n\"controlFalseScript\": {\n          \"abilityID\": \"F4911EE3-010E-F139-55C3-9B5D7F4B140B\"\n}\n```",
+      "source_content_hash": "dd0a0ce2a38dbb4e69675bc04a684052ff1f3c37cfaa715456ae00a39fe9f13f",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_f39e109c"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/02-spec/block.mdx",
+  "last_updated_timestamp": "2025-06-06T09:44:52.880602+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "ja": "f153af65bfdc6159179a37e11702b6d7af1daeccbeea28f5e58dc8edf27fa1aa"
+  }
+}

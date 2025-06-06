@@ -1,0 +1,222 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "wiki/02-spec/01-overview.mdx",
+  "source_file_content_hash": "55c67d9ca7c8a1e8caa8cdb00febb2cf4500451ffdf01ca3d4af401980a278ca",
+  "segments": [
+    {
+      "segment_id": "a9b642df",
+      "source_content": "import Note from '/src/components/Note.tsx';\nimport Undocumented from '/src/components/Undocumented.tsx';\nimport Button from '/src/components/Button.tsx';",
+      "source_content_hash": "63c01a191ea726fcea811155b12f6c266ff422dfaf0900f8b54cad30636ecff5",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_a9b642df"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "# Overview",
+      "source_content_hash": "e1cb7d861aecdf5efcbabedd31ee970857b02eec940d72c08574a7b1b3bdf580",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "# 概要"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "Hopscotch projects are [JSON files](https://en.wikipedia.org/wiki/JSON). They are stored on the mobile app as `.hopscotch` files.",
+      "source_content_hash": "f8d272cc0e9ed7e66c784275cd0c8de3b5dd7b3dd2aceff696809dd854dc3396",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "Hopscotchプロジェクトは[JSONファイル](https://en.wikipedia.org/wiki/JSON)です。モバイルアプリでは「.hopscotch」ファイルとして保存されます。"
+      }
+    },
+    {
+      "segment_id": "7e5c5a39",
+      "source_content": "Essentially, [JSON (JavaScript Object Notation)](https://en.wikipedia.org/wiki/JSON) is a file format which organizes data using pairs of names and values,\nlike a checklist, which both people and computers can easily read. For example:",
+      "source_content_hash": "d3744316fe0fced629f4c04b212ba5f033f6084c4933af25eb947068dc759daf",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "基本的に、[JSON (JavaScript Object Notation)](https://en.wikipedia.org/wiki/JSON)は、データを名前と値のペアで整理するファイル形式で、チェックリストのように人間とコンピュータの両方が簡単に読むことができます。例えば："
+      }
+    },
+    {
+      "segment_id": "b9c7a144",
+      "source_content": "```json\n{ // {} means it's a list of pairs\n\t\"name\": \"Alice\",\n\t\"age\": 12,\n\t\"homework_finished\": false,\n\t\"hobbies\": [\"coding\", \"drawing\"], // [] means it's a list of single items\n\t\"pets\": [ // {} inside of [] count as single items!\n\t\t{\n\t\t\t\"name\": \"bailey\",\n\t\t\t\"age\": 2,\n\t\t\t\"bio\": { // {} inside of {}? No problem!\n\t\t\t\t\"description\": \"My lovely puppy!\",\n\t\t\t\t\"status\": \"adorable\"\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"name\": \"max\",\n\t\t\t\"age\": 7\n\t\t}\n\t]\n}\n```",
+      "source_content_hash": "0fe0a4b22e167bd4502284236d4a010fa75105d0c271b02d99afa5d2b12dd99f",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_b9c7a144"
+      }
+    },
+    {
+      "segment_id": "109ace10",
+      "source_content": "## Anatomy",
+      "source_content_hash": "867840c63838a0aef5fb6894e96c8cfe0687125b5c604d7ba7b0222cbe66ed15",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## 構造"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "Projects are essentially containers inside of containers:",
+      "source_content_hash": "53ab6f8c04cd53dad865d0a43ac5e70604933d88327742fb4cc025d6671f0ede",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "プロジェクトは基本的にコンテナの中のコンテナです："
+      }
+    },
+    {
+      "segment_id": "e7bc8c38",
+      "source_content": "- [Scenes](/wiki/spec/scene) contain a list of unique [object](/wiki/spec/object) identifiers (IDs).\n  - [Objects](/wiki/spec/object) contain a list of IDs to [rules](/wiki/spec/rule) and [custom rule instances](/wiki/spec/custom-rule-instance).\n   - [Custom rule instances](/wiki/spec/custom-rule-instance) are checked first by the web player<Note note=\"needs verification\" />,\n     containing a reference to a [custom rule](/wiki/spec/custom-rule), as well as the [parameters](/wiki/spec/parameter) for that custom rule.\n   - [Rules](/wiki/spec/rule) contain an ID to an [ability](/wiki/spec/ability).\n   - [Abilities](/wiki/spec/ability) contain blocks, which can themselves contain abilities or [parameters](/wiki/spec/parameter).",
+      "source_content_hash": "1549c78149444318f8b4eed579aea76c0b7c80d6fe8a9112f0f049adf121d3e2",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "ja": "- [シーン](/wiki/spec/scene)は一意の[オブジェクト](/wiki/spec/object)識別子（ID）のリストを含みます。\n  - [オブジェクト](/wiki/spec/object)は[ルール](/wiki/spec/rule)と[カスタムルールインスタンス](/wiki/spec/custom-rule-instance)へのIDのリストを含みます。\n   - [カスタムルールインスタンス](/wiki/spec/custom-rule-instance)はウェブプレイヤーによって最初にチェックされます<Note note=\"要検証\" />、\n     これらは[カスタムルール](/wiki/spec/custom-rule)への参照と、そのカスタムルールの[パラメータ](/wiki/spec/parameter)を含みます。\n   - [ルール](/wiki/spec/rule)は[アビリティ](/wiki/spec/ability)へのIDを含みます。\n   - [アビリティ](/wiki/spec/ability)はブロックを含み、それら自体がアビリティや[パラメータ](/wiki/spec/parameter)を含むことができます。"
+      }
+    },
+    {
+      "segment_id": "f44c1398",
+      "source_content": "## Nuances",
+      "source_content_hash": "5d3208fc3fd277777fb9482fadb9caf38e83128c02f3aafb43d854db2bc0834f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## ニュアンス"
+      }
+    },
+    {
+      "segment_id": "29528c8d",
+      "source_content": "[Custom rule instances](/wiki/spec/custom-rule-instance) have the same properties as [objects](/wiki/spec/object).",
+      "source_content_hash": "9880d19189a1a2d6d15394ff5deaa18a699fe4e3792601809a0c608fdae82f27",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "[カスタムルールインスタンス](/wiki/spec/custom-rule-instance)は[オブジェクト](/wiki/spec/object)と同じプロパティを持ちます。"
+      }
+    },
+    {
+      "segment_id": "11c76fcc",
+      "source_content": "## Viewing `.hopscotch` Files",
+      "source_content_hash": "7fa0dd2e2b5e714b70440491c717d88752d0b7ac512056154ffaeedc9045d0c9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## 「.hopscotch」ファイルの表示"
+      }
+    },
+    {
+      "segment_id": "8296bd42",
+      "source_content": "<Undocumented message=\"Coming soon!\" />",
+      "source_content_hash": "92704a62f35d64b4d059f4d6fcafcf88204e452605a1d337048d39c70598f75d",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_8296bd42"
+      }
+    },
+    {
+      "segment_id": "af52d59d",
+      "source_content": "## Viewing Types",
+      "source_content_hash": "2b140d17ffca57dee2de5c00fabf27727782461c284ce8c30696f399edb9e0b5",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## タイプの表示"
+      }
+    },
+    {
+      "segment_id": "4d52a261",
+      "source_content": "Types are magic numbers used in blocks, objects and parameters, which define their behavior.",
+      "source_content_hash": "7f0708497298af1e7084662c45616396cb749d614b0590e64b929ad1e9a810b6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "タイプはブロック、オブジェクト、パラメータで使用されるマジックナンバーで、それらの動作を定義します。"
+      }
+    },
+    {
+      "segment_id": "23dfb152",
+      "source_content": "Use the HS Tools API to view the latest data.",
+      "source_content_hash": "8f8a95cd5dd6ab23ff4773d0f42d4460db275755e2b6a1edb3d1d6dfacda7232",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "最新のデータを表示するにはHS Tools APIを使用してください。"
+      }
+    },
+    {
+      "segment_id": "416beea7",
+      "source_content": ":::tip\n\nDue to the webplayer's data format, keys that end with zeroes will be formatted in scientific notation. For instance:\n\n- `300` becomes `3e2`\n- `4000` becomes `4e3`\n\n:::",
+      "source_content_hash": "0f22e3d3290508acc41598e3ce7b51b466e5d9b9cf3eb2da08711e9a9428b3d9",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "ja": ":::tip\n\nウェブプレイヤーのデータ形式のため、ゼロで終わるキーは科学的記数法でフォーマットされます。例えば：\n\n- `300` は `3e2` になります\n- `4000` は `4e3` になります\n\n:::"
+      }
+    },
+    {
+      "segment_id": "ee8401db",
+      "source_content": "### Plain JSON Response",
+      "source_content_hash": "a06a7016ff45b155597b5591ce56e3a7beca1587155cbeb9180192655dcb6852",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### プレーンなJSONレスポンス"
+      }
+    },
+    {
+      "segment_id": "5b035b90",
+      "source_content": "<Button\n          label=\"HS Tools API: Project Datatypes (API)\"\n          variant=\"secondary\"\n          link=\"https://hs-tools-api.up.railway.app/webplayer/2.0/project-datatypes\"\n          outline external\n/>",
+      "source_content_hash": "4a0dc4badfb2d4851d1d4c3573eb5f49107249e50392499f3cb91c3d1e161953",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_5b035b90"
+      }
+    },
+    {
+      "segment_id": "58ed925f",
+      "source_content": "### JSON Hero",
+      "source_content_hash": "a8310761f07cf10e21badad8b462d583a3eec19c8efee14efdabb9f489fc7adc",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### JSON Hero"
+      }
+    },
+    {
+      "segment_id": "463ed165",
+      "source_content": "An external website which neatly categorizes the data into sections.\n*(We aren't affiliated with JSON Hero.)*",
+      "source_content_hash": "9f52aa5bf43a57304f553afd19bdccef05426a355393ba8beb749ce46dabe822",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "データをきれいにセクションに分類する外部ウェブサイトです。\n*（私たちはJSON Heroとは関係ありません。）*"
+      }
+    },
+    {
+      "segment_id": "3e8b4b41",
+      "source_content": "<Button\n          label=\"HS Tools API: Project Datatypes (JSON Hero)\"\n          variant=\"secondary\"\n          link=\"https://jsonhero.io/new?url=https://hs-tools-api.up.railway.app/webplayer/2.0/project-datatypes\"\n          outline external\n/>",
+      "source_content_hash": "8ab3f264b94de64e6d0f50eeff72d978fb869e1a9ac9cdc9ef1a302f4cda8941",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_3e8b4b41"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/02-spec/01-overview.mdx",
+  "last_updated_timestamp": "2025-06-06T09:44:52.879541+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "ja": "55c67d9ca7c8a1e8caa8cdb00febb2cf4500451ffdf01ca3d4af401980a278ca"
+  }
+}

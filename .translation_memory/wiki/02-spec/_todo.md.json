@@ -1,0 +1,182 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "wiki/02-spec/_todo.md",
+  "source_file_content_hash": "3236337c7902749758f1ecc325e19377504e8d21ed1e2cc8491cc272f028716b",
+  "segments": [
+    {
+      "segment_id": "76e4a56a",
+      "source_content": "# Wiki",
+      "source_content_hash": "0a725958a8cffeadcb9f15daf5033805c453b80c25812dc372df93932142a3e1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "# Wiki"
+      }
+    },
+    {
+      "segment_id": "145a76cc",
+      "source_content": "- Create logo/asset kit for HSAPI.\n- Change Prism theme to use Hopscotch colors instead. [prism.css](../../src/css/prism.css)\n- Make this page unlisted and still accessible from the site",
+      "source_content_hash": "d3f75ae6dd699b47128e4bd2303b658246acd83df7cc26848091c49f54becbf2",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "ja": "- HSAPIのロゴ/アセットキットを作成する。\n- PrismのテーマをHopscotchのカラーに変更する。[prism.css](../../src/css/prism.css)\n- このページを非公開にしつつ、サイトからアクセス可能にする"
+      }
+    },
+    {
+      "segment_id": "a703643c",
+      "source_content": "# Overview",
+      "source_content_hash": "e1cb7d861aecdf5efcbabedd31ee970857b02eec940d72c08574a7b1b3bdf580",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "# 概要"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "The Nuances section should be merged into other pages, as well as the Anatomy section as needed.",
+      "source_content_hash": "db9a0fbed02a110490a6c16ccfaaf8a91d6b8c9762df227fed2eeb59a6143131",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "「Nuances」セクションは他のページに統合し、「Anatomy」セクションも必要に応じて統合する。"
+      }
+    },
+    {
+      "segment_id": "8a5f6a7b",
+      "source_content": "# Project Attributes",
+      "source_content_hash": "36a1156ddefc217a1dde2baeda5631683304f42a8b3b1b9e1e702ef1e8eaf8fa",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "# プロジェクト属性"
+      }
+    },
+    {
+      "segment_id": "180bddb1",
+      "source_content": "`fontSize`\nWhat's the different cutoff threshold for different font sizes on different devices?",
+      "source_content_hash": "40ab32743a402dacac1bb5f629829fc09b38799067cd9551ddfc0a284a34d66d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "`fontSize`\n異なるデバイスでのフォントサイズのカットオフ閾値はどうなっているか？"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "`uuid`\n\"By default, project UUIDs are a unix timestamp in milliseconds of the UUID's creation\" ...\nElaborate - is there a way to override the default behavior?",
+      "source_content_hash": "696d46ae37c0a535ef6a76d430e3140c190d2d3781e15e3156438111910533a7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "`uuid`\n「デフォルトでは、プロジェクトUUIDはUUID作成時のUnixタイムスタンプ（ミリ秒）である」...\n詳細を説明 - デフォルトの動作を上書きする方法はあるか？"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "`playerVersion`\nDocument all valid player versions. Elaborate on the different features/changelog of each player version.",
+      "source_content_hash": "fe32b7037943f223ae5079327c29d0a2a1b687afde3819ce0217f72682d94dbf",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "`playerVersion`\n有効なプレイヤーバージョンをすべて文書化する。各プレイヤーバージョンの機能/変更点について詳しく説明する。"
+      }
+    },
+    {
+      "segment_id": "40f9552a",
+      "source_content": "# Block",
+      "source_content_hash": "59a02b6d404b094012d0a28bf2e6bca52f97d290e15ec9ddb9aedf43a02a251b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "# ブロック"
+      }
+    },
+    {
+      "segment_id": "f2c2bdd0",
+      "source_content": "`block_class`\nAre there any specific examples that are missing here?",
+      "source_content_hash": "067677cd1c6a1746ce95bb799662800e9f17d2e58e68faac6ec7b2ff1a9f0829",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "`block_class`\nここに記載されていない具体的な例はあるか？"
+      }
+    },
+    {
+      "segment_id": "d9172fa4",
+      "source_content": "The unused attributes need some research.",
+      "source_content_hash": "1eb25000da476b6da2e6056aa51f8855ba07e70a888bb053f525fc5b31caf80a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "未使用の属性について調査が必要。"
+      }
+    },
+    {
+      "segment_id": "d06306f7",
+      "source_content": "# Parameter",
+      "source_content_hash": "4696141cd68bb7fddff566579cdb1ffbdda98f923935b524b9f90b1ff8d3c60a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "# パラメータ"
+      }
+    },
+    {
+      "segment_id": "73ab96a3",
+      "source_content": "`datum`\nDescribe what image data looks like.",
+      "source_content_hash": "f6be0c420fb98cb06d1c9dd9fcb87d97cbe1939ba2b3487232de6afbb6bf5934",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "`datum`\n画像データの構造について説明する。"
+      }
+    },
+    {
+      "segment_id": "f422383e",
+      "source_content": "# Version History",
+      "source_content_hash": "7f6430f9e25c8f21d2614ba0816cdf3b19c7209ef0756614f3e6664e2a6e69df",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "# バージョン履歴"
+      }
+    },
+    {
+      "segment_id": "5d66c9dc",
+      "source_content": "- How do older v<=24 players work on the web player?\n- Fix ExternalLink margin error",
+      "source_content_hash": "3d7c83e80f7dc58189d8b28ae7329bc913d02118e908346e74b5a470b2e0f277",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "ja": "- v<=24の古いプレイヤーはWebプレイヤー上でどのように動作するか？\n- ExternalLinkのマージンエラーを修正する"
+      }
+    },
+    {
+      "segment_id": "782c902a",
+      "source_content": "# CSS",
+      "source_content_hash": "1af777c780a908156a0688db4496b11468186f12ea71124489c73b85863dc958",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "# CSS"
+      }
+    },
+    {
+      "segment_id": "8612da05",
+      "source_content": "- Figure out how to remove !important from all DocSearch properties.",
+      "source_content_hash": "be6b5a77cb2c39624fd24fab70177fac82efdcb5a6e6d78df71d6b1b5dad020c",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "ja": "- DocSearchのすべてのプロパティから!importantを削除する方法を検討する。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/02-spec/_todo.md",
+  "last_updated_timestamp": "2025-06-06T09:44:52.877375+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "ja": "3236337c7902749758f1ecc325e19377504e8d21ed1e2cc8491cc272f028716b"
+  }
+}

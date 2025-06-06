@@ -1,0 +1,87 @@
+import Note from '/src/components/Note.tsx';
+import Undocumented from '/src/components/Undocumented.tsx';
+import Button from '/src/components/Button.tsx';
+
+# 概要
+
+Hopscotchプロジェクトは[JSONファイル](https://en.wikipedia.org/wiki/JSON)です。モバイルアプリでは「.hopscotch」ファイルとして保存されます。
+
+基本的に、[JSON (JavaScript Object Notation)](https://en.wikipedia.org/wiki/JSON)は、データを名前と値のペアで整理するファイル形式で、チェックリストのように人間とコンピュータの両方が簡単に読むことができます。例えば：
+
+```json
+{ // {} means it's a list of pairs
+	"name": "Alice",
+	"age": 12,
+	"homework_finished": false,
+	"hobbies": ["coding", "drawing"], // [] means it's a list of single items
+	"pets": [ // {} inside of [] count as single items!
+		{
+			"name": "bailey",
+			"age": 2,
+			"bio": { // {} inside of {}? No problem!
+				"description": "My lovely puppy!",
+				"status": "adorable"
+			}
+		},
+		{
+			"name": "max",
+			"age": 7
+		}
+	]
+}
+```
+
+## 構造
+
+プロジェクトは基本的にコンテナの中のコンテナです：
+
+- [シーン](/wiki/spec/scene)は一意の[オブジェクト](/wiki/spec/object)識別子（ID）のリストを含みます。
+  - [オブジェクト](/wiki/spec/object)は[ルール](/wiki/spec/rule)と[カスタムルールインスタンス](/wiki/spec/custom-rule-instance)へのIDのリストを含みます。
+   - [カスタムルールインスタンス](/wiki/spec/custom-rule-instance)はウェブプレイヤーによって最初にチェックされます<Note note="要検証" />、
+     これらは[カスタムルール](/wiki/spec/custom-rule)への参照と、そのカスタムルールの[パラメータ](/wiki/spec/parameter)を含みます。
+   - [ルール](/wiki/spec/rule)は[アビリティ](/wiki/spec/ability)へのIDを含みます。
+   - [アビリティ](/wiki/spec/ability)はブロックを含み、それら自体がアビリティや[パラメータ](/wiki/spec/parameter)を含むことができます。
+
+## ニュアンス
+
+[カスタムルールインスタンス](/wiki/spec/custom-rule-instance)は[オブジェクト](/wiki/spec/object)と同じプロパティを持ちます。
+
+## 「.hopscotch」ファイルの表示
+
+<Undocumented message="Coming soon!" />
+
+## タイプの表示
+
+タイプはブロック、オブジェクト、パラメータで使用されるマジックナンバーで、それらの動作を定義します。
+
+最新のデータを表示するにはHS Tools APIを使用してください。
+
+:::tip
+
+ウェブプレイヤーのデータ形式のため、ゼロで終わるキーは科学的記数法でフォーマットされます。例えば：
+
+- `300` は `3e2` になります
+- `4000` は `4e3` になります
+
+:::
+
+### プレーンなJSONレスポンス
+
+<Button
+          label="HS Tools API: Project Datatypes (API)"
+          variant="secondary"
+          link="https://hs-tools-api.up.railway.app/webplayer/2.0/project-datatypes"
+          outline external
+/>
+
+### JSON Hero
+
+データをきれいにセクションに分類する外部ウェブサイトです。
+*（私たちはJSON Heroとは関係ありません。）*
+
+<Button
+          label="HS Tools API: Project Datatypes (JSON Hero)"
+          variant="secondary"
+          link="https://jsonhero.io/new?url=https://hs-tools-api.up.railway.app/webplayer/2.0/project-datatypes"
+          outline external
+/>

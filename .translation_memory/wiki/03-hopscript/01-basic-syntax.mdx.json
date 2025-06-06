@@ -1,0 +1,552 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "wiki/03-hopscript/01-basic-syntax.mdx",
+  "source_file_content_hash": "0bb23aa49bd669aaadba9dec459def882060c2ea7ad0c8af3bff089072f4b0ad",
+  "segments": [
+    {
+      "segment_id": "76e4a56a",
+      "source_content": "# Basic Syntax",
+      "source_content_hash": "6469df5c3ef2bec30072f4918e9371f3638bb528597be5c055f1add86c8cbb82",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "# 基本構文"
+      }
+    },
+    {
+      "segment_id": "faebdc62",
+      "source_content": "Here is a poorly-articulated idea for the basic syntax of the language, based on my experience with petrichorian hopscript which is based on tri-angle's htn examples. The syntax described here is basically petrichorian hopscript with some improvements. Do ask for any examples for things that you are confused about.",
+      "source_content_hash": "a72246377f9c15d756e135d0ca2da3fa31ed182ab95dca5bf2802dbf55b0d783",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "ここでは、petrichorian hopscript（tri-angleのhtn例に基づく）の経験に基づいた、言語の基本構文に関する大まかなアイデアを説明します。ここで説明する構文は、基本的にpetrichorian hopscriptを改良したものです。不明な点があれば、例を要求してください。"
+      }
+    },
+    {
+      "segment_id": "e7ec8f99",
+      "source_content": "What type of syntax and what values are allowed in a given place are based on what \"context\" that place is in.",
+      "source_content_hash": "2a4614820d299924a2ca2385ebc76e61b324b6ac8f732f4554ea784dbf8aa470",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "特定の場所で許可される構文のタイプと値は、その場所が属する「コンテキスト」に基づきます。"
+      }
+    },
+    {
+      "segment_id": "6ef78e84",
+      "source_content": "Starting at the very top of the file, you are in a top-level context. So you will be allowed to define custom blocks, scenes, or objects (which will just go to the very first scene), but not rules or method blocks.",
+      "source_content_hash": "d16a444836c8a7df05dcb4204a95cd2bbf63c018d699fa60605d76710edd81f9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "ファイルの最上部から始めて、トップレベルのコンテキストにいます。したがって、カスタムブロック、シーン、またはオブジェクト（これらは最初のシーンに配置されます）を定義できますが、ルールやメソッドブロックは定義できません。"
+      }
+    },
+    {
+      "segment_id": "d912d376",
+      "source_content": "## Syntax Rules",
+      "source_content_hash": "08fbd2faf4d2b3c323aeaae89b8aea35a483cbe12037b5263b6162937d10d940",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## 構文規則"
+      }
+    },
+    {
+      "segment_id": "8a5f6a7b",
+      "source_content": "### Context-changing lines",
+      "source_content_hash": "1213640ac05a18b299fe60ced3c3a13d657e31efa3f133e500fbfd43579aa484",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### コンテキスト変更行"
+      }
+    },
+    {
+      "segment_id": "180bddb1",
+      "source_content": "One way to change contexts is to have a context-changing line. These lines roughly are the same as something that has a container in the web explorer's editor – scenes, rules, condition blocks, etc.",
+      "source_content_hash": "f444fe513d4ecda7d9a2056d39e58b003339d0c42a926d1691169f889681cfe7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "コンテキストを変更する方法の1つは、コンテキスト変更行を使用することです。これらの行は、ウェブエクスプローラーのエディタでコンテナを持つもの（シーン、ルール、条件ブロックなど）とほぼ同じです。"
+      }
+    },
+    {
+      "segment_id": "cf898102",
+      "source_content": "Generally these are either definitions like\n`<type of thing being defined> <required whitespace> <name of thing being defined> [optional parameters]:`\nor container blocks like\n`<name of block> [optional parameters]:`\nContainer blocks such as `check_once_if` will obviously use the second option, but pretty much everything else would be more like the first. Some examples:\n`check_once_if 7 == 7:`\n^^ note how parentheses are optional for parameter lists with just a single unlabeled parameter",
+      "source_content_hash": "fd5bc94fe9c265cfec80760892c33768504fbac1926b524c856fe33d05381d25",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "一般的に、これらは以下のいずれかの形式です：\n`<定義するもののタイプ> <必須の空白> <定義するものの名前> [オプションパラメータ]:`\nまたはコンテナブロック：\n`<ブロック名> [オプションパラメータ]:`\n`check_once_if`などのコンテナブロックは明らかに2番目のオプションを使用しますが、それ以外のほとんどは1番目の形式に近いです。例：\n`check_once_if 7 == 7:`\n^^ 単一のラベルなしパラメータリストでは括弧がオプションであることに注意"
+      }
+    },
+    {
+      "segment_id": "2fdadb08",
+      "source_content": "`repeat_forever:`\n`Custom_block do_something(argument: \"Default value\", arg2: 0):`\n^^ See more notes on custom blocks later\n`Custom_rule ui_object:`\n`Custom_rule make_a_grid(width: 5, height: 7):`\n`Scene scene_1:`\n`bear rawrbear(x_position: 512, y_position: 384, resize_scale: 2):`\n`bird bird:`",
+      "source_content_hash": "a4d6f0b759bd5026d3cc465d30de528355d804ccd301d3677e158d31dbe49bf4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "`repeat_forever:`\n`Custom_block do_something(argument: \"デフォルト値\", arg2: 0):`\n^^ カスタムブロックに関する詳細は後述\n`Custom_rule ui_object:`\n`Custom_rule make_a_grid(width: 5, height: 7):`\n`Scene scene_1:`\n`bear rawrbear(x_position: 512, y_position: 384, resize_scale: 2):`\n`bird bird:`"
+      }
+    },
+    {
+      "segment_id": "73ab96a3",
+      "source_content": "Each of these lines will do something different, as well as change the context. For example, the line `Custom_block go_to_center:` will:",
+      "source_content_hash": "5aebda7bd27fda45d4e681cc6499ddfeaa83a93a09f161f5d088875449ea0a77",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "これらの各行は、コンテキストを変更するだけでなく、異なる動作をします。例えば、`Custom_block go_to_center:`という行は："
+      }
+    },
+    {
+      "segment_id": "f2c8a42b",
+      "source_content": "1. Define a custom block called `go_to_center` (or error if such a custom block already exists.)\n2. If in a context where custom blocks can be added (ie an ability), it will add a reference to the new custom block there.\n3. Change the context to the ability that the custom block uses.",
+      "source_content_hash": "2463266cba72c4862f19d5764da5753300c3ac35e846291cd39508fa0f4438d4",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "ja": "1. `go_to_center`というカスタムブロックを定義します（既に存在する場合はエラーになります）。\n2. カスタムブロックを追加できるコンテキスト（例：アビリティ）であれば、新しいカスタムブロックへの参照を追加します。\n3. カスタムブロックが使用するアビリティのコンテキストに変更します。"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "After a context changed in this way, the following lines will be indented one level further and will use the new context. To return to the previous context, unindent one level. For example:",
+      "source_content_hash": "453347dc765e5755dded140f7b76086fd4029af4ea6810c3df26b6e6c0689707",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "この方法でコンテキストが変更された後、次の行は1レベルインデントされ、新しいコンテキストを使用します。前のコンテキストに戻るには、1レベルアンインデントします。例："
+      }
+    },
+    {
+      "segment_id": "a11df754",
+      "source_content": "```hopscript\nCustom_block go_to_center:                                 # <- Top level context\n\tset_position(to_x: Game.width / 2, y: Game.height / 2) # <- Ability for go_to_center context\nScene game:                                                # <- Top level context\n\ttext petrichor(text: \"🐠\"):                            # <- Scene game context\n\t\tmessage = \"hello!\"                                 # <- Object petrichor context\n\t\tWhen game_starts:                                  # <- Object petrichor context\n\t\t\tshow_popup(message: message)                   # <- Ability for when game starts rule context\n\tbird bird_grid:                                        # <- Scene game context\n\t\tCustom_rule make_a_grid(width: 5, height: 5)       # <- Object bird context (notice that without the `:` at the end, this is just a reference to the custom rule)\n```",
+      "source_content_hash": "24970e73a44ca31109623837efff984b2161f39552e834fcd5cc60e54d4cc9f0",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_a11df754"
+      }
+    },
+    {
+      "segment_id": "cb5b269c",
+      "source_content": "### Parameters",
+      "source_content_hash": "dacb9f2cc46a622f5511c5364655f9def4f6fcc386bb32596f71a76b43474560",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### パラメータ"
+      }
+    },
+    {
+      "segment_id": "b36c6338",
+      "source_content": "Another way to change context, this time for only part of a line, is with parameters.",
+      "source_content_hash": "e1ee2765d6ef3b0f39705d2b1554ad2f4884b2cd5760a9424658b7192c692e5a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "コンテキストを変更する別の方法は、パラメータを使用することです。これは行の一部のみに適用されます。"
+      }
+    },
+    {
+      "segment_id": "b9aaa519",
+      "source_content": "If the block has only one parameter which doesn't have a label (ie check_once_if) then the final value can be on its own. Otherwise, it is necessary to put the parameters in parentheses.\nInside the parentheses is a comma-separated list of `<parameter label>: <value>`, or, if the parameter has no label, just the value.",
+      "source_content_hash": "51658e51f74cd3be5164a4d9bc26f19d8f025712d20b5f65c76619e8845797eb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "ブロックにラベルのない単一のパラメータしかない場合（例：`check_once_if`）、最終値を単独で記述できます。それ以外の場合は、パラメータを括弧内に記述する必要があります。\n括弧内は、`<パラメータラベル>: <値>`のカンマ区切りリスト、またはパラメータにラベルがない場合は値のみです。"
+      }
+    },
+    {
+      "segment_id": "23dfb152",
+      "source_content": "The value can be any expression, ie math blocks, conditional blocks, string literals, etc. Some contexts may restrict this further.",
+      "source_content_hash": "db16b91ddf82ff61ba4693e47caad696bbc619cdd7a7dd9f30618962d556a629",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "値は任意の式（数学ブロック、条件ブロック、文字列リテラルなど）にできます。一部のコンテキストではこれがさらに制限される場合があります。"
+      }
+    },
+    {
+      "segment_id": "e912d935",
+      "source_content": "### Custom blocks and rules",
+      "source_content_hash": "05ad61a303596b3c452cf9808ec38fd0e8b6045df614aa0c320b73c932c0fbe1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### カスタムブロックとルール"
+      }
+    },
+    {
+      "segment_id": "8b2a52b1",
+      "source_content": "In hopscript, custom blocks and rules are somewhat special. Unlike scenes or objects, defining them doesn't necessarily _use_ them. They can be defined in the top level, and will just be made available in that case. If defined in a top-level context, the parameters in their definition will only be the default values and therefore must be literal values, not expressions. If however they are defined in a place where they can be referenced, the definition will also function as a reference, and the parameters will accept expressions. We, as the developers of hopscript, will have to determine what happens to the default value of the parameter if it is defined with an expression. I don't think it really matters, and defaulting to `0` makes sense.",
+      "source_content_hash": "52eead68d77f66e2f7eda31c00c1f6892561a1dba5aa506eac949c68ff65f52b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "hopscriptでは、カスタムブロックとルールは特別な存在です。シーンやオブジェクトとは異なり、定義しても必ずしも使用されるわけではありません。トップレベルで定義すると、単に利用可能になるだけです。トップレベルのコンテキストで定義された場合、定義内のパラメータはデフォルト値のみであり、リテラル値でなければなりません（式は不可）。ただし、参照可能な場所で定義された場合、定義は参照としても機能し、パラメータは式を受け入れます。hopscriptの開発者として、式で定義された場合のパラメータのデフォルト値の扱いを決定する必要があります。これはあまり重要ではなく、デフォルトを`0`にするのが妥当だと思います。"
+      }
+    },
+    {
+      "segment_id": "5dae11e3",
+      "source_content": "They can also be used in different places than where they were defined by referencing them like:\n`Custom_block <name> [Optional parameters]`\nThe same for custom rules, but with `rule` instead of `block`. The parameters are only optional if the custom block/rule was defined without any.",
+      "source_content_hash": "2c67459f53b833c162d8e236242051dcc0f1bf4e5d2f49a84e5d88793b4abf61",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "また、定義された場所とは異なる場所で使用するには、以下のように参照します:\n`Custom_block <名前> [オプションパラメータ]`\nカスタムルールも同様ですが、`block`の代わりに`rule`を使用します。パラメータは、カスタムブロック/ルールがパラメータなしで定義された場合にのみオプションです。"
+      }
+    },
+    {
+      "segment_id": "3ef18741",
+      "source_content": "### Variables",
+      "source_content_hash": "cb1e67d971d2e52c2a7b5a11dad118f69bce10ec4c0ec30efe2c21e08db0fa4f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### 変数"
+      }
+    },
+    {
+      "segment_id": "e7772088",
+      "source_content": "Variables take the form of `<Scope>.<variable name>`, or just the variable name if that is not ambiguous. If the scope is not specified, it is assumed to be `Local`. The variable name can be a string literal, but then the scope _must_ be specified, even if the variable is local.",
+      "source_content_hash": "6d9295b15ee20871e8e6b8415d90380ed75b008f53233886640c38c8ff1d6992",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "変数は`<スコープ>.<変数名>`の形式を取るか、曖昧でない場合は変数名のみで指定できます。スコープが指定されていない場合、`Local`と見なされます。変数名は文字列リテラルにすることもできますが、その場合、変数がローカルであってもスコープを指定する必要があります。"
+      }
+    },
+    {
+      "segment_id": "eab056be",
+      "source_content": "Traits (the orange blocks such as invisibility as a %) are treated identically to variables. If you want to have a variable with the same name as a trait, its name will be a string literal. So `Self.\"Width\"` would be a self variable called width, and `Self.width` would be the trait `width`. Suggestions for better ways to do this would be very helpful.\nThe possible scopes in base hopscript are:\n`Game` – game variables\n`Self` – object variables referencing self\n`Original_object` – object variables referencing the original object\n`Local` – local variables\n`User` – user variables\nany defined object name – object variables referencing that object\n`Scenes` – A scene reference to the scene with the name provided as a variable name. Only valid in blocks that accept scene references. Needed because you can also use variables there. Also has the special `Scenes.Next`, `Scenes.Previous`, etc.\nExtensions should be able to define their own scopes. More on that in the extensions section.",
+      "source_content_hash": "925413fbcc01d67daf71e71457c4c0c8bce37a51f5d00616fa54007a8e58e6db",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "特性（オレンジ色のブロック、例えば不可視性(%)など）は変数と同様に扱われます。特性と同じ名前の変数を持ちたい場合、その名前は文字列リテラルにする必要があります。例えば、`Self.\"Width\"`は「Width」という名前のセルフ変数であり、`Self.width`は特性`width`を指します。より良い方法の提案は大歓迎です。\nベースHopscriptで可能なスコープは以下の通りです:\n`Game` – ゲーム変数\n`Self` – 自身を参照するオブジェクト変数\n`Original_object` – オリジナルオブジェクトを参照するオブジェクト変数\n`Local` – ローカル変数\n`User` – ユーザー変数\n定義されたオブジェクト名 – そのオブジェクトを参照するオブジェクト変数\n`Scenes` – 変数名として提供されたシーン名へのシーン参照。シーン参照を受け入れるブロックでのみ有効。ここでは変数も使用できるため必要です。また、特別な`Scenes.Next`、`Scenes.Previous`なども含みます。\n拡張機能は独自のスコープを定義できる必要があります。詳細は拡張機能セクションで説明します。"
+      }
+    },
+    {
+      "segment_id": "a4bf4268",
+      "source_content": "### Blocks",
+      "source_content_hash": "468f1bef2f8a76f4e175645ba40b37ff921c60ca5657692f12c03d36643316fc",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### ブロック"
+      }
+    },
+    {
+      "segment_id": "ec619944",
+      "source_content": "There are a couple forms of blocks: expression blocks and method blocks.\nBoth of them take the same form, but are usable in different contexts. Expression blocks are for inside parameters, while method blocks are for inside abilities.\n`<block name> [optional parameters]`\nThe parameters are only optional if the block doesn't have any.\nIf it is a container block, it must be a method block, and must have the line end with a `:`. This will make it a context changing line.",
+      "source_content_hash": "0ad96d57a2bae35c64b057c87c96860a305ae03fbe3bc9647cd6d232100cefb7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "ブロックにはいくつかの形式があります: 式ブロックとメソッドブロックです。\nどちらも同じ形式を取りますが、使用できるコンテキストが異なります。式ブロックはパラメータ内で使用し、メソッドブロックはアビリティ内で使用します。\n`<ブロック名> [オプションパラメータ]`\nパラメータは、ブロックがパラメータを持たない場合にのみオプションです。\nコンテナブロックの場合、メソッドブロックでなければならず、行末に`:`が必要です。これによりコンテキスト変更行になります。"
+      }
+    },
+    {
+      "segment_id": "bd30d33e",
+      "source_content": "### Binary operators",
+      "source_content_hash": "88287e7f2aef5449fab430dd8955b44940f50d12fe30005e2fc49a45ad810344",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### 二項演算子"
+      }
+    },
+    {
+      "segment_id": "6b77b644",
+      "source_content": "There are certain binary operators that can be defined to be shorthand for a specific block in a specific context. So for example, in an ability context, the `=` binary operator would be shorthand for the `set(_:, to:)` block, but in an expression context, it would be shorthand for the `equals` block.\nThe possible binary operators are:\n`=`, `-`, `/`, `*`, `+`, `^`, `!=`, `<=`, `>=`, `<`, `>`, `%`, `matches`, `and`, `or`\nThe last three _must_ have whitespace before and after them, but the rest can have whitespace be optional.",
+      "source_content_hash": "59223fbc21e86dc6c5155b62be25ac52a5ecd64489471a37809583602c5192c2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "特定のコンテキストで特定のブロックの短縮形として定義できる二項演算子があります。例えば、アビリティコンテキストでは、`=`二項演算子は`set(_:, to:)`ブロックの短縮形ですが、式コンテキストでは`equals`ブロックの短縮形になります。\n可能な二項演算子は以下の通りです:\n`=`, `-`, `/`, `*`, `+`, `^`, `!=`, `<=`, `>=`, `<`, `>`, `%`, `matches`, `and`, `or`\n最後の3つは前後に空白が必要ですが、それ以外は空白がオプションです。"
+      }
+    },
+    {
+      "segment_id": "e06c002e",
+      "source_content": "### Capitalization",
+      "source_content_hash": "e48dc544232aeb461f6f8d42842d64a3baf1acbb3ddbe19181a3bab2ad51af3e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### 大文字化"
+      }
+    },
+    {
+      "segment_id": "25212439",
+      "source_content": "Anything that is hopscript specific should be in Capital_snake_case. Anything that comes directly from hopscotch data, such as block names/parameter labels, object type names, etc. are in regular snake_case. Regular snake_case is otherwise reserved for user-defined names.",
+      "source_content_hash": "8da5506e41e356a576784e82ddb8a7fbecc27a9161cee611644dd51b5fffcd31",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "Hopscript固有のものはCapital_snake_case（大文字スネークケース）にする必要があります。Hopscotchデータから直接来るもの、例えばブロック名/パラメータラベル、オブジェクトタイプ名などは通常のsnake_case（スネークケース）です。通常のsnake_caseはそれ以外の場合、ユーザー定義名に予約されています。"
+      }
+    },
+    {
+      "segment_id": "94145a94",
+      "source_content": "### Comments",
+      "source_content_hash": "f78e23e1f1748669cfccf80c1aa5c949980fbd23ee608857917de5a5489ce1b3",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### コメント"
+      }
+    },
+    {
+      "segment_id": "2838eb68",
+      "source_content": "Comments start with `#` and the rest of the line is a comment. They can go in any context.",
+      "source_content_hash": "d5039991d672dc0814c45de1fab2a7ce22f1240094a3edfbb30f4445009bbf18",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "コメントは`#`で始まり、行の残りがコメントになります。どのコンテキストでも使用できます。"
+      }
+    },
+    {
+      "segment_id": "42a5832e",
+      "source_content": "### Whitespace",
+      "source_content_hash": "8db99bf90d74982c99b58b168261b07b2eadea43143ff8d2d75b20ba5bfa1b63",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### 空白"
+      }
+    },
+    {
+      "segment_id": "0e80209e",
+      "source_content": "Whitespace is accepted and ignored pretty much anywhere, though it is sometimes required. For example, these are interpreted the same:\n`set_position(to_x: Game.width / 2, y: Game.height / 2)`\n`set_position   (to_x   :Game.width/   2,y:Game.height/2      )`",
+      "source_content_hash": "433467f16fef29db5d764ab97480af62dafbdaa9c8b0bc6ac05d108937a433f4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "空白はほぼどこでも受け入れられ、無視されますが、時々必要です。例えば、以下の例は同じように解釈されます:\n`set_position(to_x: Game.width / 2, y: Game.height / 2)`\n`set_position   (to_x   :Game.width/   2,y:Game.height/2      )`"
+      }
+    },
+    {
+      "segment_id": "8574d51c",
+      "source_content": "### Possible contexts",
+      "source_content_hash": "6b8e8cf6acde8d937dd15366b14499d57a20976aebaeee33e7abad3e102a6d87",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### 可能なコンテキスト"
+      }
+    },
+    {
+      "segment_id": "e9313fef",
+      "source_content": "The possible contexts in base hopscript are:",
+      "source_content_hash": "03d3e11b32b0a04d856ebefbe1562976be775a4cab067176753c86365f967d59",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "ベースHopscriptで可能なコンテキストは以下の通りです:"
+      }
+    },
+    {
+      "segment_id": "2890f5b2",
+      "source_content": "- top-level: What each file starts in. Allows custom block/rule definitions, scene definitions, import statements, object definitions. if an object is defined top-level, the scene it belongs to is the very first scene in the project. This will not be super-trivial to implement, but won't be hard.\n- Scene: The context after a scene definition. Allows object definitions.\n- Object: The context after an object or custom rule definition. If no rules or custom rules have been defined/referenced, it allows set variable blocks, custom rule references/definitions, rule definitions. It does not allow set variable blocks after the first rule/custom rule.\n- Ability: The context after a custom block definition, rule definition, or container block definition. Allows method blocks, custom block references/definitions.\n- Parameters: See the section on parameters above.\n- Expression: In parameters",
+      "source_content_hash": "a5ac07ae44d086962268f162d870fce1a4e3e51c3eb19c09d372031fe268d415",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "ja": "- トップレベル: 各ファイルの開始コンテキスト。カスタムブロック/ルール定義、シーン定義、インポート文、オブジェクト定義が可能。オブジェクトがトップレベルで定義された場合、その所属シーンはプロジェクトの最初のシーンとなる。実装は非常に単純ではないが、難しいものではない。\n- シーン: シーン定義後のコンテキスト。オブジェクト定義が可能。\n- オブジェクト: オブジェクトまたはカスタムルール定義後のコンテキスト。ルールやカスタムルールが定義/参照されていない場合、変数設定ブロック、カスタムルール参照/定義、ルール定義が可能。最初のルール/カスタムルール以降は変数設定ブロックは許可されない。\n- アビリティ: カスタムブロック定義、ルール定義、またはコンテナーブロック定義後のコンテキスト。メソッドブロック、カスタムブロック参照/定義が可能。\n- パラメーター: 前述のパラメーターセクションを参照。\n- 式: パラメーター内"
+      }
+    },
+    {
+      "segment_id": "ed644f52",
+      "source_content": "### Name restrictions",
+      "source_content_hash": "5c58aaff502870fc3aa3f77ea9d2ec84fb30ab7bf430393b9eaeae8b68269a30",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### 名前の制限"
+      }
+    },
+    {
+      "segment_id": "b9331170",
+      "source_content": "Names can contain any character except what would cause the compiler to get confused. Currently the disallowed characters that I can think of are:",
+      "source_content_hash": "508f63a794d87fdf5feb9a6e5bdf128d82847c9cbfc4c22ffd2665eab52c5f1f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "名前には、コンパイラが混乱する可能性のある文字を除き、任意の文字を含めることができる。現在考えられる禁止文字は以下の通り:"
+      }
+    },
+    {
+      "segment_id": "4b530389",
+      "source_content": "- Any whitespace\n- &num;\n- (\n- )\n- =\n- \"\n- ,\n- /\n- [\n- ]\n- :\n- \\-\n- &plus;\n- &ast;\n- %\n- ^\n- &lt;\n- &gt;",
+      "source_content_hash": "0ba2d8c155d0d992a5c8ed19b67312d4a0beb5cfadd860f7bad7348dc8712391",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "ja": "- 空白文字全般\n- &num;\n- (\n- )\n- =\n- \"\n- ,\n- /\n- [\n- ]\n- :\n- \\-\n- &plus;\n- &ast;\n- %\n- ^\n- &lt;\n- &gt;"
+      }
+    },
+    {
+      "segment_id": "f7e6e884",
+      "source_content": "There are additional limits on the first character of a name that are okay in the rest of the name. These are:",
+      "source_content_hash": "baaf886711914b5cce7d0bf09c7447d454b90fab8f72846c509ba9ee48329e90",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "名前の最初の文字には追加の制限があり、名前の途中では許可される文字もある。これらは:"
+      }
+    },
+    {
+      "segment_id": "d4615819",
+      "source_content": "- any digits\n- underscores (\\_)",
+      "source_content_hash": "694b97b601e04b8a2294a7c8c5812c1d55ae3eb677d0e4a191507c7ae6de7ebe",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "ja": "- 数字全般\n- アンダースコア (\\_)"
+      }
+    },
+    {
+      "segment_id": "671cbf7c",
+      "source_content": "### Block overloading",
+      "source_content_hash": "2592edd7f3f3dca6ab273b6d7d83bed3bd1a3f431b94d4db4ffea61bb4b0b22d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### ブロックのオーバーロード"
+      }
+    },
+    {
+      "segment_id": "4c787c52",
+      "source_content": "In cases like create a clone, which has an optional parameter, or save input, which has an extra parameter in ae mod, it is useful to have a block with the same name and different parameters. This is allowed, but user-defined custom blocks/rules cannot allow this, which matches with how hopscotch handles it.",
+      "source_content_hash": "0609df51fadb3a00ac8a7e70dd54fdae16f3d8e5e976c3df59fabf314f438ee2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "クローン作成（オプションパラメーターあり）や入力保存（ae modで追加パラメーターあり）などの場合、同じ名前で異なるパラメーターを持つブロックが有用である。これは許可されているが、ユーザー定義のカスタムブロック/ルールでは許可されない。これはHopscotchの動作と一致する。"
+      }
+    },
+    {
+      "segment_id": "b50cf7ff",
+      "source_content": "### Things this syntax does not include that it should",
+      "source_content_hash": "3caebb22e63862aac69cee7090e1dc163d8ed8269d279db98dee0dd3d2bd0723",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### この構文に含まれていない必要機能"
+      }
+    },
+    {
+      "segment_id": "1496ef51",
+      "source_content": "`When is_tapped Self:` is the way to do when self is tapped. It should be `When (Self) is_tapped` or something like that.",
+      "source_content_hash": "815fddc746715279b38ab4acb378e836ab5ffb6ebe26364eacdc659fd778369c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "`When is_tapped Self:` は「自分がタップされた時」を表現する方法である。これは `When (Self) is_tapped` のような形式であるべき。"
+      }
+    },
+    {
+      "segment_id": "7312e69e",
+      "source_content": "## Hopscotchification",
+      "source_content_hash": "115ca67344ec0977eca1b1706dcd81c27025908b4bbe44a0712ad5c726780c4f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## ホップスコッチ化"
+      }
+    },
+    {
+      "segment_id": "2dbfc5f7",
+      "source_content": "The following section describes how the syntax transpiles into Hopscotch code,\nwhich we call \"hopscotchification\".",
+      "source_content_hash": "1dbd18cf2409d66804a4845530d3187cf97570ff4271429c03b009d131874164",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "以下のセクションでは、この構文がHopscotchコードにどのようにトランスパイルされるか（「ホップスコッチ化」と呼ぶ）を説明する。"
+      }
+    },
+    {
+      "segment_id": "fd7ed056",
+      "source_content": "When hopscotchifying, a file is implicitly imported that contains definitions of each of the blocks in non-advanced mode hopscotch. See the section on extensions for more info about how this will work.",
+      "source_content_hash": "d41e0aebdd54fff3cffe998d5ef2fc06edd43ee362c3a8c384175a6b8e896aa0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "ホップスコッチ化時には、非アドバンストモードのHopscotchにおける各ブロックの定義を含むファイルが暗黙的にインポートされる。この動作の詳細については、拡張機能セクションを参照。"
+      }
+    },
+    {
+      "segment_id": "58f98d22",
+      "source_content": "### Name hopscotchification",
+      "source_content_hash": "e7b364423a8ec6a26e0f819aff1fa75f0d2f88b9a420e87df915b7601fa925ed",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### 名前のホップスコッチ化"
+      }
+    },
+    {
+      "segment_id": "d636abf8",
+      "source_content": "Names are hopscotchified assuming they are snake*case. They are split into words by `*` characters, then the first word word has its first letter capitalized, and the words are then joined together with spaces.",
+      "source_content_hash": "8e592af6b38812f93e327019d4c51e8d8d61e10fb4a29e62c10dea430a0511d5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "名前はスネーク*ケースであると仮定してホップスコッチ化される。`*`文字で単語に分割され、最初の単語の最初の文字が大文字化された後、単語はスペースで結合される。"
+      }
+    },
+    {
+      "segment_id": "191265da",
+      "source_content": "### Comment hopscotchification",
+      "source_content_hash": "bdf6e72bc071e7561df9fa7f7b86382389747992cb45553079a7facb0393e353",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### コメントのホップスコッチ化"
+      }
+    },
+    {
+      "segment_id": "85ea22dd",
+      "source_content": "Hopscript allows comments in more places than hopscotch. Comments in areas that Hopscotch allows them will be included directly. Comments at the end of lines that are themselves in a place where comments are allowed (ie `repeat_forever: # main loop`) will be included before the hopscotchification of the rest of the line, but only when that will not affect the behavior of the code. Comments that cannot be reasonably included in the final project will be dropped.",
+      "source_content_hash": "c4a1f981f5a86e7871789946330cfc3508386901975405c5d244c26977b75a68",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "HopscriptはHopscotchよりも多くの場所でコメントを許可する。Hopscotchが許可する場所のコメントは直接含まれる。コメントが許可された場所にある行末のコメント（例: `repeat_forever: # メインループ`）は、コードの動作に影響しない場合に限り、行の残りのホップスコッチ化前に含まれる。合理的に最終プロジェクトに含められないコメントは削除される。"
+      }
+    },
+    {
+      "segment_id": "e1642ab4",
+      "source_content": "### Multi-file projects",
+      "source_content_hash": "fc90e7e18afd7ff1968fee6dd3bb0c263c417ef3c8de805fd3107719b04de87d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### マルチファイルプロジェクト"
+      }
+    },
+    {
+      "segment_id": "674abb31",
+      "source_content": "Multi-file projects are possible in hopscript. To include the code in another file, you can import it by including a statement like the following in a top level context:\n`Import \"<path to file, relative to the current file>\"`\nYou can also import standard-library-like files by omitting the quotes. For example, to use advanced mode features, `Import advanced.hopscript`. This can be used for advanced mode, secret blocks, common mods like ae's mods, or common useful features/hopscript extensions like booleans.\nYou can only reference things that are directly imported directly into the current file.\nSo if file A imports file B which imports file C, file A can use custom blocks defined in file B but not file C.\nRestrictions on duplicate names apply to the entire project though.",
+      "source_content_hash": "91da5981f222f3ce988fb4046bfc4c23046771ce0b84ddd2f9f34ad179291c23",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "Hopscriptではマルチファイルプロジェクトが可能。他のファイルのコードを含めるには、トップレベルコンテキストで以下のような文を含める:\n`Import \"<現在のファイルからの相対パス>\"`\n引用符を省略して標準ライブラリのようなファイルをインポートすることも可能。例: アドバンストモード機能を使用する場合、`Import advanced.hopscript`。これはアドバンストモード、秘密のブロック、aeのmodのような一般的なmod、またはブーリアンのような便利な機能/Hopscript拡張に使用できる。\n直接現在のファイルにインポートされたもののみを参照可能。\nつまり、ファイルAがファイルBをインポートし、ファイルBがファイルCをインポートしている場合、ファイルAはファイルBで定義されたカスタムブロックは使用できるが、ファイルCのものは使用できない。\nただし、名前の重複に関する制限はプロジェクト全体に適用される。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/03-hopscript/01-basic-syntax.mdx",
+  "last_updated_timestamp": "2025-06-06T09:44:52.880218+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "ja": "0bb23aa49bd669aaadba9dec459def882060c2ea7ad0c8af3bff089072f4b0ad"
+  }
+}

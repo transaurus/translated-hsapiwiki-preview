@@ -1,0 +1,142 @@
+import {PropertyData} from '/src/components/PropertyData.tsx';
+import Note from '/src/components/Note.tsx';
+
+# 共通プロジェクトプロパティ
+
+以下のプロパティはプロジェクトJSONのルートに存在します。
+
+デフォルト値は、プロジェクトが最初にiPad、iPhone、またはウェブプレイヤーで作成されたかどうかによって異なる場合があります。
+
+## メタデータ
+
+### `baseObjectScale`
+
+<PropertyData type="number" defaultValue="1" playerVersion="<1.5.16" />
+
+*最新の[プレイヤーバージョン](/wiki/spec/version-history#player-versions)では未使用。*
+
+キャラクターSVGをこの値の倍率でスケーリングします。図形やテキストはスケーリングされません。
+
+*バージョン付きウェブプレイヤー`<=1.?`<Note note="要調査" />では、通常サイズの図形（エディタからアクセス可能なもの）に対して値は`0.5`に置き換えられ、他の図形には`1`が使用されます。*
+
+```json
+"baseObjectScale": 1
+```
+
+### `edited_at`
+
+<PropertyData type="string" />
+
+ドラフトが最後に編集された時刻のタイムスタンプが含まれます。
+
+*オンラインプロジェクトの公開日については、[published_at](#)と[correct_published_at](#)を参照してください。*
+
+```json
+"edited_at": "2024-09-09T15:22:57Z"
+```
+
+### `fontSize`
+
+<PropertyData type="number" defaultValueiPad="80" defaultValueiPhone="72" />
+
+テキストサイズをスケーリングします。
+
+この値が大きすぎると、テキストの行の高さがプレイヤーの処理可能な最大閾値を超え、テキストが途中で切り取られます。<Note note="詳細説明が必要" />
+
+```json
+"fontSize": 80
+```
+
+### `playerUpgrades`
+
+<PropertyData type="object" defaultValue="{}" />
+
+[プレイヤーバージョン](/wiki/spec/version-history#player-versions)のアップグレード履歴が含まれます。
+ドラフトメニュー経由でプロジェクトのプレイヤーがアップグレードされると生成されます。
+
+Hopscotchアプリでは、古いプロジェクトのプレイヤーをアップグレードするには、省略記号（...）をタップし、「最新のプレイヤーに更新」を選択します。
+これにより、プロジェクトの`playerVersion`プロパティが更新され、古いプレイヤーバージョンと新しいプレイヤーバージョンが`playerUpgrades`に追加されます。
+
+例えば、これはプレイヤーバージョン`2.0.0`からバージョン`2.1.1`へのアップグレードを表しています：
+
+```json
+playerUpgrades: {
+    "2.0.0": "2.1.1"
+}
+```
+
+### `playerVersion`
+
+<PropertyData type="string" />
+
+[ウェブプレイヤーバージョン](/wiki/spec/version-history#player-versions)が含まれます。セマンティックバージョニングを使用しています。
+
+```json
+"playerVersion": "2.1.1"
+"playerVersion": "1.5.15"
+```
+
+### `requires_beta_editor`
+
+<PropertyData type="boolean" />
+
+プロジェクトがアドバンストエディタで保存されているかどうかを決定します。`true`に設定されている場合、
+プロジェクトの編集にはHopscotchのサブスクリプションが必要です。
+
+```json
+requires_beta_editor: true
+```
+
+### `stageSize`
+
+<PropertyData type="object" defaultValueMobile="screen resolution" defaultValueWebEditor="1366x1024" />
+
+プロジェクトステージの寸法が含まれます。
+
+```json
+"stageSize": {
+    "width": 1366,
+    "height": 1024
+}
+```
+
+### `version`
+
+<PropertyData type="number" />
+
+プロジェクトが保存された最新の[Hopscotchアプリバージョン](/wiki/spec/version-history#app-versions)を表します。
+古いバージョンのHopscotchアプリは、より新しい`version`のプロジェクトを開くことができません。
+
+`version <=24`の場合、アプリはウェブプレイヤーの代わりに旧プレイヤーを使用します。
+
+```json
+"version": 34
+```
+
+## ID配列
+
+<PropertyData type="array" />
+
+以下のプロパティはオブジェクトの配列で、プロジェクト全体で一意の識別子を使用して参照されます。
+
+各プロパティは独自の配列で、オブジェクトタイプごとにカタログ化されています：
+
+### [`abilities`](/wiki/spec/ability)
+
+### [`customObjects`](/wiki/spec/custom-object)（カスタムオブジェクト）
+
+### [`customRules`](/wiki/spec/custom-rule)（カスタムルール）
+
+### [`customRuleInstances`](/wiki/spec/custom-rule-instance)（カスタムルールインスタンス）
+
+### [`eventParameters`](/wiki/spec/event-parameter)（イベントパラメータ）
+
+### [`rules`](/wiki/spec/rule)（ルール）
+
+### [`scenes`](/wiki/spec/scene)（シーン）
+
+### [`sceneReferences`](/wiki/spec/scene-reference)（シーン参照）
+
+### [`traits`](/wiki/spec/trait)（特性）
+
+### [`variables`](/wiki/spec/variable)（変数）

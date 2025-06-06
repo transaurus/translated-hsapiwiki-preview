@@ -1,0 +1,117 @@
+import {PropertyData} from '/src/components/PropertyData.tsx';
+import Undocumented from '/src/components/Undocumented.tsx';
+import Note from '/src/components/Note.tsx';
+
+
+# Block
+
+Blocks are objects in [abilities](/wiki/spec/ability) and the
+[`datum`](/wiki/spec/parameter#datum) property of [parameters](/wiki/spec/parameter), with
+[one minor difference](#parameters--params) between these contexts.
+
+
+## Common Properties
+
+### `block_class`
+
+<PropertyData type="string" />
+
+Represents the block's class type.
+
+Possible values include:<Note note="needs elaboration" />
+
+- `"method"`: for loopless blocks, such as Move Forward, Set Variable, Comment, etc.
+- `"conditionalControl"`: for Check Once and Check If Else loops.
+- `"control"`: for Draw a Trail and other loop blocks.<Note note="needs verification" />
+- `"conditionalOperator"`: for conditional operators, including `=`, `≠`, `<` and `>`.
+- `"operator"`: for math and string operators, such as `+`, `-`, `×`, `÷`, Random, and HSB.
+
+Unused.<Note note="needs research" />
+
+```json
+"block_class": "conditionalControl"
+```
+
+
+### `description`
+
+<PropertyData type="string" />
+
+The label of the [block type](#type).
+
+*Unused.*<Note note="needs research" />
+
+```json
+"description": "Draw a Trail"
+```
+
+
+### `keyboardName`
+
+<PropertyData type="string" />
+
+*Not always used.* Only seems to exist in certain operator blocks. The extended name of a block,
+as one might type in a search for the block.<Note note="needs research" />
+
+```json
+"keyboardName": "Add"
+```
+
+
+### `type`
+
+<PropertyData type="number" />
+
+A magic number that corresponds to the block's type and behavior.<Note note="needs verification" />
+
+For a full list of possible values, see [Viewing Types](/wiki/spec/overview#viewing-types).
+
+```json
+"type": 41
+```
+
+
+### `parameters` / `params`
+
+<PropertyData type="array" />
+
+Contains the block's [parameter](/wiki/spec/parameter) objects.
+
+#### Nuances
+- If the block is inside of an [ability](/wiki/spec/ability), the key is called `parameters`.
+- If the block is inside of a parameter's [`datum`](/wiki/spec/parameter#datum) property, the key is instead called `params`.
+
+
+## Loops
+
+The following properties only exist in blocks with inner loops, such as
+Check Once If and Draw a Trail:
+
+### `controlScript`
+
+<PropertyData type="object" />
+
+Contains an [`abilityID`](/wiki/spec/ability#abilityid) property, referencing the
+[ability](/wiki/spec/ability) with the loop's contents.
+
+```json
+"controlScript": {
+          "abilityID": "F4911EE3-010E-F139-55C3-9B5D7F4B140B"
+}
+```
+
+
+### `controlFalseScript`
+<Undocumented />
+<PropertyData type="object" />
+
+Only present on Check If Else blocks.
+
+Contains an [`abilityID`](/wiki/spec/ability#abilityid) property, referencing the
+[ability](/wiki/spec/ability) with the loop's `Else` contents.
+
+```json
+"controlFalseScript": {
+          "abilityID": "F4911EE3-010E-F139-55C3-9B5D7F4B140B"
+}
+```

@@ -1,0 +1,112 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "wiki/100-credits.md",
+  "source_file_content_hash": "3d3b9141582e5ed0e4efe4f868bc70135ae36fefa9e3ca639e98309b9f64e4b2",
+  "segments": [
+    {
+      "segment_id": "76e4a56a",
+      "source_content": "# Credits",
+      "source_content_hash": "0e27171ed44dcb2e3e5619dd9b1478478c497da680630ac49645e88caa448f5a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "# クレジット"
+      }
+    },
+    {
+      "segment_id": "adbc947a",
+      "source_content": "## @Petrichor",
+      "source_content_hash": "3d5a26edcb7f961cd348cd2926b9e128d7cd23d05b98aed51018a5ad8fe52fa3",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## @Petrichor"
+      }
+    },
+    {
+      "segment_id": "e7ec8f99",
+      "source_content": "Provided all of the [prior `.hopscotch` format research](https://forum.gethopscotch.com/t/an-explanation-of-how-hopscotch-json-files-look/64722).\nCreator of [Petrichorian Hopscript](https://github.com/petrichor-1/petrichorian-hopscript), used to make Connect The Pipes!",
+      "source_content_hash": "1ef683fd8004fc7e4bdab4d58d5eb3d12b6760167afc3ece05da5b2214f220c2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "[従来の `.hopscotch` フォーマット研究](https://forum.gethopscotch.com/t/an-explanation-of-how-hopscotch-json-files-look/64722)をすべて提供。\n[Petrichorian Hopscript](https://github.com/petrichor-1/petrichorian-hopscript)の作成者で、Connect The Pipes!の制作に使用されました。"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "[Hopscotch forum profile](https://forum.gethopscotch.com/u/petrichor/summary) • [GitHub](https://github.com/petrichor-1)",
+      "source_content_hash": "d78a9b947979e6733fee3b7b3f4206c0935fd0a27a8ce5eb10822b45775f0870",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "[Hopscotch フォーラムプロフィール](https://forum.gethopscotch.com/u/petrichor/summary) • [GitHub](https://github.com/petrichor-1)"
+      }
+    },
+    {
+      "segment_id": "1cc03ec8",
+      "source_content": "## @Awesome_E",
+      "source_content_hash": "4986185199fff5d575e466734c75d16eb4076d078aa0c9a0d4f2dca7d9d949cb",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## @Awesome_E"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "Offers leader support and great insights about the Hopscotch API!",
+      "source_content_hash": "7ad182fc5085f51ac48307cdddcc1e508101aa766e44366502eeb76a78430e78",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "リーダーサポートとHopscotch APIに関する優れた洞察を提供！"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "[Hopscotch forum profile](https://forum.gethopscotch.com/u/awesome_e/summary) • [GitHub](https://github.com/AE-Hopscotch)",
+      "source_content_hash": "e5795bc7f84947f0812d5f51c55bd3d99a70555530a0a6cb6024d7c1bc863f93",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "[Hopscotch フォーラムプロフィール](https://forum.gethopscotch.com/u/awesome_e/summary) • [GitHub](https://github.com/AE-Hopscotch)"
+      }
+    },
+    {
+      "segment_id": "cbe57f9d",
+      "source_content": "## @Rawrbear",
+      "source_content_hash": "f111964f0cad8914932516084dac24fedfb6c501b8bb5302d912e4b747c8f82b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## @Rawrbear"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "Creator and maintainer of this website, as well as the [HSAPI: Planning](https://forum.gethopscotch.com/t/hsapi-planning/67073) topic!",
+      "source_content_hash": "41067d29c1fbc1f7e31686ca40fccb2f035b63eb4bc179a914227684c0b8294c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "このウェブサイトの作成者および管理者、そして[HSAPI: Planning](https://forum.gethopscotch.com/t/hsapi-planning/67073)トピックの作成者！"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "[Hopscotch forum profile](https://forum.gethopscotch.com/u/rawrbear/summary) • [GitHub](https://github.com/RawrbearHS/)",
+      "source_content_hash": "2675e80195a4ee43d61a0537c050c525f5b17d840bcf1cb8086af06439591620",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "[Hopscotch フォーラムプロフィール](https://forum.gethopscotch.com/u/rawrbear/summary) • [GitHub](https://github.com/RawrbearHS/)"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/100-credits.md",
+  "last_updated_timestamp": "2025-06-06T09:44:52.876251+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "ja": "3d3b9141582e5ed0e4efe4f868bc70135ae36fefa9e3ca639e98309b9f64e4b2"
+  }
+}

@@ -1,0 +1,592 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "wiki/02-spec/02-common-project-properties.mdx",
+  "source_file_content_hash": "c82bda677149a8c2ade222eec88c726bdef628b48767c536c5eebbb96873c018",
+  "segments": [
+    {
+      "segment_id": "a9b642df",
+      "source_content": "import {PropertyData} from '/src/components/PropertyData.tsx';\nimport Note from '/src/components/Note.tsx';",
+      "source_content_hash": "aaa0cb66eceaeba43ed99522b1baca2f195c6d382e886d7190c165cdfe03135b",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_a9b642df"
+      }
+    },
+    {
+      "segment_id": "f85bbfb4",
+      "source_content": "# Common Project Properties",
+      "source_content_hash": "0712f5e140f468cf16655524da7ef522518fef25c612a2398545882fafd4c0e2",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "# 共通プロジェクトプロパティ"
+      }
+    },
+    {
+      "segment_id": "6ef78e84",
+      "source_content": "The following properties are present in the root of a project's JSON.",
+      "source_content_hash": "3e89b303899c03f9b4db90488e7310ec12b2843716d8ffc409b4ebebc13817bc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "以下のプロパティはプロジェクトJSONのルートに存在します。"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "Default values may be different depending on if the project was initially created on\nan iPad, iPhone, or the web player.",
+      "source_content_hash": "691a8470c9ca5d709358be0fe0e2d83c5590627f66710e867709fbc0dbb9b17d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "デフォルト値は、プロジェクトが最初にiPad、iPhone、またはウェブプレイヤーで作成されたかどうかによって異なる場合があります。"
+      }
+    },
+    {
+      "segment_id": "ba4f48ff",
+      "source_content": "## Metadata",
+      "source_content_hash": "5f36ef31f13617511304433b9e9e4763415441830683815b42490db5074914cd",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## メタデータ"
+      }
+    },
+    {
+      "segment_id": "e14c9928",
+      "source_content": "### `baseObjectScale`",
+      "source_content_hash": "d24daa78173e82e85172bcece86d23a0b1b2d22e2de8c8a5fd812bea7f2b530b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `baseObjectScale`"
+      }
+    },
+    {
+      "segment_id": "514644bf",
+      "source_content": "<PropertyData type=\"number\" defaultValue=\"1\" playerVersion=\"<1.5.16\" />",
+      "source_content_hash": "bb42e23cd3a08beb73ff16817b14e6a7313b0fbb21eafd68a55d9337c1099035",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_514644bf"
+      }
+    },
+    {
+      "segment_id": "f6168993",
+      "source_content": "*Unused in modern [player versions](/wiki/spec/version-history#player-versions).*",
+      "source_content_hash": "192ff23a53f37304eaa321045f05707ca0c12d11b0d83963b681877996d9984e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "*最新の[プレイヤーバージョン](/wiki/spec/version-history#player-versions)では未使用。*"
+      }
+    },
+    {
+      "segment_id": "f5f6d2ce",
+      "source_content": "Scales character SVGs by a factor of its value. Does not scale shapes or text.",
+      "source_content_hash": "04f122501430c221d2a10f7e467e5889b1d83bb521265d957a5aedd61c620b5f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "キャラクターSVGをこの値の倍率でスケーリングします。図形やテキストはスケーリングされません。"
+      }
+    },
+    {
+      "segment_id": "2fdadb08",
+      "source_content": "*In any versioned webplayer `<=1.?`<Note note=\"needs research\" />, the value is replaced with `0.5` for normal-sized shapes\n(ones that are accessible from the editor), and uses a value of `1` for other shapes.*",
+      "source_content_hash": "be8062f5220022f64a432ad7e7997636ab544599574bacfa56587466512571c2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "*バージョン付きウェブプレイヤー`<=1.?`<Note note=\"要調査\" />では、通常サイズの図形（エディタからアクセス可能なもの）に対して値は`0.5`に置き換えられ、他の図形には`1`が使用されます。*"
+      }
+    },
+    {
+      "segment_id": "a89b882e",
+      "source_content": "```json\n\"baseObjectScale\": 1\n```",
+      "source_content_hash": "f66798a7193a6484bf43545454f3ba29bb0f37ae38262471090f869a14f6b80c",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_a89b882e"
+      }
+    },
+    {
+      "segment_id": "48847fd4",
+      "source_content": "### `edited_at`",
+      "source_content_hash": "1e837e7c59b3798af41c627c09d6ff3e51354cb50ea9e7c93498a019a2487ace",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `edited_at`"
+      }
+    },
+    {
+      "segment_id": "2a70bec8",
+      "source_content": "<PropertyData type=\"string\" />",
+      "source_content_hash": "5a914b4a6d6fb58cc4e0a720243742dcd538cf38cf44c91ffb71a8c2d6a93971",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_2a70bec8"
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "Contains a timestamp with the last time the draft was edited.",
+      "source_content_hash": "f5faf8f1fb3a714c7523da3e22240a8249f0797961bef052939e35e74a611d4d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "ドラフトが最後に編集された時刻のタイムスタンプが含まれます。"
+      }
+    },
+    {
+      "segment_id": "97ae4a01",
+      "source_content": "*For an online project's publish date, see [published_at](#) and [correct_published_at](#).*",
+      "source_content_hash": "f88b5e677cf33f53f44ec01e9e9459e44338c5b2579b7a92b23e05afeaa820d5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "*オンラインプロジェクトの公開日については、[published_at](#)と[correct_published_at](#)を参照してください。*"
+      }
+    },
+    {
+      "segment_id": "de8f60af",
+      "source_content": "```json\n\"edited_at\": \"2024-09-09T15:22:57Z\"\n```",
+      "source_content_hash": "a0a020b0145d1dab555cebf91fe7d3eac48b94ffd179997e9e25c8fdddc08071",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_de8f60af"
+      }
+    },
+    {
+      "segment_id": "54268405",
+      "source_content": "### `fontSize`",
+      "source_content_hash": "aca4f686ad1cf98fc40dc887bf19572f9cc7fc1bd50d05ba60e61392896ef30c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `fontSize`"
+      }
+    },
+    {
+      "segment_id": "f5276727",
+      "source_content": "<PropertyData type=\"number\" defaultValueiPad=\"80\" defaultValueiPhone=\"72\" />",
+      "source_content_hash": "a98cf71bd1a3143f114177e93ce1ff3c6b6bb140ab181a57afe2174cfc37b533",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_f5276727"
+      }
+    },
+    {
+      "segment_id": "a9d49f92",
+      "source_content": "Scales the text size.",
+      "source_content_hash": "78446e19fc601fabb87a850515ba7b158525bd491e934a77a1a80428dfeb2050",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "テキストサイズをスケーリングします。"
+      }
+    },
+    {
+      "segment_id": "a44047a5",
+      "source_content": "If this value is too big, the text line height will exceed\nthe maximum threshold the player can handle, cutting off the text in the middle.<Note note=\"needs elaboration\" />",
+      "source_content_hash": "2a989ae6e887f43acd3102934a20180337c0585ea2a97ed61291d78d11f23242",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "この値が大きすぎると、テキストの行の高さがプレイヤーの処理可能な最大閾値を超え、テキストが途中で切り取られます。<Note note=\"詳細説明が必要\" />"
+      }
+    },
+    {
+      "segment_id": "ac961110",
+      "source_content": "```json\n\"fontSize\": 80\n```",
+      "source_content_hash": "92f4fe123962df23cb0bca7ecda3849a8c4df33c71c83a9f5e43aef1549df429",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_ac961110"
+      }
+    },
+    {
+      "segment_id": "1a316f80",
+      "source_content": "### `playerUpgrades`",
+      "source_content_hash": "5ce70d74e4842ccf31b3f550383f2198600e699a7c38ce1713831b649b6b83f3",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `playerUpgrades`"
+      }
+    },
+    {
+      "segment_id": "60e88cae",
+      "source_content": "<PropertyData type=\"object\" defaultValue=\"{}\" />",
+      "source_content_hash": "b8b6b517d82a72ecbf5269477af2a2d6b04a21cb1d72aa3d40d13a5e5f430e6b",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_60e88cae"
+      }
+    },
+    {
+      "segment_id": "6ea4c715",
+      "source_content": "Contains a history of [player version](/wiki/spec/version-history#player-versions) upgrades.\nPopulates when the project's player is upgraded via the drafts menu.",
+      "source_content_hash": "b1b2d4b030f84bc32313a7e6a5399302344a0e7479e9c0bf8a449b58161226f8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "[プレイヤーバージョン](/wiki/spec/version-history#player-versions)のアップグレード履歴が含まれます。\nドラフトメニュー経由でプロジェクトのプレイヤーがアップグレードされると生成されます。"
+      }
+    },
+    {
+      "segment_id": "5dae11e3",
+      "source_content": "In the Hopscotch app, you can upgrade older projects' players by tapping the ellipsis (...),\nthen selecting \"Update to Latest Player\".\nThis updates the project's `playerVersion` property, and appends the old and new player versions to `playerUpgrades`.",
+      "source_content_hash": "f86661f4bba066069758e57f500ec02fc0c3e5274c8ceb7477f6a638459d3533",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "Hopscotchアプリでは、古いプロジェクトのプレイヤーをアップグレードするには、省略記号（...）をタップし、「最新のプレイヤーに更新」を選択します。\nこれにより、プロジェクトの`playerVersion`プロパティが更新され、古いプレイヤーバージョンと新しいプレイヤーバージョンが`playerUpgrades`に追加されます。"
+      }
+    },
+    {
+      "segment_id": "657c2b20",
+      "source_content": "For example, this represents an upgrade from player version `2.0.0` to version `2.1.1`:",
+      "source_content_hash": "3278eac9225a39229654db71e711cc63f6ebe78c4c5e20cc30d2ffc7f13aa7d9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "例えば、これはプレイヤーバージョン`2.0.0`からバージョン`2.1.1`へのアップグレードを表しています："
+      }
+    },
+    {
+      "segment_id": "17c579d2",
+      "source_content": "```json\nplayerUpgrades: {\n    \"2.0.0\": \"2.1.1\"\n}\n```",
+      "source_content_hash": "0d1e089b76dad94b80800bc7c417f657d303ca3eaadb102d78735766f10e43ef",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_17c579d2"
+      }
+    },
+    {
+      "segment_id": "98355e36",
+      "source_content": "### `playerVersion`",
+      "source_content_hash": "2cc4f1fa5f84340c0763bbfdfa22bea2e92762f46a595a638412f198692b5756",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `playerVersion`"
+      }
+    },
+    {
+      "segment_id": "4edbd92a",
+      "source_content": "<PropertyData type=\"string\" />",
+      "source_content_hash": "5a914b4a6d6fb58cc4e0a720243742dcd538cf38cf44c91ffb71a8c2d6a93971",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_4edbd92a"
+      }
+    },
+    {
+      "segment_id": "6270d577",
+      "source_content": "Contains the [web player version](/wiki/spec/version-history#player-versions). Uses semantic versioning.",
+      "source_content_hash": "0bc46fd6a55708100f2604a125ba9829b4b536c09f71316311e7facf0850c1d1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "[ウェブプレイヤーバージョン](/wiki/spec/version-history#player-versions)が含まれます。セマンティックバージョニングを使用しています。"
+      }
+    },
+    {
+      "segment_id": "d8159289",
+      "source_content": "```json\n\"playerVersion\": \"2.1.1\"\n\"playerVersion\": \"1.5.15\"\n```",
+      "source_content_hash": "bbb681f34363152bf8e0ca8b5ced3698a3f17ee4de48cd374c0aee7ec91ebda8",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_d8159289"
+      }
+    },
+    {
+      "segment_id": "90d35b51",
+      "source_content": "### `requires_beta_editor`",
+      "source_content_hash": "06a1f86c1dab9f8b4174c5b7dae890f78c5c821a662a99ca8170662d47142c34",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `requires_beta_editor`"
+      }
+    },
+    {
+      "segment_id": "9cb0b344",
+      "source_content": "<PropertyData type=\"boolean\" />",
+      "source_content_hash": "a43720772232ebf67d2ea1909637d6a2ac31d6b650e52bd94e465ac524d6f7e3",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_9cb0b344"
+      }
+    },
+    {
+      "segment_id": "6b77b644",
+      "source_content": "Determines if the project is saved with the advanced editor. When set to `true`,\nprojects require a Hopscotch subscription to edit.",
+      "source_content_hash": "63c57cb10c7cfd28c295a886cb7ebbd64da70ae26cfc2a1667538e1bc3f365c6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "プロジェクトがアドバンストエディタで保存されているかどうかを決定します。`true`に設定されている場合、\nプロジェクトの編集にはHopscotchのサブスクリプションが必要です。"
+      }
+    },
+    {
+      "segment_id": "ec99e704",
+      "source_content": "```json\nrequires_beta_editor: true\n```",
+      "source_content_hash": "d487ba60fc2ae6e8dcae33e9c76f40ae796a26756daf2cb85bf87f98ad2d8975",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_ec99e704"
+      }
+    },
+    {
+      "segment_id": "a138e327",
+      "source_content": "### `stageSize`",
+      "source_content_hash": "dc7a521cff95c9cc95d068871008fd7f3f0d219552cb8f7d01605cabec3b174b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `stageSize`"
+      }
+    },
+    {
+      "segment_id": "341c2c0e",
+      "source_content": "<PropertyData type=\"object\" defaultValueMobile=\"screen resolution\" defaultValueWebEditor=\"1366x1024\" />",
+      "source_content_hash": "98ddef96be147f022e3994b59cbe2c9b9761cdee099d90345c7c8e70f0b703ab",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_341c2c0e"
+      }
+    },
+    {
+      "segment_id": "c1eaf30b",
+      "source_content": "Contains the dimensions of the project stage.",
+      "source_content_hash": "011de7f69752c62620bd23af5b6e58189555b04e256ef8fff303c0805d726bf6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "プロジェクトステージの寸法が含まれます。"
+      }
+    },
+    {
+      "segment_id": "c4c0fc07",
+      "source_content": "```json\n\"stageSize\": {\n    \"width\": 1366,\n    \"height\": 1024\n}\n```",
+      "source_content_hash": "22fb79b3ac105e14b78976e913cf7cb4da2a67f197f7139d103d90551f0526aa",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_c4c0fc07"
+      }
+    },
+    {
+      "segment_id": "48155948",
+      "source_content": "### `version`",
+      "source_content_hash": "bf85172bfe47a77754dc0f6818368b541e54426e63824bfe62b5a888c82d1869",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `version`"
+      }
+    },
+    {
+      "segment_id": "11507d75",
+      "source_content": "<PropertyData type=\"number\" />",
+      "source_content_hash": "f4b234343b40b541c898334d8ed741dee04ca4677e6739b6c890abff052df6bf",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_11507d75"
+      }
+    },
+    {
+      "segment_id": "a8610918",
+      "source_content": "Represents the latest [Hopscotch app version](/wiki/spec/version-history#app-versions) which a project was saved in.\nOlder versions of the Hopscotch app will not open projects with a later `version`.",
+      "source_content_hash": "8101dde0976df96dbb94ef7dd9c75b70523c7deb6c201e25e6a94934e5169a4c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "プロジェクトが保存された最新の[Hopscotchアプリバージョン](/wiki/spec/version-history#app-versions)を表します。\n古いバージョンのHopscotchアプリは、より新しい`version`のプロジェクトを開くことができません。"
+      }
+    },
+    {
+      "segment_id": "f38d1cb0",
+      "source_content": "If `version <=24`, the app will use the old player instead of the web player.",
+      "source_content_hash": "e42781920f5f4cddb816d1a0143399f091260831edf4f1fd96f687d5280b8a5c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "`version <=24`の場合、アプリはウェブプレイヤーの代わりに旧プレイヤーを使用します。"
+      }
+    },
+    {
+      "segment_id": "e2c67c87",
+      "source_content": "```json\n\"version\": 34\n```",
+      "source_content_hash": "0326b3628df5df669bb2fe919a51c29234bae0e5c14627089187bc89d883d0f5",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_e2c67c87"
+      }
+    },
+    {
+      "segment_id": "47cd8dd6",
+      "source_content": "## ID Arrays",
+      "source_content_hash": "c6ecde14f19b4ea4992d6f2f2f1837b20bf714ef8d3641548750d06fb5e4af01",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## ID配列"
+      }
+    },
+    {
+      "segment_id": "2974c396",
+      "source_content": "<PropertyData type=\"array\" />",
+      "source_content_hash": "f82d6f49d0cc24b7fa09300e9122dfa0e79ec983960430f714b43daedd023fe5",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_2974c396"
+      }
+    },
+    {
+      "segment_id": "383fbdd2",
+      "source_content": "The following properties are arrays of objects, which are referenced project-wide\nusing unique identifiers.",
+      "source_content_hash": "d343e906186d9a52135f5399ef1b51177cb0eb2931581099fc3e0aa1d0077fa8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "以下のプロパティはオブジェクトの配列で、プロジェクト全体で一意の識別子を使用して参照されます。"
+      }
+    },
+    {
+      "segment_id": "e77cf7c6",
+      "source_content": "Each property is its own array, catalogued with its object type:",
+      "source_content_hash": "38d4e1f2390a6bb11a8fad2eeb35f0c9e2738f502a06a5cb8c0ccd174c4ca8ac",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "各プロパティは独自の配列で、オブジェクトタイプごとにカタログ化されています："
+      }
+    },
+    {
+      "segment_id": "9c2ab4c8",
+      "source_content": "### [`abilities`](/wiki/spec/ability)",
+      "source_content_hash": "4e3bc0c268476a69da76981a3f5496afaf5b5ecd7f1b7f6c896972557343b145",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### [`abilities`](/wiki/spec/ability)"
+      }
+    },
+    {
+      "segment_id": "0d5321b7",
+      "source_content": "### [`customObjects`](/wiki/spec/custom-object)",
+      "source_content_hash": "eb4cca03eb77e15ff49609b84cb4daa8a4931e61e2c8650881a180ea25bacbda",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### [`customObjects`](/wiki/spec/custom-object)（カスタムオブジェクト）"
+      }
+    },
+    {
+      "segment_id": "73776161",
+      "source_content": "### [`customRules`](/wiki/spec/custom-rule)",
+      "source_content_hash": "8b149c923f6c85442f83c0c88690bc930f741011964de30e606f9dbeb7a95f9a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### [`customRules`](/wiki/spec/custom-rule)（カスタムルール）"
+      }
+    },
+    {
+      "segment_id": "dd4905a4",
+      "source_content": "### [`customRuleInstances`](/wiki/spec/custom-rule-instance)",
+      "source_content_hash": "50feb9389afbc9612eeeee2e5519e5a86fc9bb99c6b46d232914ae213d2a733f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### [`customRuleInstances`](/wiki/spec/custom-rule-instance)（カスタムルールインスタンス）"
+      }
+    },
+    {
+      "segment_id": "35353302",
+      "source_content": "### [`eventParameters`](/wiki/spec/event-parameter)",
+      "source_content_hash": "5ff80bbcaab8ae66b435bdad38a6edb05ab656edec1049750174c69f252aa8ca",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### [`eventParameters`](/wiki/spec/event-parameter)（イベントパラメータ）"
+      }
+    },
+    {
+      "segment_id": "6ab1b234",
+      "source_content": "### [`rules`](/wiki/spec/rule)",
+      "source_content_hash": "5d0382d8511e7bd61a76f9d2e59b7b44cf29684e9af9462ab36d69954b291bb6",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### [`rules`](/wiki/spec/rule)（ルール）"
+      }
+    },
+    {
+      "segment_id": "b77e7669",
+      "source_content": "### [`scenes`](/wiki/spec/scene)",
+      "source_content_hash": "3c6cb73d2b57a6502bbfd3daef7d2a5a2be5d11e553f3119770092003cedd97d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### [`scenes`](/wiki/spec/scene)（シーン）"
+      }
+    },
+    {
+      "segment_id": "2f2d5f01",
+      "source_content": "### [`sceneReferences`](/wiki/spec/scene-reference)",
+      "source_content_hash": "ca8027c73b28364183e8e6bba6e5466a7f67e99d165d327cb42a7c83f809c8a8",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### [`sceneReferences`](/wiki/spec/scene-reference)（シーン参照）"
+      }
+    },
+    {
+      "segment_id": "97afbaf0",
+      "source_content": "### [`traits`](/wiki/spec/trait)",
+      "source_content_hash": "67881cd2c931a84bac77ad4600cf74b8acd76bc35254b271ad641add2bee0a69",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### [`traits`](/wiki/spec/trait)（特性）"
+      }
+    },
+    {
+      "segment_id": "531ec0bb",
+      "source_content": "### [`variables`](/wiki/spec/variable)",
+      "source_content_hash": "46f8202cd080b84096a3c86925342e2201396665774ebd6085e367f7e5975cfe",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### [`variables`](/wiki/spec/variable)（変数）"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/02-spec/02-common-project-properties.mdx",
+  "last_updated_timestamp": "2025-06-06T09:44:52.875444+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "ja": "c82bda677149a8c2ade222eec88c726bdef628b48767c536c5eebbb96873c018"
+  }
+}

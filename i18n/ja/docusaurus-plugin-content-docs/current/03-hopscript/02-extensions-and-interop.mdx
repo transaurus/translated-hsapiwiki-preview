@@ -1,0 +1,86 @@
+# 拡張機能と相互運用性
+
+## `.hopscotch` フォーマットとの相互運用
+
+Hopscotchプロジェクトや部分的なHopscotchプロジェクト（`abilities`や`objects`などの特定のトップレベルキーのみを含む）を通常のHopscriptファイルと同様にインポートできるようにする必要があります。少なくとも、完全なHopscotchプロジェクトとaeのhspre形式、おそらくhsprez形式（基本的に部分的なHopscotchプロジェクトまたはそれらをZIP化したもの）をサポートする必要があります。ユーザーにとっての動作についてはマルチファイルプロジェクトのセクションを、名前のデホップスコッチ化については以下のセクションを参照してください。
+
+## 拡張機能
+
+拡張機能は、Hopscriptの最初のバージョンで完全に完成させる必要があるものではありませんが、言語を拡張してより多くの機能を追加したり、さまざまな改造目的に対応できるようにすることは非常に役立ちます。
+
+## 基本的な型定義
+
+これは言語の「真の」拡張ではなく、新しいタイプのブロックやオブジェクトを定義することです。これはHopscriptの最初のバージョンで必須です。なぜなら、これがブロックを定義する方法だからです。ホップスコッチ化ツール/コンパイラ自体は、どのタイプのブロックが何であるかを知らず、それらはすべてHopscriptで定義されます。
+
+具体的な構文についてはまだ明確なアイデアはありませんが、現在の実装で気に入っていないものは以下のようなものです：
+
+### オブジェクトタイプ
+
+`_defineObjectType <名前> <ID> <ファイル名> <幅> <高さ>`
+例：
+`_defineObjectType text 1 "text-object.png" 74 55`
+
+### ブロック
+
+`_defineBlockType <ブロッククラス> <名前> <タイプ> <JSON記述> [適用可能な場合、パラメータ]`
+パラメータの形式は：
+`<タイプ> <ラベル> <JSONキー> <デフォルト値>, `
+例えば、メソッドブロック：
+`_defineBlockType method set_position 41 "Set Position" 42 to_x "to x" "200", 42 y "y" "200", `
+イベントとしての演算子ブロック：
+`_defineBlockType operator(Event) i_get_a_message 7023 "I Get a Message" 53 _ "I get a message" "", `
+演算子は戻り値のタイプを指定します。
+条件演算子：
+`_defineBlockType conditionalOperator(Boolean) less_than 1002 "＜" 57 _ "" "6", 57 _ "＜" "7", `
+^^ 条件演算子は、Hopscriptの観点では演算子/式と同一です。ただし、ホップスコッチ化においては異なります。
+
+### 二項演算子
+
+`_defineBinaryOperator <演算子> <ブロック名>`
+^^ この正確な形式は、この記事で説明されているHopscriptでは直接機能しません。なぜなら、式コンテキストまたはメソッドコンテキストのどちらかを指定していないからです。
+例：
+`_defineBinaryOperator - subtract`
+
+### 特性
+
+`_defineTraitType <値のタイプ> <名前> <タイプ> <JSON記述> [<スコープ>]`
+例：
+`_defineTraitType Number rotation 2000 "Rotation" [Object, ]`
+
+### パラメータタイプ
+
+`_defineParameterType <タイプ> <Hopscriptタイプ>`
+各パラメータタイプが受け入れるタイプをHopscriptに伝えます。オートコンプリートの提案や、一部の場合（主にシーン）のホップスコッチ化に役立ちます。
+例：
+`_defineParameterType 42 String Number `
+
+### `requires_beta_editor` の設定
+
+`_setRequiresBetaEditor <ブール値>`
+プロジェクトJSON内のrequires_beta_editor値を設定します。アプリの動作を正確に再現するために、アドバンストモードファイルでのみ必要です。
+
+## 修飾子拡張
+
+これらは言語の動作をより実質的に変更するものです。新しいスコープの定義や、hopscotch化されたコードの修正などが可能になります。最終的には、すべてのスコープがこのような拡張機能を通じて定義されるべきですが、最初のバージョンでは`Game`や`Local`などが何にhopscotch化されるかをハードコードしても問題ないかもしれません。
+
+これらは、Hopscotchプレイヤー向けではなく、カスタムインタプリタ向けに作成されたHopscriptファイルの形式を取ります。基本的なHopscotchブロックを暗黙的にインポートする代わりに、_私たちの_インタプリタにとって意味のあるブロックを暗黙的にインポートします。このコードはプロジェクトがhopscotch化される際に実行され、hsapiを呼び出すブロックを使用してhopscotch化されたコードを修正することが許可されます。例えば：
+
+```hopscript
+# It doesn't look like it, but `Scope` could be defined as an object type.
+Scope Game:
+	When i_am_used:
+		# Note the use of the `Rule` scope to refer to "arguments" to the rule. These could be implemented as traits, and are specific to our interperator
+		# In this example, the `i_am_used` rule is called whenever a scope called `Game` is used for a non-trait variable, and is expected to use the `return` block to return an hsapi object that can be used as an expression.
+		hsapi_create_variable(named: Rule.variable_name, type: HSBlockType.Game, store_into: result)
+		return(result)
+# `enum` could be another object type
+# I don't think enums should be included as a feature in our interperator, but it is an example of an extension, and extensions should also be able to be used in extensions, as long as it isn't recursive or something.
+enum HSBlockType:
+	...
+	Game = 8003
+	...
+```
+
+この例の具体的な内容は私の好みではありませんが、これがどのようなものになるかを本当に理解するためには、hopscotch化ツール/コンパイラについてさらに多くの進展が必要です。拡張機能がコンパイラの内部についてある程度の知識を必要とすることは問題ありません。
+
+拡張機能は何らかの方法でインポート可能であるべきであり、それらをオプトインしたファイルにのみ影響を与えるべきです（ただし、プロジェクト全体に対して何らかの処理を行うことも可能であるべきです。ただし、拡張機能で定義されたスコープなどのものは明示的にオプトインされる必要があります。）

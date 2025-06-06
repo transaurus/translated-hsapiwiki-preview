@@ -1,0 +1,465 @@
+import Undocumented from '/src/components/Undocumented.tsx';
+import {PropertyData} from '/src/components/PropertyData.tsx';
+import Note from '/src/components/Note.tsx';
+import Details from '/src/components/Details.tsx';
+
+# パラメータ
+
+パラメータは[ブロック](/wiki/spec/block)の[`parameters`](/wiki/spec/block#parameters--params)配列内のオブジェクトです。
+
+## 共通プロパティ
+
+### `datum`
+
+<PropertyData type="object" />
+
+*[Datum](#datum-1)セクションを参照してください。*
+
+### `defaultValue`
+
+<PropertyData type="string" />
+
+パラメータが空の場合にモバイルアプリエディタに表示されるデフォルト値。
+
+```json
+"defaultValue": "50"
+```
+
+### `key`
+
+<PropertyData type="string" />
+
+パラメータのラベル。
+
+この値はエディタ内でパラメータの表示名を変更するために修正可能です。
+ブロックの他の属性とは異なり、ブロックタイプにハードコードされていません。
+（Wait Til Timestampなど、ハードコードされたブロック名を持たない一部のブロックのラベル付けに使用されます。）
+ただし、Set Invisibilityなどの特定のブロックタイプでは、キーの変更が機能する保証はありません。<Note note="要検証" />
+
+```json
+"key": "percent"
+```
+
+### `type`
+
+<PropertyData type="number" />
+
+パラメータのタイプと動作に対応するマジックナンバー。<Note note="要検証" />
+
+可能な値の完全なリストについては、[Viewing Types](/wiki/spec/overview#viewing-types)を参照してください。
+
+```json
+"type": 57
+```
+
+### `value`
+
+<PropertyData type="string" />
+
+パラメータの値。
+
+```json
+"value": "100"
+```
+
+### `variable`
+
+<PropertyData type="string" />
+
+*オプション。* [rules](/wiki/spec/rule)内で[event parameters](/wiki/spec/event-parameter)を参照するために使用されるID。`value`パラメータをその内容で上書きします。
+
+`datum`が存在しない場合、プレイヤーはこの参照を使用して以下のタイプを検索しようとします：
+
+1. 変数（見つからない場合、プレイヤーは次を検索します...）
+2. 特性
+3. イベントパラメータ
+
+<Undocumented message="Example missing."/>
+
+## Datum
+
+`datum`プロパティはパラメータのデータ内容を決定します。
+
+各datumは以下のいずれかを排他的に含みます（詳細は各ページを参照）：
+
+- 演算子[ブロック](/wiki/spec/block)
+  - HSB、RGBおよびランダムカラー演算子を含む
+- [特性](/wiki/spec/trait)
+- [変数](/wiki/spec/variable)参照を持つ`variable`プロパティ
+- Set Image [ブロック](/wiki/spec/block)用の画像<Note note="要詳細説明" />
+
+### プレイヤーの優先順位
+
+プレイヤーは`datum`オブジェクトを以下の順序でチェックします：<Note note="要検証" />
+
+1. Set Image [ブロック](/wiki/spec/block)内の画像
+2. [変数](/wiki/spec/variable)参照
+3. [特性](/wiki/spec/trait)および[ブロック](/wiki/spec/block)
+
+### 算術演算子ブロック
+
+以下は加算(`+`)演算子ブロックをdatumとして持つMove Forwardブロックの例です：
+
+<p><img src="/img/parameters/addition-datums-example.png"
+	alt="Move forward by negative one, plus ten"
+height="50" /></p>
+
+```json
+{
+	"block_class": "method",
+	"type": 23,
+	"description": "Move Forward",
+	"parameters": [{
+		"value": "100",
+		"defaultValue": "100",
+		"key": "",
+		"type": 57, // MultiPurposeNumberDefault: parameter
+		"datum": {
+			"keyboardName": "Add",
+			"block_class": "operator",
+			"type": 4000, // MathOperatorAdd: block
+			"description": "+",
+			"params": [{
+				"defaultValue": "2",
+				"value": "-1",
+				"key": "",
+				"type": 57
+			}, {
+				"defaultValue": "3",
+				"value": "10",
+				"key": "+",
+				"type": 57
+			}]
+		}
+	}]
+}
+```
+
+算術演算子datumは一般的にネストされます：
+
+<p><img src="/img/parameters/nested-random-example.png"
+	alt="Change X by negative one, plus a random number between ten and fifty"
+height="50" /></p>
+
+```json
+{
+	"block_class": "method",
+	"description": "Change X by",
+	"type": 27,
+	"parameters": [{
+		"value": "100",
+		"defaultValue": "100",
+		"key": "",
+		"type": 57, // MultiPurposeNumberDefault: parameter
+		"datum": {
+			"keyboardName": "Add",
+			"block_class": "operator",
+			"type": 4000, // MathOperatorAdd: block
+			"description": "+",
+			"params": [{
+				"defaultValue": "2",
+				"value": "-1",
+				"key": "",
+				"type": 57 // MultiPurposeNumberDefault: parameter
+			}, {
+				"defaultValue": "3",
+				"value": "3",
+				"key": "+",
+				"type": 57, // MultiPurposeNumberDefault: parameter
+				"datum": {
+					"block_class": "operator",
+					"type": 4004, // MathOperatorRandom: parameter
+					"description": "Random",
+					"params": [{
+						"defaultValue": "1",
+						"value": "10",
+						"key": "",
+						"type": 45 // RandomLow: parameter
+					}, {
+						"defaultValue": "100",
+						"value": "50",
+						"key": "to",
+						"type": 46 // RandomHigh: parameter
+					}]
+				}
+			}]
+		}
+	}]
+}
+```
+
+### カラー演算子ブロック
+
+#### 単色
+
+エディタのカラーパレットから選択された色は**datumを使用しません。**
+
+:::note
+
+<Undocumented />
+{/* この部分はより適切な場所に移動する必要があります。 */}
+`value`プロパティは編集可能です。変更はエディタビューに反映されます。
+
+ただし、datumが追加された場合、この値は上書きされます。
+
+:::
+
+<p><img src="/img/parameters/plain-trail-color.png"
+	alt="Set trail color to pure black"
+height="50" /></p>
+
+```json
+{
+	"block_class": "method",
+	"description": "Set Trail Color",
+	"type": 32,
+	"parameters": [{
+		"defaultValue": "HSB(288,57,43)",
+		"value": "HSB(0,0,0)",
+		"key": "to",
+		"type": 44 // LineColor: parameter
+	}]
+}
+```
+
+#### ランダムカラー
+
+<p><img src="/img/parameters/random-trail-color.png"
+	alt="Set trail color to a random one"
+height="50" /></p>
+
+```json
+{
+	"block_class": "method",
+	"description": "Set Trail Color",
+	"type": 32,
+	"parameters": [{
+		"defaultValue": "HSB(288,57,43)",
+		"value": "HSB(353,96,83)", // plain color value is overridden by datum
+		"key": "to",
+		"type": 44, // LineColor: parameter
+		"datum": {
+			"type": 5000, // ColorOperatorRandom: block
+			"block_class": "operator",
+			"description": "Random"
+		}
+	}]
+}
+```
+
+#### RGBカラー
+
+<p><img src="/img/parameters/set-trail-color-rgb.png"
+	alt="Set RGB color to magenta"
+height="50" /></p>
+
+```json
+{
+	"block_class": "method",
+	"description": "Set Trail Color",
+	"type": 32,
+	"parameters": [{
+		"defaultValue": "HSB(288,57,43)",
+		"value": "HSB(288,57,43)", // plain color value is overridden by datum
+		"key": "to",
+		"type": 44, // LineColor: parameter
+		"datum": {
+			"type": 5001, // ColorOperatorRGB: block
+			"block_class": "operator",
+			"description": "RGB",
+			"params": [{
+				"value": "255",
+				"defaultValue": "34",
+				"key": "R",
+				"type": 57 // MultiPurposeNumberDefault: parameter
+			}, {
+				"value": "0",
+				"defaultValue": "246",
+				"key": "G",
+				"type": 57 // MultiPurposeNumberDefault: parameter
+			}, {
+				"value": "255",
+				"defaultValue": "217",
+				"key": "B",
+				"type": 57 // MultiPurposeNumberDefault: parameter
+			}]
+		}
+	}]
+}
+```
+
+#### HSBカラー
+
+<p><img src="/img/parameters/set-trail-color-hsb.png"
+	alt="Set HSB color to magenta"
+height="50" /></p>
+
+```json
+{
+	"block_class": "method",
+	"description": "Set Trail Color",
+	"type": 32,
+	"parameters": [{
+		"defaultValue": "HSB(288,57,43)",
+		"value": "HSB(288,57,43)", // plain color value is overridden by datum
+		"key": "to",
+		"type": 44, // LineColor: parameter
+		"datum": {
+			"type": 5002, // ColorOperatorHSB: block
+			"block_class": "operator",
+			"description": "HSB",
+			"params": [{
+				"value": "172",
+				"defaultValue": "172",
+				"key": "H",
+				"type": 57 // MultiPurposeNumberDefault: parameter
+			}, {
+				"value": "86",
+				"defaultValue": "86",
+				"key": "S",
+				"type": 57 // MultiPurposeNumberDefault: parameter
+			}, {
+				"value": "96",
+				"defaultValue": "96",
+				"key": "B",
+				"type": 57 // MultiPurposeNumberDefault: parameter
+			}]
+		}
+	}]
+}
+```
+
+### 変数参照
+
+#### ローカル変数
+
+ローカル変数はdatum内で完全にスコープされ、
+[variable](/wiki/spec/variable)参照を必要としません:
+
+<p><img src="/img/parameters/set-local-var.png"
+	alt="Set local variable to 10"
+height="50" /></p>
+
+```json
+{
+	"block_class": "method",
+	"type": 45, // SetVariable: block
+	"description": "Set",
+	"parameters": [{
+		"value": "",
+		"defaultValue": "",
+		"key": "",
+		"type": 47, // Variable: parameter
+		"datum": {
+			"type": 8009, // Scoped: block
+			"description": "Local Variable",
+			"name": "localVar"
+		}
+	}, {
+		"value": "10",
+		"defaultValue": "10",
+		"key": "to",
+		"type": 48 // VariableValue: parameter
+	}]
+}
+```
+
+#### その他の変数
+
+オブジェクト変数、Self変数、グローバル変数は外部の[variable](/wiki/spec/variable)への参照を保持します。
+
+`object`プロパティはオブジェクト変数にのみ含まれます。
+これは変数が格納されている[object](/wiki/spec/object)への参照です。
+
+<p><img src="/img/parameters/set-heart-object-var.png"
+	alt="Set heart object variable to 30"
+height="50" /></p>
+
+```json
+{
+	"block_class": "method",
+	"type": 45, // SetVariable: block
+	"description": "Set",
+	"parameters": [{
+		"value": "",
+		"defaultValue": "",
+		"key": "",
+		"type": 47, // Variable: parameter
+		"datum": {
+			"variable": "9A4C3DCD-5C4A-B35C-6C32-0D519B578B9E",
+			"description": "Variable",
+			// The variable type here can be the following:
+			// 8000, Object: block
+			// 8003, Game: block
+			// 8004, Self: block
+			"type": 8000, // Object: block
+			"object": "83217D2E-F034-4457-3BCB-48B715AFA3AD"
+		}
+	}, {
+		"value": "30",
+		"defaultValue": "10",
+		"key": "to",
+		"type": 48 // VariableValue: parameter
+	}]
+}
+```
+
+### 特性(Traits)
+
+<Undocumented message="Coming soon!" />
+
+### ネストされたDatums
+
+以下の例は、様々なdatumを含むこのブロックのJSON構造です:
+
+<p><img src="/img/parameters/nested-datums-example.png"
+	alt="Turn degrees block, with the parameter 90 plus the sine of variable gameVar"
+height="50" /></p>
+
+```json
+{
+	"block_class": "method",
+	"type": 24,
+	"description": "Turn",
+	"parameters": [{
+		"value": "90",
+		"defaultValue": "90",
+		"key": "degrees",
+		"type": 57,
+		"datum": {
+			"keyboardName": "Add",
+			"block_class": "operator",
+			"type": 4000,
+			"description": "+",
+			"params": [{
+				"defaultValue": "2",
+				"value": "90",
+				"key": "",
+				"type": 57
+			}, {
+				"defaultValue": "3",
+				"value": "3",
+				"key": "+",
+				"type": 57,
+				"datum": {
+					"keyboardName": "Sine",
+					"block_class": "operator",
+					"type": 4007,
+					"description": "Sin",
+					"params": [{
+						"defaultValue": "45",
+						"value": "3",
+						"key": "",
+						"type": 57,
+						"datum": {
+							"variable": "D9D0EA2D-C656-7C7A-8843-EF5716D2909C",
+							"description": "Variable",
+							"type": 8003
+						}
+					}]
+				}
+			}]
+		}
+	}]
+}
+```

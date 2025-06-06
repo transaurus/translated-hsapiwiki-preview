@@ -1,0 +1,242 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "wiki/02-spec/ability.mdx",
+  "source_file_content_hash": "bebc622935624a87db0e978a70bdd30cd901dd75c177ac0dc2ae15ca01ab3d83",
+  "segments": [
+    {
+      "segment_id": "a9b642df",
+      "source_content": "import {PropertyData} from '/src/components/PropertyData.tsx';",
+      "source_content_hash": "a46548d3cb4fee01faff4c9518d30095562bf3057cf11bc79da620ec9a177c97",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_a9b642df"
+      }
+    },
+    {
+      "segment_id": "adbc947a",
+      "source_content": "# Ability",
+      "source_content_hash": "a6386b0c6cb7759244ce7434267c26e867f10718192f01fce3d8a312bf86db08",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "# アビリティ"
+      }
+    },
+    {
+      "segment_id": "e7ec8f99",
+      "source_content": "An ability is a collection of [blocks](/wiki/spec/block) that are always\nreferenced by [rules](/wiki/spec/rule) and [loop blocks](/wiki/spec/block#loops).",
+      "source_content_hash": "4b9f4821f223c1ea4f1444b0704bd4e3c3baefea67fcc0f9f25404b27d95c2eb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "アビリティは[ブロック](/wiki/spec/block)の集合体であり、常に\n[ルール](/wiki/spec/rule)や[ループブロック](/wiki/spec/block#loops)から参照されます。"
+      }
+    },
+    {
+      "segment_id": "d912d376",
+      "source_content": "## Metadata",
+      "source_content_hash": "5f36ef31f13617511304433b9e9e4763415441830683815b42490db5074914cd",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## メタデータ"
+      }
+    },
+    {
+      "segment_id": "8a5f6a7b",
+      "source_content": "### `abilityID`",
+      "source_content_hash": "2ca22da2122e7e5f10aba4b87e7e2bd647a31158761f02c13ce1a48cc956b898",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `abilityID`"
+      }
+    },
+    {
+      "segment_id": "5da3670c",
+      "source_content": "<PropertyData type=\"string\" />",
+      "source_content_hash": "5a914b4a6d6fb58cc4e0a720243742dcd538cf38cf44c91ffb71a8c2d6a93971",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_5da3670c"
+      }
+    },
+    {
+      "segment_id": "cf898102",
+      "source_content": "The ability's unique identifier, referenced in\n[rules](/wiki/spec/rule#abilityid) and [loop blocks](/wiki/spec/block#controlscript).",
+      "source_content_hash": "2809f283191494c8f4e68b752a66b7391535c9a46b4dcfabcbbb7f161141da67",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "アビリティの一意な識別子で、\n[ルール](/wiki/spec/rule#abilityid)や[ループブロック](/wiki/spec/block#controlscript)から参照されます。"
+      }
+    },
+    {
+      "segment_id": "6e5ba8fb",
+      "source_content": "```json\n\"abilityID\": \"561D32F8-FD6B-45E0-9DFF-3191085E2351-3248-00005BE3B1E67098\"\n```",
+      "source_content_hash": "00cebe9a067cd642266e0c8dba6476a19c2425bdb50b997dfa9a8f59d455f5b9",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_6e5ba8fb"
+      }
+    },
+    {
+      "segment_id": "40f9552a",
+      "source_content": "### [`blocks`](/wiki/spec/block)",
+      "source_content_hash": "f64c4b1993dba62054f6fc52d8c9d119264f8648eea76ee0120c1b91ff90aaa7",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### [`blocks`](/wiki/spec/block)"
+      }
+    },
+    {
+      "segment_id": "0dc46dba",
+      "source_content": "<PropertyData type=\"array\" />",
+      "source_content_hash": "f82d6f49d0cc24b7fa09300e9122dfa0e79ec983960430f714b43daedd023fe5",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_0dc46dba"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "Contains [block](/wiki/spec/block) objects in the ability.",
+      "source_content_hash": "6ca5eec8321175e1b5d78c45f29254f58054760e5da435d879c3f619d5ed3111",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "アビリティ内の[ブロック](/wiki/spec/block)オブジェクトを含みます。"
+      }
+    },
+    {
+      "segment_id": "0c911872",
+      "source_content": "```json\n\"blocks\": []\n```",
+      "source_content_hash": "732b631b545e45592ed9c1788c851b33649cabf3f71513378bb51a23acf46704",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_0c911872"
+      }
+    },
+    {
+      "segment_id": "a1b3d8cb",
+      "source_content": "### `createdAt`",
+      "source_content_hash": "401586fa5be8ba88b1e3ed7cd4b8eed0801317dcb5d31cc8df20d8b37ce955f6",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `createdAt`"
+      }
+    },
+    {
+      "segment_id": "e7c54101",
+      "source_content": "<PropertyData type=\"number\" />",
+      "source_content_hash": "f4b234343b40b541c898334d8ed741dee04ca4677e6739b6c890abff052df6bf",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_e7c54101"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "The creation timestamp of the ability, representing the number of seconds since\nJanuary 1, 2001, 00:00 UTC.",
+      "source_content_hash": "653bfddb08660985311b2c27dc488b639a4985ad288bfc3c07b6adba8d5b42bc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "アビリティの作成タイムスタンプで、2001年1月1日00:00 UTCからの秒数で表されます。"
+      }
+    },
+    {
+      "segment_id": "3cfe6286",
+      "source_content": "Used to order custom blocks in the app's block picker.",
+      "source_content_hash": "648c7beb8a1d88890477f503fb1dee41055b336758356f8a90191d83e7041236",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "アプリのブロックピッカーでカスタムブロックを並べ替える際に使用されます。"
+      }
+    },
+    {
+      "segment_id": "d9330cd7",
+      "source_content": "```json\n\"createdAt\": 528311636.47971\n```",
+      "source_content_hash": "424a5fd287d16fc12f7d739c10a722336dac7d98262e6a516e1b3ec59f1ffed6",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_d9330cd7"
+      }
+    },
+    {
+      "segment_id": "c674e260",
+      "source_content": "## Metadata (Custom Block)",
+      "source_content_hash": "2edc1533fb187c96f52c9efdfa361cd22aa55e1171d6f967132750979e45e89a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## メタデータ（カスタムブロック）"
+      }
+    },
+    {
+      "segment_id": "6d28a77c",
+      "source_content": "### `name`",
+      "source_content_hash": "dd75848446db7aa8b86df07cb4decbc493252b3901dc97107e43c0237e41d1c4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `name`"
+      }
+    },
+    {
+      "segment_id": "b72935b5",
+      "source_content": "<PropertyData type=\"string\" />",
+      "source_content_hash": "5a914b4a6d6fb58cc4e0a720243742dcd538cf38cf44c91ffb71a8c2d6a93971",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_b72935b5"
+      }
+    },
+    {
+      "segment_id": "b36c6338",
+      "source_content": "The display name of a custom block.",
+      "source_content_hash": "479a4c2078784ca50a5088cc9156b3e48586f2f048c87a6c1b603bc87a974cb4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "カスタムブロックの表示名です。"
+      }
+    },
+    {
+      "segment_id": "b9aaa519",
+      "source_content": "If empty, a custom block will not appear in the app's block picker.\nBlocks with identical names can coexist without issues.",
+      "source_content_hash": "89faba9cde8ae4ed984de3b2825ba23a8224a20e477d8ce24555e3f2a507d819",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "空の場合、カスタムブロックはアプリのブロックピッカーに表示されません。\n同じ名前のブロックが複数存在しても問題ありません。"
+      }
+    },
+    {
+      "segment_id": "6d254e09",
+      "source_content": "```json\n\"name\": \"Do a Cool Trick\"\n```",
+      "source_content_hash": "b63f922f950d5fcb95da41746ce638acef19b58aede0b01c6cd1e382d2d50dc5",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_6d254e09"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/02-spec/ability.mdx",
+  "last_updated_timestamp": "2025-06-06T09:44:52.876714+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "ja": "bebc622935624a87db0e978a70bdd30cd901dd75c177ac0dc2ae15ca01ab3d83"
+  }
+}

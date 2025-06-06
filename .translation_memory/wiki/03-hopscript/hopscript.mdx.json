@@ -1,0 +1,182 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "wiki/03-hopscript/hopscript.mdx",
+  "source_file_content_hash": "2a22180b15cbfd217b272740374761d38ee63253394de63c1dc59a98f2c42bcd",
+  "segments": [
+    {
+      "segment_id": "76e4a56a",
+      "source_content": "# Hopscript",
+      "source_content_hash": "79e70deef5e99c8e4ee9692dca6de8dc0904a0f3920065b94226f5cc64c885d2",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "# Hopscript"
+      }
+    },
+    {
+      "segment_id": "adbc947a",
+      "source_content": "## Fundamental goals",
+      "source_content_hash": "48534f255827125f31e3f949aa2a26875a896a8a4edd81dc6022d0a2efd8c174",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## 基本目標"
+      }
+    },
+    {
+      "segment_id": "e7ec8f99",
+      "source_content": "The most important goals of hopscript should be:",
+      "source_content_hash": "33bb2ef7b068025ad272db4e51d90f1e40394ccb5a7eccbe235b067185825c74",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "Hopscriptの最も重要な目標は以下の通りです:"
+      }
+    },
+    {
+      "segment_id": "57e757df",
+      "source_content": "- Represent _any_ hopscotch code in a textual form.\n- Be simple to understand coming exclusively from regular hopscotch\n- Easily and simply interface with existing hopscotch code, both ways",
+      "source_content_hash": "714b1d3c544bcdf71a29ddade4ea099695f4a34a65fcbec6b020930ce915cfb9",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "ja": "- あらゆるHopscotchコードをテキスト形式で表現すること\n- 通常のHopscotchからの移行をシンプルに理解できること\n- 既存のHopscotchコードとの双方向の簡単なインターフェースを提供すること"
+      }
+    },
+    {
+      "segment_id": "8a5f6a7b",
+      "source_content": "## Secondary goals",
+      "source_content_hash": "651d5904928bce884093ed84fac2c2485b1435aa8e48cd641c282b1785d7d06d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## 二次的目標"
+      }
+    },
+    {
+      "segment_id": "180bddb1",
+      "source_content": "These are goals that are still very important, but not _quite_ as important as the ones above.",
+      "source_content_hash": "6ff9992d707b9f94bcd1dcaa9812af23e8adc548d85b7d638e54ff9ef9e96d2a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "これらは依然として非常に重要ですが、上記の目標ほどではありません。"
+      }
+    },
+    {
+      "segment_id": "4269e691",
+      "source_content": "- 1 to 1 dehopscotchification – dehopscotchify regular hopscotch code into hopscript that will\n  rehopscotchify into identical code, ignoring things like specific internal ids and such.\n- User defineable blocks – useful for modding\n- Reasonable response to name shadowing – if you have a local variable called `and` it should be\n  able to be unambiguously differentiated from the block called `and`, and the compiler should do that,\n  even if it isn't a particularly good variable name.\n- Easy extensibility – I ahve some ideas on how to do this later in this post.",
+      "source_content_hash": "24a23fc46feabecaa38000dc8b53974d16fbad96852b9940ea4df7b627204ad4",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "ja": "- 1対1のデホップスコッチ化 - 通常のHopscotchコードをHopscriptに変換し、内部IDなどの特定の要素を無視して同一のコードに再変換できること\n- ユーザー定義可能なブロック - モッド作成に有用\n- 名前のシャドウイングへの適切な対応 - `and`というローカル変数がある場合、`and`ブロックと明確に区別でき、変数名として適切でなくてもコンパイラが処理できること\n- 容易な拡張性 - この投稿の後半でいくつかのアイデアを提案予定"
+      }
+    },
+    {
+      "segment_id": "95b38f97",
+      "source_content": "## To-do list",
+      "source_content_hash": "473d29a5aef42bf7bbcd45684d7f11bbfaa5eb458e718d89e4958b6b69c33725",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## 実装予定リスト"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "Here is a list of what needs to happen to get to a finished version of hopscript. I have combined things that can be done simultaneously under a single number header",
+      "source_content_hash": "2449abd86a578b63acb0fdc6b160bb501b53921b51329a3c798051538250ed1d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "Hopscriptの完成版に向けて必要な作業のリストです。同時に実施可能な項目は単一の番号見出しにまとめています"
+      }
+    },
+    {
+      "segment_id": "3c36424c",
+      "source_content": "#### Step 1",
+      "source_content_hash": "23179f4d403dc5a18e4e227a4834577aab2722612b5b75af7d6d91f1d8d995a7",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "#### ステップ1"
+      }
+    },
+    {
+      "segment_id": "5da9e02b",
+      "source_content": "- Create first version of hsapi, needed for hopscotchification\n- Implement parser\n- Implement parts of the extensions section that don't require hsapi",
+      "source_content_hash": "5bcd6bdf09330ef05a7e90ce46c1a512ea63083ec600d3cf0c30a0afbab5280d",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "ja": "- Hopscotch化に必要なhsapiの初版を作成\n- パーサーの実装\n- hsapiを必要としない拡張機能セクションの一部を実装"
+      }
+    },
+    {
+      "segment_id": "a1b3d8cb",
+      "source_content": "#### Step 2",
+      "source_content_hash": "8df5d7a9a06c93c96ef1c3d15b5fc9e10696c7b5b356eb6ff0df3a7f7880bac9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "#### ステップ2"
+      }
+    },
+    {
+      "segment_id": "7a2e981c",
+      "source_content": "- Create hopscotchificator",
+      "source_content_hash": "0fe8b4bedf31678932e9a4dfee07badc9fd468f0d972b3af73dfcca82a08b95f",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "ja": "- Hopscotch化ツールの作成"
+      }
+    },
+    {
+      "segment_id": "80d9e13c",
+      "source_content": "#### Step 3",
+      "source_content_hash": "a2730e599548a4b00e608ea1c79f7925f0f502e8b2c5d3c31afa9a82daa6709c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "#### ステップ3"
+      }
+    },
+    {
+      "segment_id": "e7bc8c38",
+      "source_content": "- Make projects with hopscript and improve syntax\n- Create dehopscotchificator\n- Create extension interperator",
+      "source_content_hash": "41220a183137fca54c8dcb1f81ea4a525cc8761d93bb008577c4df5605431ec7",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "ja": "- Hopscriptを使用したプロジェクト作成と構文改善\n- デホップスコッチ化ツールの作成\n- 拡張機能インタープリターの作成"
+      }
+    },
+    {
+      "segment_id": "54268405",
+      "source_content": "#### Step 4",
+      "source_content_hash": "fa8fcf4f64273149dfedce232107b2fb1cdec67656e38c442c428cda249170e6",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "#### ステップ4"
+      }
+    },
+    {
+      "segment_id": "824626b3",
+      "source_content": "- Start using extensions more in base hopscript, ie remove hardcoded definitions of scopes",
+      "source_content_hash": "30bd42ca811b769cbdd93a9da08e19b8e99f2da2fca6fab814d2d166602f99de",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "ja": "- 基本Hopscriptで拡張機能をより活用開始（例: スコープのハードコード定義の削除）"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/03-hopscript/hopscript.mdx",
+  "last_updated_timestamp": "2025-06-06T09:44:52.879165+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "ja": "2a22180b15cbfd217b272740374761d38ee63253394de63c1dc59a98f2c42bcd"
+  }
+}

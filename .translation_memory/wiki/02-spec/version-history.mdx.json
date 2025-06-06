@@ -1,0 +1,252 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "wiki/02-spec/version-history.mdx",
+  "source_file_content_hash": "b86afb8a3c69b59d06fb0a768ba6803d0338582e3a6bca14c482dc0fb8051326",
+  "segments": [
+    {
+      "segment_id": "a9b642df",
+      "source_content": "import Undocumented from '/src/components/Undocumented.tsx';",
+      "source_content_hash": "a1293916ad057fbd588510885dd804c132a776df268dbbd3831dbff64ed35062",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_a9b642df"
+      }
+    },
+    {
+      "segment_id": "4dbcc3b4",
+      "source_content": "# Version History",
+      "source_content_hash": "7f6430f9e25c8f21d2614ba0816cdf3b19c7209ef0756614f3e6664e2a6e69df",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "# バージョン履歴"
+      }
+    },
+    {
+      "segment_id": "4d1292be",
+      "source_content": "import {ExternalLinkIcon} from \"/src/components/ExternalLinkIcon.tsx\";\nimport Button from \"/src/components/Button.tsx\";",
+      "source_content_hash": "6482e217af733d0de54f81d6043a91b2524bb5cf28166ed4fcfec55c98a44855",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_4d1292be"
+      }
+    },
+    {
+      "segment_id": "73ddcfdf",
+      "source_content": "export const PlayerVersion = ({children, version}) => (\n          <div>\n                    <h3>{version}</h3>\n                    <Button\n                              label={version + \" Web Player Source\"}\n                              variant=\"secondary\"\n                              link={\"https://hs-tools-api.up.railway.app/webplayer/\" + version}\n                              outline external\n                    />\n          </div>\n);",
+      "source_content_hash": "ef33e1c649792b086937c29518343125347e4d9571f14181a0d081a01b04417f",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_73ddcfdf"
+      }
+    },
+    {
+      "segment_id": "63622bf0",
+      "source_content": "## Player Versions",
+      "source_content_hash": "099946add11aa0a9fef8839e779b878a44251068bd8485ddbe8de0f67ad7f44c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## プレイヤーバージョン"
+      }
+    },
+    {
+      "segment_id": "95b38f97",
+      "source_content": "### 2.X",
+      "source_content_hash": "e127e15bf407d7e431044cb3dc4176adb5ecf27e47dccefc84387a74873eb3af",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### 2.X"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "Player versions `>=2.0` are currently shipped in production.",
+      "source_content_hash": "db73d8197fb4c7f8092989fbdc3e44e6b3148d5f61d209e7c949b68e32f2a372",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "バージョン`2.0`以上のプレイヤーが現在本番環境で提供されています。"
+      }
+    },
+    {
+      "segment_id": "d9172fa4",
+      "source_content": "[Project types](/wiki/spec/overview#viewing-types) are shared between all web player versions.",
+      "source_content_hash": "f6a26a179f96776b7c6c1cab54c4eb8a6cdf15665760b30facaa00c594343c97",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "[プロジェクトタイプ](/wiki/spec/overview#viewing-types)は全てのウェブプレイヤーバージョン間で共有されます。"
+      }
+    },
+    {
+      "segment_id": "f79f5ed0",
+      "source_content": ":::info\n\nParameters added later on, such as project ID and trail cap, have not\nbeen added to the webplayer yet.\n\n:::",
+      "source_content_hash": "c553e661eea40c044a32d74cfd3c6d130326f498a4d998f94c01dd3b943bc3b4",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "ja": ":::info\n\n後から追加されたパラメータ（プロジェクトIDやトレイルキャップなど）は、\nまだウェブプレイヤーには実装されていません。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "7b66d6d6",
+      "source_content": "<PlayerVersion version=\"2.0.9\" />",
+      "source_content_hash": "c0b0b934103dfa9099670ce12074b73a471ecd38e0352ba2a360b961da87fa84",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_7b66d6d6"
+      }
+    },
+    {
+      "segment_id": "100eac36",
+      "source_content": "<PlayerVersion version=\"2.1.7\" />",
+      "source_content_hash": "4670cf107cf5a6aa780d7a7046c7965192d35b1a7373beebc6e1db1e2fee8302",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_100eac36"
+      }
+    },
+    {
+      "segment_id": "d1ce550c",
+      "source_content": "<PlayerVersion version=\"2.2.3\" />",
+      "source_content_hash": "5714a599dbd50b667bfda304a2934a6d72a28ca099ea9999b47fbeb29490ef23",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_d1ce550c"
+      }
+    },
+    {
+      "segment_id": "54268405",
+      "source_content": "### 1.X (Legacy)",
+      "source_content_hash": "5a7eeba5cb4d8447e2e68001bf3ee8bd39ee2b4a938ca2df6d080f6bdd94e657",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### 1.X (レガシー)"
+      }
+    },
+    {
+      "segment_id": "f5276727",
+      "source_content": "<Undocumented message=\"Coming soon!\" />",
+      "source_content_hash": "92704a62f35d64b4d059f4d6fcafcf88204e452605a1d337048d39c70598f75d",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_f5276727"
+      }
+    },
+    {
+      "segment_id": "6f930b2f",
+      "source_content": "## App Versions",
+      "source_content_hash": "512ec0642900e6391d6485c0fa732eee0b0497fdb957d2708402d52c0893156e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## アプリバージョン"
+      }
+    },
+    {
+      "segment_id": "c504c207",
+      "source_content": "The following app versions correspond to the `version` key in projects:",
+      "source_content_hash": "ba9d33b6922ca100da8883fe0a151ad4bec9b5d02a5452f9111d3db021e11814",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "以下のアプリバージョンはプロジェクト内の`version`キーに対応しています："
+      }
+    },
+    {
+      "segment_id": "c6cc90a0",
+      "source_content": "### &lt;&equals;24",
+      "source_content_hash": "8eac32d421decc0c0aa37555820adcb964835d8324d59921edeaa7a24198d6e5",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### &lt;&equals;24"
+      }
+    },
+    {
+      "segment_id": "d3649a1e",
+      "source_content": "Older versions use the old non-web player.",
+      "source_content_hash": "16b6433e406a8f8a3695efc83654e6042b1d6d75397e7360e7ef01caa47c5e39",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "古いバージョンでは旧式の非ウェブプレイヤーが使用されます。"
+      }
+    },
+    {
+      "segment_id": "e50bebbf",
+      "source_content": "### 26",
+      "source_content_hash": "740372c78b2f60acffb740582d4649b4eeee145c19d78f69bcc793df425d11e8",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### 26"
+      }
+    },
+    {
+      "segment_id": "23dfb152",
+      "source_content": "Adds object variables.",
+      "source_content_hash": "c1142b85bf58fc8a12ffcdfd3058894fc4ae8055a0fc1092b863520a4e29192a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "オブジェクト変数を追加。"
+      }
+    },
+    {
+      "segment_id": "e912d935",
+      "source_content": "### 28",
+      "source_content_hash": "00ff6789681068fa61273228e873fa61162ef8f0f1538958ffa9a0ddb21fa99d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### 28"
+      }
+    },
+    {
+      "segment_id": "8b2a52b1",
+      "source_content": "Adds custom `when` rules.",
+      "source_content_hash": "5773e680e4a4c0b76aa36be64198853d6c89a74fad7afb76829aa4482d72684b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "カスタム`when`ルールを追加。"
+      }
+    },
+    {
+      "segment_id": "126950d7",
+      "source_content": "### 34",
+      "source_content_hash": "34c90a48295eed71a563936b9be4929c1edec6273bf6efcdeecd79ebfb389f23",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### 34"
+      }
+    },
+    {
+      "segment_id": "0bb95128",
+      "source_content": "Current version (as of August 2022).",
+      "source_content_hash": "6a190d04971605db618cdff0d059867d4796ba4b39806ea679cc42a4265144bf",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "現在の最新バージョン（2022年8月時点）。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/02-spec/version-history.mdx",
+  "last_updated_timestamp": "2025-06-06T09:44:52.876933+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "ja": "b86afb8a3c69b59d06fb0a768ba6803d0338582e3a6bca14c482dc0fb8051326"
+  }
+}

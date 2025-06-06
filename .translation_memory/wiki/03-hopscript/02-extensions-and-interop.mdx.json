@@ -1,0 +1,272 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "wiki/03-hopscript/02-extensions-and-interop.mdx",
+  "source_file_content_hash": "19824ff29d0ec0d7e78f772c2488472702ea7ab8bba24a2c60dbe64d64322966",
+  "segments": [
+    {
+      "segment_id": "76e4a56a",
+      "source_content": "# Extensions and Interop",
+      "source_content_hash": "18865cd21c319eae749c803587500efbe7848d862562632ced1e299cdbf99e96",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "# 拡張機能と相互運用性"
+      }
+    },
+    {
+      "segment_id": "adbc947a",
+      "source_content": "## `.hopscotch` format interoperability",
+      "source_content_hash": "e3f085df5dbe4dbb95e08414dfab8debecf88646b63961e11cba6562b3fbf8ea",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## `.hopscotch` フォーマットとの相互運用"
+      }
+    },
+    {
+      "segment_id": "e7ec8f99",
+      "source_content": "You should be able to import hopscotch projects, or partial hopscotch projects (only includes certain top-level keys such as `abilities` or `objects`, but not all of them) just like regular hopscript files. We should at the very least support full hopscotch projects and ae's hspre and _mayeb_ hsprez formats, which are basically just partial hopscotch projects or zipped partial hopscotch projects. See the section on multi-file projects for how this would behave to the user, and the section on name-dehopscotchification below for how names would work.",
+      "source_content_hash": "8ee9f9cdd6f0922b66895eb7c397538d5371574477a7674602f9d7766a46f685",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "Hopscotchプロジェクトや部分的なHopscotchプロジェクト（`abilities`や`objects`などの特定のトップレベルキーのみを含む）を通常のHopscriptファイルと同様にインポートできるようにする必要があります。少なくとも、完全なHopscotchプロジェクトとaeのhspre形式、おそらくhsprez形式（基本的に部分的なHopscotchプロジェクトまたはそれらをZIP化したもの）をサポートする必要があります。ユーザーにとっての動作についてはマルチファイルプロジェクトのセクションを、名前のデホップスコッチ化については以下のセクションを参照してください。"
+      }
+    },
+    {
+      "segment_id": "a703643c",
+      "source_content": "## Extensions",
+      "source_content_hash": "2c61e8ea600219386788eded9b437b51a3d9e85ea371a8d330dda8883bafb8f3",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## 拡張機能"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "Extensions are not necessarily something that is essential to have fully finished for the very first version of hopscript, but allowing extending the language to add more features or to accomodate various modding purposes would be very helpful.",
+      "source_content_hash": "b86359df0dcb35b3cf731e1dcda091dd3e0286c162fc1fe06e51c3df04ea73ef",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "拡張機能は、Hopscriptの最初のバージョンで完全に完成させる必要があるものではありませんが、言語を拡張してより多くの機能を追加したり、さまざまな改造目的に対応できるようにすることは非常に役立ちます。"
+      }
+    },
+    {
+      "segment_id": "8a5f6a7b",
+      "source_content": "## Basic type definitions",
+      "source_content_hash": "2d7bcd1dedada5ebcf27a8d4a93f050736fd066c809fb1a6eaacfed1a8dd0785",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## 基本的な型定義"
+      }
+    },
+    {
+      "segment_id": "180bddb1",
+      "source_content": "This referes to not _really_ extensions of the language, rather just defining new types of blocks or objects. This _is_ essential for the first version of hopscript, because this is how blocks will be defined. The hopscotchifier/compiler itself won't know what any type of block actually is, that will all be defined in hopscript.",
+      "source_content_hash": "f7a6c2811fc87d59e86d28252263610a8aba19c9117a8d2fe9bd3b9f0a7765a3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "これは言語の「真の」拡張ではなく、新しいタイプのブロックやオブジェクトを定義することです。これはHopscriptの最初のバージョンで必須です。なぜなら、これがブロックを定義する方法だからです。ホップスコッチ化ツール/コンパイラ自体は、どのタイプのブロックが何であるかを知らず、それらはすべてHopscriptで定義されます。"
+      }
+    },
+    {
+      "segment_id": "cf898102",
+      "source_content": "I do not have any idea what the specific syntax for this would be, but what I have in my current implementation, but do not like, is something like this following:",
+      "source_content_hash": "8654b8ad0206cd16bb68d6e64d1aab73a8deea1d2966b18ce39b2f8e7e5fbc0c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "具体的な構文についてはまだ明確なアイデアはありませんが、現在の実装で気に入っていないものは以下のようなものです："
+      }
+    },
+    {
+      "segment_id": "3daf1b88",
+      "source_content": "### Object types",
+      "source_content_hash": "d935904fe666789e3255a39b31d9dc4cf4c8bdda0880e970b2f1fad0dcc9c021",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### オブジェクトタイプ"
+      }
+    },
+    {
+      "segment_id": "f6168993",
+      "source_content": "`_defineObjectType <name> <id> <filename> <width> <height>`\nexample:\n`_defineObjectType text 1 \"text-object.png\" 74 55`",
+      "source_content_hash": "0ecd2a1f7019528148d66a9e61b6827b6e097a0e60940b320a5cfb185457617c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "`_defineObjectType <名前> <ID> <ファイル名> <幅> <高さ>`\n例：\n`_defineObjectType text 1 \"text-object.png\" 74 55`"
+      }
+    },
+    {
+      "segment_id": "40f9552a",
+      "source_content": "### Blocks",
+      "source_content_hash": "468f1bef2f8a76f4e175645ba40b37ff921c60ca5657692f12c03d36643316fc",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### ブロック"
+      }
+    },
+    {
+      "segment_id": "f2c2bdd0",
+      "source_content": "`_defineBlockType <block class> <name> <type> <json description> [parameters, if applicable]`\nthe parameters take the format of:\n`<type> <label> <json key> <default value>, `\nFor example, a method block:\n`_defineBlockType method set_position 41 \"Set Position\" 42 to_x \"to x\" \"200\", 42 y \"y\" \"200\", `\nan operator block that is an event:\n`_defineBlockType operator(Event) i_get_a_message 7023 \"I Get a Message\" 53 _ \"I get a message\" \"\", `\nOperators specify return type.\nA conditional operator:\n`_defineBlockType conditionalOperator(Boolean) less_than 1002 \"＜\" 57 _ \"\" \"6\", 57 _ \"＜\" \"7\", `\n^^ conditional operators are, from hopscript's point of view identical to an operator/expression. However, for hopscotchification they are different.",
+      "source_content_hash": "e163a15c2460e98ce9402c19807e98ee13b483a9b4aafecf0e7337735763e742",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "`_defineBlockType <ブロッククラス> <名前> <タイプ> <JSON記述> [適用可能な場合、パラメータ]`\nパラメータの形式は：\n`<タイプ> <ラベル> <JSONキー> <デフォルト値>, `\n例えば、メソッドブロック：\n`_defineBlockType method set_position 41 \"Set Position\" 42 to_x \"to x\" \"200\", 42 y \"y\" \"200\", `\nイベントとしての演算子ブロック：\n`_defineBlockType operator(Event) i_get_a_message 7023 \"I Get a Message\" 53 _ \"I get a message\" \"\", `\n演算子は戻り値のタイプを指定します。\n条件演算子：\n`_defineBlockType conditionalOperator(Boolean) less_than 1002 \"＜\" 57 _ \"\" \"6\", 57 _ \"＜\" \"7\", `\n^^ 条件演算子は、Hopscriptの観点では演算子/式と同一です。ただし、ホップスコッチ化においては異なります。"
+      }
+    },
+    {
+      "segment_id": "3b7478ea",
+      "source_content": "### Binary operators",
+      "source_content_hash": "88287e7f2aef5449fab430dd8955b44940f50d12fe30005e2fc49a45ad810344",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### 二項演算子"
+      }
+    },
+    {
+      "segment_id": "c3a738de",
+      "source_content": "`_defineBinaryOperator <operator> <block name>`\n^^ This exact format won't work directly in the hopscript described in this post, because it doesn't specify wheteher it is for the expression context or the method context.\nexample:\n`_defineBinaryOperator - subtract`",
+      "source_content_hash": "0981b21e954c13dbc6b97dea110bbe7e90b9d43c86e53fbbe75d508a1b08f069",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "`_defineBinaryOperator <演算子> <ブロック名>`\n^^ この正確な形式は、この記事で説明されているHopscriptでは直接機能しません。なぜなら、式コンテキストまたはメソッドコンテキストのどちらかを指定していないからです。\n例：\n`_defineBinaryOperator - subtract`"
+      }
+    },
+    {
+      "segment_id": "54268405",
+      "source_content": "### Traits",
+      "source_content_hash": "03dce4ea01dd45ee2fbbd7f0855bf07479137e3ce244251b1afaba267e9bd769",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### 特性"
+      }
+    },
+    {
+      "segment_id": "8af76f3d",
+      "source_content": "`_defineTraitType <value type> <name> <type> <json description> [<scopes>]`\nexample:\n`_defineTraitType Number rotation 2000 \"Rotation\" [Object, ]`",
+      "source_content_hash": "ccc315d8f185754e2d9dbf0b9b7534f4d2db420fc768a771adc5c5e80c823c14",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "`_defineTraitType <値のタイプ> <名前> <タイプ> <JSON記述> [<スコープ>]`\n例：\n`_defineTraitType Number rotation 2000 \"Rotation\" [Object, ]`"
+      }
+    },
+    {
+      "segment_id": "6d28a77c",
+      "source_content": "### Parameter types",
+      "source_content_hash": "6d2d125f81f5b2b9bfd4fc56bee37564b32ba2cb3ca10d8fe2e540a70a6c050e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### パラメータタイプ"
+      }
+    },
+    {
+      "segment_id": "f7ef78f9",
+      "source_content": "`_defineParameterType <type> <hopscript types>`\nTells hopscript what type(s) each parameter type accepts. Useful for autocomplete suggestions, and for hopscotchification in some cases (primarily scenes)\nexample:\n`_defineParameterType 42 String Number `",
+      "source_content_hash": "df2664aa7c77a7e2838033eb8143db1e64f18fe730976aa616d0ad23a33602a1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "`_defineParameterType <タイプ> <Hopscriptタイプ>`\n各パラメータタイプが受け入れるタイプをHopscriptに伝えます。オートコンプリートの提案や、一部の場合（主にシーン）のホップスコッチ化に役立ちます。\n例：\n`_defineParameterType 42 String Number `"
+      }
+    },
+    {
+      "segment_id": "e50bebbf",
+      "source_content": "### Setting `requires_beta_editor`",
+      "source_content_hash": "099c5a3216116b48a7cccf90f63b508cf6234e114e0e622f4dd42aa3a56e45ef",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `requires_beta_editor` の設定"
+      }
+    },
+    {
+      "segment_id": "23dfb152",
+      "source_content": "`_setRequiresBetaEditor <boolean>`\nSets the requires beta editor value in the project json. Needed exclusively for the advanced mode file to properly re-create how the app works.",
+      "source_content_hash": "b6b7feee0f7dc0cdd0c285ea41c66ea10a4ff3f0e7964c0c262874ee24f2eaa9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "`_setRequiresBetaEditor <ブール値>`\nプロジェクトJSON内のrequires_beta_editor値を設定します。アプリの動作を正確に再現するために、アドバンストモードファイルでのみ必要です。"
+      }
+    },
+    {
+      "segment_id": "c431704b",
+      "source_content": "## Modifier extensions",
+      "source_content_hash": "5fe7169bd7dad3669ad8b8c66209c3ea9e5036c4459060eddb9932710a1c510d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## 修飾子拡張"
+      }
+    },
+    {
+      "segment_id": "79ad944d",
+      "source_content": "These are more substantial changes to the behavior of the language. They allow defining new scopes, modifying hopscotchified code, etc. Eventually, all scopes should be defined through extensions like this, but for the first version it might be okay to hardcode what `Game` or `Local` etc. hopscotchify to.",
+      "source_content_hash": "d60035e55550718125df32c255f45fd4df3f920a8b78904115fb6cf65f49da86",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "これらは言語の動作をより実質的に変更するものです。新しいスコープの定義や、hopscotch化されたコードの修正などが可能になります。最終的には、すべてのスコープがこのような拡張機能を通じて定義されるべきですが、最初のバージョンでは`Game`や`Local`などが何にhopscotch化されるかをハードコードしても問題ないかもしれません。"
+      }
+    },
+    {
+      "segment_id": "531437ca",
+      "source_content": "These will take the form of hopscript files that instead of being made for the hopscotch player are made for a custom interperator. Instead of implicitly importing basic hopscotch blocks, they will implicitly import blocks that are meaningful to _our_ interperator. This code will run as the project is hopscotchified and be allowed to use blocks that call hsapi to modify the hopscotchified code. For example:",
+      "source_content_hash": "3d8ab2e6bd2b39bf5d7ef7370d1abd02b40006555174e31d0fd496710ca21319",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "これらは、Hopscotchプレイヤー向けではなく、カスタムインタプリタ向けに作成されたHopscriptファイルの形式を取ります。基本的なHopscotchブロックを暗黙的にインポートする代わりに、_私たちの_インタプリタにとって意味のあるブロックを暗黙的にインポートします。このコードはプロジェクトがhopscotch化される際に実行され、hsapiを呼び出すブロックを使用してhopscotch化されたコードを修正することが許可されます。例えば："
+      }
+    },
+    {
+      "segment_id": "67b24fc5",
+      "source_content": "```hopscript\n# It doesn't look like it, but `Scope` could be defined as an object type.\nScope Game:\n\tWhen i_am_used:\n\t\t# Note the use of the `Rule` scope to refer to \"arguments\" to the rule. These could be implemented as traits, and are specific to our interperator\n\t\t# In this example, the `i_am_used` rule is called whenever a scope called `Game` is used for a non-trait variable, and is expected to use the `return` block to return an hsapi object that can be used as an expression.\n\t\thsapi_create_variable(named: Rule.variable_name, type: HSBlockType.Game, store_into: result)\n\t\treturn(result)\n# `enum` could be another object type\n# I don't think enums should be included as a feature in our interperator, but it is an example of an extension, and extensions should also be able to be used in extensions, as long as it isn't recursive or something.\nenum HSBlockType:\n\t...\n\tGame = 8003\n\t...\n```",
+      "source_content_hash": "122066723bdc37d40efe62b77e807f066312126471c892eb83971b7282a56de6",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_67b24fc5"
+      }
+    },
+    {
+      "segment_id": "a1fa5396",
+      "source_content": "The specifics of this example are not really my favorite, but to really figure out what this will look like we will need to make a lot more progress on the hopscotchifier/compiler. It is okay for extensions to have to have some more knowledge of the compiler internals.",
+      "source_content_hash": "c9dca8938e27d5e17429fa4d3fa7af23d0261b07caefe2f736154b748e4c8d2d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "この例の具体的な内容は私の好みではありませんが、これがどのようなものになるかを本当に理解するためには、hopscotch化ツール/コンパイラについてさらに多くの進展が必要です。拡張機能がコンパイラの内部についてある程度の知識を必要とすることは問題ありません。"
+      }
+    },
+    {
+      "segment_id": "ec619944",
+      "source_content": "Extensions should be able to be imported somehow, and should only affect files that opt-in to them (though should also be able to do some things over the whole project, but things like scopes defined in an extension should need to be explicitly opted-in to.)",
+      "source_content_hash": "2f0296ca023387f7b9c33bbc976301e4d84e16a6ba88b46663bf8f1f3ee2b2c8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "拡張機能は何らかの方法でインポート可能であるべきであり、それらをオプトインしたファイルにのみ影響を与えるべきです（ただし、プロジェクト全体に対して何らかの処理を行うことも可能であるべきです。ただし、拡張機能で定義されたスコープなどのものは明示的にオプトインされる必要があります。）"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/03-hopscript/02-extensions-and-interop.mdx",
+  "last_updated_timestamp": "2025-06-06T09:44:52.876472+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "ja": "19824ff29d0ec0d7e78f772c2488472702ea7ab8bba24a2c60dbe64d64322966"
+  }
+}

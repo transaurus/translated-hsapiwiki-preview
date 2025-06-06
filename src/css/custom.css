@@ -1,0 +1,65 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-font-family-base: 'Figtree', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont,
+    'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', monospace;
+  --ifm-font-family-monospace: 'Source Code Pro', SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --ifm-color-primary: #049072;
+  --ifm-color-primary-dark: #048267;
+  --ifm-color-primary-darker: #037a61;
+  --ifm-color-primary-darkest: #036550;
+  --ifm-color-primary-light: #049e7d;
+  --ifm-color-primary-lighter: #05a683;
+  --ifm-color-primary-lightest: #05bb94;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #00d8be;
+  --ifm-color-primary-dark: #00c2ab;
+  --ifm-color-primary-darker: #00b8a2;
+  --ifm-color-primary-darkest: #009785;
+  --ifm-color-primary-light: #00eed1;
+  --ifm-color-primary-lighter: #00f8db;
+  --ifm-color-primary-lightest: #1affe3;
+  /* --ifm-background-color: #1d141d !important; */
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+
+  --hsapi-docsearch-gray: #767676;
+  --docsearch-text-color: #f7f7f7 !important;
+  /* linear-gradient(-26.5deg,#565872,#31355b) */
+
+  --docsearch-key-gradient: linear-gradient(-26-26.5deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 28%) !important;
+  --docsearch-key-shadow: inset 0 -2px 0 0 #606060,inset 0 0 1px 1px #787878,0 2px 2px 0 rgba(0, 0, 0, 0.3) !important;
+  --docsearch-modal-shadow: inset 1px 1px 0 0 #343434,0 3px 8px 0 #000000 !important;
+  --docsearch-footer-shadow: inset 0 1px 0 0 rgba(107, 107, 107, 0.5),0 -4px 8px 0 rgba(0,0,0,0.2) !important;
+
+  --docsearch-modal-background: var(--ifm-background-color) !important;
+  --docsearch-footer-background: var(--ifm-background-color) !important;
+  --docsearch-muted-color: var(--hsapi-docsearch-gray) !important;
+
+  .DocSearch-Logo > a > svg {
+    /* Very similar color as var(--hsapi-docsearch-gray) */
+    filter: brightness(0) saturate(100%) invert(53%) sepia(11%) saturate(0%) hue-rotate(219deg) brightness(85%) contrast(91%) !important;
+  }
+}
+
+.table-vertical th {
+  background-color: var(--ifm-table-background);
+}
+
+.table-vertical td {
+  background-color: var(--ifm-table-stripe-background);
+}
+
+.table-vertical tr:nth-child(2n) {
+  background-color: inherit;
+}

@@ -1,0 +1,63 @@
+import Undocumented from '/src/components/Undocumented.tsx';
+
+# バージョン履歴
+
+import {ExternalLinkIcon} from "/src/components/ExternalLinkIcon.tsx";
+import Button from "/src/components/Button.tsx";
+
+export const PlayerVersion = ({children, version}) => (
+          <div>
+                    <h3>{version}</h3>
+                    <Button
+                              label={version + " Web Player Source"}
+                              variant="secondary"
+                              link={"https://hs-tools-api.up.railway.app/webplayer/" + version}
+                              outline external
+                    />
+          </div>
+);
+
+## プレイヤーバージョン
+
+### 2.X
+
+バージョン`2.0`以上のプレイヤーが現在本番環境で提供されています。
+
+[プロジェクトタイプ](/wiki/spec/overview#viewing-types)は全てのウェブプレイヤーバージョン間で共有されます。
+
+:::info
+
+後から追加されたパラメータ（プロジェクトIDやトレイルキャップなど）は、
+まだウェブプレイヤーには実装されていません。
+
+:::
+
+<PlayerVersion version="2.0.9" />
+
+<PlayerVersion version="2.1.7" />
+
+<PlayerVersion version="2.2.3" />
+
+### 1.X (レガシー)
+
+<Undocumented message="Coming soon!" />
+
+## アプリバージョン
+
+以下のアプリバージョンはプロジェクト内の`version`キーに対応しています：
+
+### &lt;&equals;24
+
+古いバージョンでは旧式の非ウェブプレイヤーが使用されます。
+
+### 26
+
+オブジェクト変数を追加。
+
+### 28
+
+カスタム`when`ルールを追加。
+
+### 34
+
+現在の最新バージョン（2022年8月時点）。

@@ -1,0 +1,152 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "wiki/02-spec/custom-rule.mdx",
+  "source_file_content_hash": "63e9c489a7a6d4a8731e9229fdc881af1ac1c8ee9b7296422eb4f32107a03063",
+  "segments": [
+    {
+      "segment_id": "a9b642df",
+      "source_content": "import Undocumented from '/src/components/Undocumented.tsx';",
+      "source_content_hash": "a1293916ad057fbd588510885dd804c132a776df268dbbd3831dbff64ed35062",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_a9b642df"
+      }
+    },
+    {
+      "segment_id": "4dbcc3b4",
+      "source_content": "# Custom Rule",
+      "source_content_hash": "4e3f758f2d37f420de4dd9eb341836c4206e3b63c063d41c9f734d0b92bca306",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "# カスタムルール"
+      }
+    },
+    {
+      "segment_id": "c9ed38fc",
+      "source_content": "<Undocumented message=\"Coming soon!\" />",
+      "source_content_hash": "92704a62f35d64b4d059f4d6fcafcf88204e452605a1d337048d39c70598f75d",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_c9ed38fc"
+      }
+    },
+    {
+      "segment_id": "d912d376",
+      "source_content": "## Properties",
+      "source_content_hash": "899ecb557156d36aac98f2082474f5ea1e01af3d4a611b79b00dab2a3116aab2",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## プロパティ"
+      }
+    },
+    {
+      "segment_id": "8a5f6a7b",
+      "source_content": "### `abilityId`",
+      "source_content_hash": "61a187268899c6fd3bd88c338a02b082a0a702c33bac4bfb194d8f52d4fd0db8",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `abilityId`"
+      }
+    },
+    {
+      "segment_id": "321c5251",
+      "source_content": "<Undocumented />",
+      "source_content_hash": "54a8eb1e66ea7817b1ccc114f80204ec97c8b398f6755d941e87335ed8b665f4",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_321c5251"
+      }
+    },
+    {
+      "segment_id": "70153c6e",
+      "source_content": "### `id`",
+      "source_content_hash": "6fa10ecc5949d933365af59824901f344e8a5ed1c7d28cb9c17847fab685f567",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `id`"
+      }
+    },
+    {
+      "segment_id": "4b7cc23c",
+      "source_content": "<Undocumented />",
+      "source_content_hash": "54a8eb1e66ea7817b1ccc114f80204ec97c8b398f6755d941e87335ed8b665f4",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_4b7cc23c"
+      }
+    },
+    {
+      "segment_id": "3daf1b88",
+      "source_content": "### `name`",
+      "source_content_hash": "dd75848446db7aa8b86df07cb4decbc493252b3901dc97107e43c0237e41d1c4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `name`"
+      }
+    },
+    {
+      "segment_id": "21c93b79",
+      "source_content": "<Undocumented />",
+      "source_content_hash": "54a8eb1e66ea7817b1ccc114f80204ec97c8b398f6755d941e87335ed8b665f4",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_21c93b79"
+      }
+    },
+    {
+      "segment_id": "bc633244",
+      "source_content": "### `parameters`",
+      "source_content_hash": "6c06d15ab294137f11b61b9a918350566a47b3087be22b7a2bff66880201bc1e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `parameters`"
+      }
+    },
+    {
+      "segment_id": "1485a88b",
+      "source_content": "<Undocumented />",
+      "source_content_hash": "54a8eb1e66ea7817b1ccc114f80204ec97c8b398f6755d941e87335ed8b665f4",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_1485a88b"
+      }
+    },
+    {
+      "segment_id": "40f9552a",
+      "source_content": "### `rules`",
+      "source_content_hash": "160926a39f3c9a6dc18776f2594d27e6a06d4d3b1e6dcce3cc1c4f89de854a60",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `rules`"
+      }
+    },
+    {
+      "segment_id": "42e34e45",
+      "source_content": "<Undocumented />",
+      "source_content_hash": "54a8eb1e66ea7817b1ccc114f80204ec97c8b398f6755d941e87335ed8b665f4",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_42e34e45"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/02-spec/custom-rule.mdx",
+  "last_updated_timestamp": "2025-06-06T09:44:52.874741+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "ja": "63e9c489a7a6d4a8731e9229fdc881af1ac1c8ee9b7296422eb4f32107a03063"
+  }
+}

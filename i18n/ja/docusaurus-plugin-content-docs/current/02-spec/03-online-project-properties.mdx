@@ -1,0 +1,54 @@
+import Undocumented from '/src/components/Undocumented.tsx';
+import {PropertyData} from '/src/components/PropertyData.tsx';
+import Note from '/src/components/Note.tsx';
+
+# オンラインプロジェクトプロパティ
+
+<Undocumented message="Coming soon!" />
+
+## メタデータ
+
+### `user`
+
+<PropertyData type="object" />
+
+### `uuid`
+
+<PropertyData type="string" />
+
+プロジェクトUUIDはプロジェクトの短い識別子です。プロジェクトがオンラインで公開されるとき、URLの末尾に割り当てられます。
+
+```
+https://c.gethopscotch.com/p/xjerz8lre
+        |    project slug ─┘  uuid ─┘
+        └─ community subdomain
+```
+
+- プロジェクトUUIDは、プロジェクトがアップロードされるときにHopscotchのサーバーによって計算されます。
+- UUIDは、現在のUNIXタイムスタンプ（秒単位）を65536倍し、Base36に変換して計算されます。
+- かなり古いプロジェクトは異なるUUIDフォーマットを使用しています。2014年後半以降のプロジェクト<Note note="要調査" />は通常現在のフォーマットに従います。
+
+```json
+"uuid": "xjerz8lre"
+```
+
+## メタデータ（リミックス）
+
+これらのプロパティはリミックスされたプロジェクトにのみ存在します。
+
+これらのプロパティを編集すると、リミックスのドラフトがローカルで更新され、Hopscotchアプリのドラフトメニューに編集されたリミックスバッジが表示されます。
+ただし、リミックスをオンラインで公開すると、これらのプロパティはHopscotchのサーバーによって上書きされます。
+
+### `original_user`
+
+<PropertyData type="object" />
+
+リミックス元のプロジェクトの作成者を記述した[ユーザーオブジェクト](/wiki/spec/online-project-properties#user)を含みます。
+
+ドラフトメニューでリミックスバッジを表示するために使用されます。
+
+### `previous_project_uuid`
+
+<PropertyData type="string" />
+
+このプロジェクトを作成するためにリミックスされた元プロジェクトの[UUID](#uuid)を含みます。

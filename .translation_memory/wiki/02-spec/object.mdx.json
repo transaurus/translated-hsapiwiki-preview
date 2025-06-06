@@ -1,0 +1,312 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "wiki/02-spec/object.mdx",
+  "source_file_content_hash": "6ba662a551c324f44e095f92059a07a16f11710ed03fc094f6846dd291570dc3",
+  "segments": [
+    {
+      "segment_id": "a9b642df",
+      "source_content": "import Undocumented from '/src/components/Undocumented.tsx';",
+      "source_content_hash": "a1293916ad057fbd588510885dd804c132a776df268dbbd3831dbff64ed35062",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_a9b642df"
+      }
+    },
+    {
+      "segment_id": "4dbcc3b4",
+      "source_content": "# Object",
+      "source_content_hash": "be5bbbe7413d0070da9a7f98364e5b4aba75f10a8450d456ff6093054d3f1046",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "# オブジェクト"
+      }
+    },
+    {
+      "segment_id": "c9ed38fc",
+      "source_content": "<Undocumented message=\"Coming soon!\" />",
+      "source_content_hash": "92704a62f35d64b4d059f4d6fcafcf88204e452605a1d337048d39c70598f75d",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_c9ed38fc"
+      }
+    },
+    {
+      "segment_id": "d912d376",
+      "source_content": "## Properties",
+      "source_content_hash": "899ecb557156d36aac98f2082474f5ea1e01af3d4a611b79b00dab2a3116aab2",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## プロパティ"
+      }
+    },
+    {
+      "segment_id": "8a5f6a7b",
+      "source_content": "### `width`",
+      "source_content_hash": "466da2ad29daff30b425dbfda1b4bbf5a290672ed5b2415e7bbfb14d844dbe75",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `width`"
+      }
+    },
+    {
+      "segment_id": "321c5251",
+      "source_content": "<Undocumented />",
+      "source_content_hash": "54a8eb1e66ea7817b1ccc114f80204ec97c8b398f6755d941e87335ed8b665f4",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_321c5251"
+      }
+    },
+    {
+      "segment_id": "70153c6e",
+      "source_content": "### `height`",
+      "source_content_hash": "e4fb016c96faca759fece3409dfac1f2604a28231868dee85e3089e499d9d537",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `height`"
+      }
+    },
+    {
+      "segment_id": "4b7cc23c",
+      "source_content": "<Undocumented />",
+      "source_content_hash": "54a8eb1e66ea7817b1ccc114f80204ec97c8b398f6755d941e87335ed8b665f4",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_4b7cc23c"
+      }
+    },
+    {
+      "segment_id": "3daf1b88",
+      "source_content": "### `name`",
+      "source_content_hash": "dd75848446db7aa8b86df07cb4decbc493252b3901dc97107e43c0237e41d1c4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `name`"
+      }
+    },
+    {
+      "segment_id": "21c93b79",
+      "source_content": "<Undocumented />",
+      "source_content_hash": "54a8eb1e66ea7817b1ccc114f80204ec97c8b398f6755d941e87335ed8b665f4",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_21c93b79"
+      }
+    },
+    {
+      "segment_id": "bc633244",
+      "source_content": "### `resizeScale`",
+      "source_content_hash": "46564e0e34e09e24341c1b44f693cba06e4f0e7ab79800e04a5e2f90aa4f8790",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `resizeScale`"
+      }
+    },
+    {
+      "segment_id": "1485a88b",
+      "source_content": "<Undocumented />",
+      "source_content_hash": "54a8eb1e66ea7817b1ccc114f80204ec97c8b398f6755d941e87335ed8b665f4",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_1485a88b"
+      }
+    },
+    {
+      "segment_id": "40f9552a",
+      "source_content": "### `filename`",
+      "source_content_hash": "cde5150eaf7079fff7a5ff9abeb41d80ba7032b5a5be55e009d39516fd097f80",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `filename`"
+      }
+    },
+    {
+      "segment_id": "42e34e45",
+      "source_content": "<Undocumented />",
+      "source_content_hash": "54a8eb1e66ea7817b1ccc114f80204ec97c8b398f6755d941e87335ed8b665f4",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_42e34e45"
+      }
+    },
+    {
+      "segment_id": "79b2d0b9",
+      "source_content": "### `abilityID`",
+      "source_content_hash": "2ca22da2122e7e5f10aba4b87e7e2bd647a31158761f02c13ce1a48cc956b898",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `abilityID`"
+      }
+    },
+    {
+      "segment_id": "358a309f",
+      "source_content": "<Undocumented />",
+      "source_content_hash": "54a8eb1e66ea7817b1ccc114f80204ec97c8b398f6755d941e87335ed8b665f4",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_358a309f"
+      }
+    },
+    {
+      "segment_id": "f2f30ae8",
+      "source_content": "### `rules`",
+      "source_content_hash": "160926a39f3c9a6dc18776f2594d27e6a06d4d3b1e6dcce3cc1c4f89de854a60",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `rules`"
+      }
+    },
+    {
+      "segment_id": "599822a5",
+      "source_content": "<Undocumented />",
+      "source_content_hash": "54a8eb1e66ea7817b1ccc114f80204ec97c8b398f6755d941e87335ed8b665f4",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_599822a5"
+      }
+    },
+    {
+      "segment_id": "b25f21be",
+      "source_content": "### `xPosition`",
+      "source_content_hash": "2f257989cf0ae712e6e444598ba43a15fd4016b3c5613ea3a2946671258b886d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `xPosition`"
+      }
+    },
+    {
+      "segment_id": "2a70bec8",
+      "source_content": "<Undocumented />",
+      "source_content_hash": "54a8eb1e66ea7817b1ccc114f80204ec97c8b398f6755d941e87335ed8b665f4",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_2a70bec8"
+      }
+    },
+    {
+      "segment_id": "f422383e",
+      "source_content": "### `yPosition`",
+      "source_content_hash": "f406e1017cb1a34d00f014d8bcfeb279eaf0ca5ef589dd22a1e7dcc8d3760efe",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `yPosition`"
+      }
+    },
+    {
+      "segment_id": "e7c54101",
+      "source_content": "<Undocumented />",
+      "source_content_hash": "54a8eb1e66ea7817b1ccc114f80204ec97c8b398f6755d941e87335ed8b665f4",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_e7c54101"
+      }
+    },
+    {
+      "segment_id": "80d9e13c",
+      "source_content": "### `objectID`",
+      "source_content_hash": "889533896215afe16038853aa1bf5c2e1c2c53be460943eb2275545f83e987e5",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `objectID`"
+      }
+    },
+    {
+      "segment_id": "100eac36",
+      "source_content": "<Undocumented />",
+      "source_content_hash": "54a8eb1e66ea7817b1ccc114f80204ec97c8b398f6755d941e87335ed8b665f4",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_100eac36"
+      }
+    },
+    {
+      "segment_id": "9f9e64f5",
+      "source_content": "### `type`",
+      "source_content_hash": "bff0bf0ed9cfa7df3fe199f01cf2c37d802b3f0cf8b59fe6d4f6b46dcba8c50c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `type`"
+      }
+    },
+    {
+      "segment_id": "ff6ab177",
+      "source_content": "<Undocumented />",
+      "source_content_hash": "54a8eb1e66ea7817b1ccc114f80204ec97c8b398f6755d941e87335ed8b665f4",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_ff6ab177"
+      }
+    },
+    {
+      "segment_id": "54268405",
+      "source_content": "### `text`",
+      "source_content_hash": "cb93a9edb544a5a1f5c82759549d4b8ecfa2ee593c9f5cbc09968ef87fcab556",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `text`"
+      }
+    },
+    {
+      "segment_id": "68123cc1",
+      "source_content": "<Undocumented />",
+      "source_content_hash": "54a8eb1e66ea7817b1ccc114f80204ec97c8b398f6755d941e87335ed8b665f4",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_68123cc1"
+      }
+    },
+    {
+      "segment_id": "f44c1398",
+      "source_content": "### `customObjectID`",
+      "source_content_hash": "7f406f59d055f64a1ee755322c120036272c19f745ff35bcf4a2cfc938ffe84b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `customObjectID`"
+      }
+    },
+    {
+      "segment_id": "2f83a0f4",
+      "source_content": "<Undocumented />",
+      "source_content_hash": "54a8eb1e66ea7817b1ccc114f80204ec97c8b398f6755d941e87335ed8b665f4",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_2f83a0f4"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/02-spec/object.mdx",
+  "last_updated_timestamp": "2025-06-06T09:44:52.876008+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "ja": "6ba662a551c324f44e095f92059a07a16f11710ed03fc094f6846dd291570dc3"
+  }
+}

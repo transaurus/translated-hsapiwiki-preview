@@ -1,0 +1,56 @@
+import {PropertyData} from '/src/components/PropertyData.tsx';
+
+# アビリティ
+
+アビリティは[ブロック](/wiki/spec/block)の集合体であり、常に
+[ルール](/wiki/spec/rule)や[ループブロック](/wiki/spec/block#loops)から参照されます。
+
+## メタデータ
+
+### `abilityID`
+
+<PropertyData type="string" />
+
+アビリティの一意な識別子で、
+[ルール](/wiki/spec/rule#abilityid)や[ループブロック](/wiki/spec/block#controlscript)から参照されます。
+
+```json
+"abilityID": "561D32F8-FD6B-45E0-9DFF-3191085E2351-3248-00005BE3B1E67098"
+```
+
+### [`blocks`](/wiki/spec/block)
+
+<PropertyData type="array" />
+
+アビリティ内の[ブロック](/wiki/spec/block)オブジェクトを含みます。
+
+```json
+"blocks": []
+```
+
+### `createdAt`
+
+<PropertyData type="number" />
+
+アビリティの作成タイムスタンプで、2001年1月1日00:00 UTCからの秒数で表されます。
+
+アプリのブロックピッカーでカスタムブロックを並べ替える際に使用されます。
+
+```json
+"createdAt": 528311636.47971
+```
+
+## メタデータ（カスタムブロック）
+
+### `name`
+
+<PropertyData type="string" />
+
+カスタムブロックの表示名です。
+
+空の場合、カスタムブロックはアプリのブロックピッカーに表示されません。
+同じ名前のブロックが複数存在しても問題ありません。
+
+```json
+"name": "Do a Cool Trick"
+```

@@ -1,0 +1,152 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "wiki/02-spec/trait.mdx",
+  "source_file_content_hash": "9fc36d1980370ac0670bd14414cbe9b29b023fa7db2f933214a9853b0be48840",
+  "segments": [
+    {
+      "segment_id": "a9b642df",
+      "source_content": "import Undocumented from '/src/components/Undocumented.tsx';",
+      "source_content_hash": "a1293916ad057fbd588510885dd804c132a776df268dbbd3831dbff64ed35062",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_a9b642df"
+      }
+    },
+    {
+      "segment_id": "4dbcc3b4",
+      "source_content": "# Trait",
+      "source_content_hash": "9ffc667fb6366d67ceaac849a323712ab3b8a8d42fd808ee241edc9a07d17f9d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "# 特性"
+      }
+    },
+    {
+      "segment_id": "c9ed38fc",
+      "source_content": "<Undocumented message=\"Coming soon!\" />",
+      "source_content_hash": "92704a62f35d64b4d059f4d6fcafcf88204e452605a1d337048d39c70598f75d",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_c9ed38fc"
+      }
+    },
+    {
+      "segment_id": "d912d376",
+      "source_content": "## Properties",
+      "source_content_hash": "899ecb557156d36aac98f2082474f5ea1e01af3d4a611b79b00dab2a3116aab2",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## プロパティ"
+      }
+    },
+    {
+      "segment_id": "8a5f6a7b",
+      "source_content": "### `description`",
+      "source_content_hash": "938c79195a6f2fc35c06da798ca1403616df473530a187da2f28410834faa8aa",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `description`"
+      }
+    },
+    {
+      "segment_id": "321c5251",
+      "source_content": "<Undocumented />",
+      "source_content_hash": "54a8eb1e66ea7817b1ccc114f80204ec97c8b398f6755d941e87335ed8b665f4",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_321c5251"
+      }
+    },
+    {
+      "segment_id": "70153c6e",
+      "source_content": "### `HSTraitIDKey`",
+      "source_content_hash": "566156a218871c1a6798a7228f8b96e828650df8062b312773e937549cea014c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `HSTraitIDKey`"
+      }
+    },
+    {
+      "segment_id": "4b7cc23c",
+      "source_content": "<Undocumented />",
+      "source_content_hash": "54a8eb1e66ea7817b1ccc114f80204ec97c8b398f6755d941e87335ed8b665f4",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_4b7cc23c"
+      }
+    },
+    {
+      "segment_id": "3daf1b88",
+      "source_content": "### `HSTraitObjectIDKey`",
+      "source_content_hash": "e868edc28cbcbeec112045057c1b03181b99241896dc877f73630c2b34edacc7",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `HSTraitObjectIDKey`"
+      }
+    },
+    {
+      "segment_id": "21c93b79",
+      "source_content": "<Undocumented />",
+      "source_content_hash": "54a8eb1e66ea7817b1ccc114f80204ec97c8b398f6755d941e87335ed8b665f4",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_21c93b79"
+      }
+    },
+    {
+      "segment_id": "bc633244",
+      "source_content": "### `HSTraitObjectParameterTypeKey`",
+      "source_content_hash": "b433b3f50738c9030c3e5dd0f48a9aa5f5b10ffd3b095984e0b0e2eda3cc1f77",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `HSTraitObjectParameterTypeKey`"
+      }
+    },
+    {
+      "segment_id": "1485a88b",
+      "source_content": "<Undocumented />",
+      "source_content_hash": "54a8eb1e66ea7817b1ccc114f80204ec97c8b398f6755d941e87335ed8b665f4",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_1485a88b"
+      }
+    },
+    {
+      "segment_id": "40f9552a",
+      "source_content": "### `HSTraitTypeKey`",
+      "source_content_hash": "c697d26e8c21195e747d5452a227bd4dcb2a91f4f61834ac07919c36751138ee",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `HSTraitTypeKey`"
+      }
+    },
+    {
+      "segment_id": "42e34e45",
+      "source_content": "<Undocumented />",
+      "source_content_hash": "54a8eb1e66ea7817b1ccc114f80204ec97c8b398f6755d941e87335ed8b665f4",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_42e34e45"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/02-spec/trait.mdx",
+  "last_updated_timestamp": "2025-06-06T09:44:52.875788+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "ja": "9fc36d1980370ac0670bd14414cbe9b29b023fa7db2f933214a9853b0be48840"
+  }
+}

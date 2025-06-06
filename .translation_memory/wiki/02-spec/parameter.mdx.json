@@ -1,0 +1,772 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "wiki/02-spec/parameter.mdx",
+  "source_file_content_hash": "22ad97892732654d72aa4c3eb8a5670e00fcd6b379a4f20dbc6d862fdefb43e7",
+  "segments": [
+    {
+      "segment_id": "a9b642df",
+      "source_content": "import Undocumented from '/src/components/Undocumented.tsx';\nimport {PropertyData} from '/src/components/PropertyData.tsx';\nimport Note from '/src/components/Note.tsx';\nimport Details from '/src/components/Details.tsx';",
+      "source_content_hash": "1ee2f5badec4cfcebf08e57fc63631214fa50c39a087f7b36f4a0d41a98616ef",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_a9b642df"
+      }
+    },
+    {
+      "segment_id": "a703643c",
+      "source_content": "# Parameter",
+      "source_content_hash": "4696141cd68bb7fddff566579cdb1ffbdda98f923935b524b9f90b1ff8d3c60a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "# パラメータ"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "Parameters are objects in the [block](/wiki/spec/block)'s [`parameters`](/wiki/spec/block#parameters--params) array.",
+      "source_content_hash": "9b34c75f3e4b066c5da09855ca8668b88541814abd04bdbd5070f6ec5f3ad10f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "パラメータは[ブロック](/wiki/spec/block)の[`parameters`](/wiki/spec/block#parameters--params)配列内のオブジェクトです。"
+      }
+    },
+    {
+      "segment_id": "9fcbdce9",
+      "source_content": "## Common Properties",
+      "source_content_hash": "ae4214abd5b460b893ba6bd5ce7a0e9b36315153805b17b1c35f2272d519356d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## 共通プロパティ"
+      }
+    },
+    {
+      "segment_id": "e14c9928",
+      "source_content": "### `datum`",
+      "source_content_hash": "7e16980f130570e6d2725471aa8f3d9983b9da6bf5bd3990df8da49c61791725",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `datum`"
+      }
+    },
+    {
+      "segment_id": "514644bf",
+      "source_content": "<PropertyData type=\"object\" />",
+      "source_content_hash": "d25f96e79ff52a1fe839c831dcf0fdd39e14940a06eae2d9b2be99cb3a5a6243",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_514644bf"
+      }
+    },
+    {
+      "segment_id": "f6168993",
+      "source_content": "*See the [Datum](#datum-1) section.*",
+      "source_content_hash": "461f4d35f4a0458550b3a6c01c67bf7c1c7d5a6b7da341d36f92c8668d3432e6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "*[Datum](#datum-1)セクションを参照してください。*"
+      }
+    },
+    {
+      "segment_id": "63622bf0",
+      "source_content": "### `defaultValue`",
+      "source_content_hash": "140633d075ba606f4e7dbf0b400d0deb020c402ec3490288c230261e2d92963f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `defaultValue`"
+      }
+    },
+    {
+      "segment_id": "42e34e45",
+      "source_content": "<PropertyData type=\"string\" />",
+      "source_content_hash": "5a914b4a6d6fb58cc4e0a720243742dcd538cf38cf44c91ffb71a8c2d6a93971",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_42e34e45"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "The default value of the parameter, as shown in the mobile app editor\nwhen a parameter is left empty.",
+      "source_content_hash": "ac343e5ba1bf763ab084a4a71fd94f1adf8d97f8dbe4fd1e9d0e945b9f974c02",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "パラメータが空の場合にモバイルアプリエディタに表示されるデフォルト値。"
+      }
+    },
+    {
+      "segment_id": "0c911872",
+      "source_content": "```json\n\"defaultValue\": \"50\"\n```",
+      "source_content_hash": "e4c39e7e3c49e0e3924d46c174e2ddcd1da1502df4c07d5ae939a0021738c86e",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_0c911872"
+      }
+    },
+    {
+      "segment_id": "a1b3d8cb",
+      "source_content": "### `key`",
+      "source_content_hash": "38092da1ab60c820a0afc1652c90cff2cc38b4441907455b912cfa68bfa608c2",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `key`"
+      }
+    },
+    {
+      "segment_id": "e7c54101",
+      "source_content": "<PropertyData type=\"string\" />",
+      "source_content_hash": "5a914b4a6d6fb58cc4e0a720243742dcd538cf38cf44c91ffb71a8c2d6a93971",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_e7c54101"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "The label for the parameter.",
+      "source_content_hash": "499de6ce354bae35d3a0168109e3d17699cf8123e4d78cc4afdae1928998bce6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "パラメータのラベル。"
+      }
+    },
+    {
+      "segment_id": "33331f27",
+      "source_content": "This value can be modified to change the parameter's display name in the editor,\nunlike other attributes of a block which are hardcoded to its block type.\n(This is used to label some blocks which don't have hardcoded block names, such as Wait Til Timestamp.)\nHowever, key modifications are not guaranteed to work with certain block types, such as Set Invisibility.<Note note=\"needs verification\" />",
+      "source_content_hash": "8a65dd45fe6ccc86356d03c680b69a533b482fd3c03b4b006d92396c0967a675",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "この値はエディタ内でパラメータの表示名を変更するために修正可能です。\nブロックの他の属性とは異なり、ブロックタイプにハードコードされていません。\n（Wait Til Timestampなど、ハードコードされたブロック名を持たない一部のブロックのラベル付けに使用されます。）\nただし、Set Invisibilityなどの特定のブロックタイプでは、キーの変更が機能する保証はありません。<Note note=\"要検証\" />"
+      }
+    },
+    {
+      "segment_id": "6648a219",
+      "source_content": "```json\n\"key\": \"percent\"\n```",
+      "source_content_hash": "793b4bfc2a5035654e372f717abc6b5ee7208379dfaeb083070d3961b4510b32",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_6648a219"
+      }
+    },
+    {
+      "segment_id": "6d28a77c",
+      "source_content": "### `type`",
+      "source_content_hash": "bff0bf0ed9cfa7df3fe199f01cf2c37d802b3f0cf8b59fe6d4f6b46dcba8c50c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `type`"
+      }
+    },
+    {
+      "segment_id": "b72935b5",
+      "source_content": "<PropertyData type=\"number\" />",
+      "source_content_hash": "f4b234343b40b541c898334d8ed741dee04ca4677e6739b6c890abff052df6bf",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_b72935b5"
+      }
+    },
+    {
+      "segment_id": "b36c6338",
+      "source_content": "A magic number that corresponds to the parameter's type and behavior.<Note note=\"needs verification\" />",
+      "source_content_hash": "21ad4d08bd10adae8a4df982d456adf50af89950ff83bd988a5c9a6f301c2e07",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "パラメータのタイプと動作に対応するマジックナンバー。<Note note=\"要検証\" />"
+      }
+    },
+    {
+      "segment_id": "b9aaa519",
+      "source_content": "For a full list of possible values, see [Viewing Types](/wiki/spec/overview#viewing-types).",
+      "source_content_hash": "572863c733b7c5b2fc43c5ee3b98a205de89e40288ae3f027c1072382e2b4856",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "可能な値の完全なリストについては、[Viewing Types](/wiki/spec/overview#viewing-types)を参照してください。"
+      }
+    },
+    {
+      "segment_id": "ef0d086d",
+      "source_content": "```json\n\"type\": 57\n```",
+      "source_content_hash": "17d234d4b311388253bd719b17eb87be0f365c5145b376b058abf3b2c7f19536",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_ef0d086d"
+      }
+    },
+    {
+      "segment_id": "c431704b",
+      "source_content": "### `value`",
+      "source_content_hash": "026cc7d3101b85c0149c1e7b5884fe371673a67a96490697f786054d9ce3cfe2",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `value`"
+      }
+    },
+    {
+      "segment_id": "28a7cb9f",
+      "source_content": "<PropertyData type=\"string\" />",
+      "source_content_hash": "5a914b4a6d6fb58cc4e0a720243742dcd538cf38cf44c91ffb71a8c2d6a93971",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_28a7cb9f"
+      }
+    },
+    {
+      "segment_id": "531437ca",
+      "source_content": "The parameter's value.",
+      "source_content_hash": "be3d248944a30e91361ffe42a53786fa505ec9aafc7248f47f644b92f9765104",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "パラメータの値。"
+      }
+    },
+    {
+      "segment_id": "67b24fc5",
+      "source_content": "```json\n\"value\": \"100\"\n```",
+      "source_content_hash": "7eac1bace065ac6f9cb1ff1d4094e2b6495cec70cb4ab599c4f91ef9a62b213f",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_67b24fc5"
+      }
+    },
+    {
+      "segment_id": "047c2395",
+      "source_content": "### `variable`",
+      "source_content_hash": "0c887aaafbe1283e55d8c4130def55d5c6850ecc64e02fec5df5ca74a9738dc7",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `variable`"
+      }
+    },
+    {
+      "segment_id": "68209f5c",
+      "source_content": "<PropertyData type=\"string\" />",
+      "source_content_hash": "5a914b4a6d6fb58cc4e0a720243742dcd538cf38cf44c91ffb71a8c2d6a93971",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_68209f5c"
+      }
+    },
+    {
+      "segment_id": "6cc549f2",
+      "source_content": "*Optional.* An ID used in [rules](/wiki/spec/rule) to reference\n[event parameters](/wiki/spec/event-parameter). Overrides the `value` parameter with its contents.",
+      "source_content_hash": "304f5bcd7a6995a4bc54d0849af3aed0e87543c5f54c0fa96f42c9f4f7ae890a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "*オプション。* [rules](/wiki/spec/rule)内で[event parameters](/wiki/spec/event-parameter)を参照するために使用されるID。`value`パラメータをその内容で上書きします。"
+      }
+    },
+    {
+      "segment_id": "e8e162a9",
+      "source_content": "If `datum` does not exist, then the player will attempt to find the following types with this reference:",
+      "source_content_hash": "11835f20bcfd13f18716a17d9acb55dae8f97017a390892552fce2d1185c5bec",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "`datum`が存在しない場合、プレイヤーはこの参照を使用して以下のタイプを検索しようとします："
+      }
+    },
+    {
+      "segment_id": "5efe9dee",
+      "source_content": "1. Variable (If this isn't found, the player will try to find a...)\n2. Trait\n3. Event parameter",
+      "source_content_hash": "edca209535467420c5cad7483e2a7451e78d3f40ae9b50df4a48dcffa6457319",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "ja": "1. 変数（見つからない場合、プレイヤーは次を検索します...）\n2. 特性\n3. イベントパラメータ"
+      }
+    },
+    {
+      "segment_id": "057a9dd8",
+      "source_content": "<Undocumented message=\"Example missing.\"/>",
+      "source_content_hash": "4363f8316aebae7174595005d4e9f3d6ee66c4f53c9f2a59af5d662f3a35c282",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_057a9dd8"
+      }
+    },
+    {
+      "segment_id": "2e771fd0",
+      "source_content": "## Datum",
+      "source_content_hash": "f0132f2c80107ba812ad430ea37f1d537db5e462b1faac8740400452f50657cd",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## Datum"
+      }
+    },
+    {
+      "segment_id": "0750bfa1",
+      "source_content": "The `datum` property determines the parameter's data contents.",
+      "source_content_hash": "0bd9d85c0a75fcc00f9487ec24a771300a0f8775f43fbbbcb7a05c69dd667dd6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "`datum`プロパティはパラメータのデータ内容を決定します。"
+      }
+    },
+    {
+      "segment_id": "86348f98",
+      "source_content": "Each datum exclusively contains one of the following (see each respective page for more information):",
+      "source_content_hash": "a42b66a075c86226d8656dab7573319fb419fc433d4f7e87f92460d7b2a5e391",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "各datumは以下のいずれかを排他的に含みます（詳細は各ページを参照）："
+      }
+    },
+    {
+      "segment_id": "023197ab",
+      "source_content": "- An operator [block](/wiki/spec/block)\n  - Includes HSB, RGB and randomized color operators\n- A [trait](/wiki/spec/trait)\n- `variable` property with a [variable](/wiki/spec/variable) reference\n- An image for the Set Image [block](/wiki/spec/block)<Note note=\"needs elaboration\" />",
+      "source_content_hash": "b1f81d7ab858505b4c37ab70d8b7a7513b2b59e6aa6a1ae20f0968abc9ce348b",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "ja": "- 演算子[ブロック](/wiki/spec/block)\n  - HSB、RGBおよびランダムカラー演算子を含む\n- [特性](/wiki/spec/trait)\n- [変数](/wiki/spec/variable)参照を持つ`variable`プロパティ\n- Set Image [ブロック](/wiki/spec/block)用の画像<Note note=\"要詳細説明\" />"
+      }
+    },
+    {
+      "segment_id": "99d0dd9b",
+      "source_content": "### Player Priority",
+      "source_content_hash": "503b30837548308979049bee3c15850bba17aeb9aaf3efd9d454f57c001dbd96",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### プレイヤーの優先順位"
+      }
+    },
+    {
+      "segment_id": "d79a4831",
+      "source_content": "The player checks `datum` objects in the following order:<Note note=\"needs verification\" />",
+      "source_content_hash": "61138b8ef46ce4c140b4e4c57db39ac518f3ca02037983d3a74f49d927518cd8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "プレイヤーは`datum`オブジェクトを以下の順序でチェックします：<Note note=\"要検証\" />"
+      }
+    },
+    {
+      "segment_id": "dea0598f",
+      "source_content": "1. Images within Set Image [blocks](/wiki/spec/block)\n2. [Variable](/wiki/spec/variable) references\n3. [Traits](/wiki/spec/trait) and [blocks](/wiki/spec/block)",
+      "source_content_hash": "5fa92b006f03ed34884ce5388ca63e97c637ccc667d1cf3188bc96828e8d4b27",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "ja": "1. Set Image [ブロック](/wiki/spec/block)内の画像\n2. [変数](/wiki/spec/variable)参照\n3. [特性](/wiki/spec/trait)および[ブロック](/wiki/spec/block)"
+      }
+    },
+    {
+      "segment_id": "56bc971f",
+      "source_content": "### Math Operator Blocks",
+      "source_content_hash": "dee6686ac8bac0179e716ccdabf2fe0af2c9951787c6b24a078e2588e255e8a1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### 算術演算子ブロック"
+      }
+    },
+    {
+      "segment_id": "0801d969",
+      "source_content": "Here is a Move Forward block with an addition (`+`) operator block as its datum:",
+      "source_content_hash": "bbfa4e9eec757e3c5d42a651a5000e0b3089b6ed4b6fb7af42d6cc00aae1acff",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "以下は加算(`+`)演算子ブロックをdatumとして持つMove Forwardブロックの例です："
+      }
+    },
+    {
+      "segment_id": "0de3740b",
+      "source_content": "<p><img src=\"/img/parameters/addition-datums-example.png\"\n\talt=\"Move forward by negative one, plus ten\"\nheight=\"50\" /></p>",
+      "source_content_hash": "4663677657332dfa4cb2ee762cd3103c9394a53e42b71d469ce38a12f9212d94",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_0de3740b"
+      }
+    },
+    {
+      "segment_id": "5347a9b5",
+      "source_content": "```json\n{\n\t\"block_class\": \"method\",\n\t\"type\": 23,\n\t\"description\": \"Move Forward\",\n\t\"parameters\": [{\n\t\t\"value\": \"100\",\n\t\t\"defaultValue\": \"100\",\n\t\t\"key\": \"\",\n\t\t\"type\": 57, // MultiPurposeNumberDefault: parameter\n\t\t\"datum\": {\n\t\t\t\"keyboardName\": \"Add\",\n\t\t\t\"block_class\": \"operator\",\n\t\t\t\"type\": 4000, // MathOperatorAdd: block\n\t\t\t\"description\": \"+\",\n\t\t\t\"params\": [{\n\t\t\t\t\"defaultValue\": \"2\",\n\t\t\t\t\"value\": \"-1\",\n\t\t\t\t\"key\": \"\",\n\t\t\t\t\"type\": 57\n\t\t\t}, {\n\t\t\t\t\"defaultValue\": \"3\",\n\t\t\t\t\"value\": \"10\",\n\t\t\t\t\"key\": \"+\",\n\t\t\t\t\"type\": 57\n\t\t\t}]\n\t\t}\n\t}]\n}\n```",
+      "source_content_hash": "095c341f041ae9bdcb667548761fb06ff4ab6af2f4a91f960af6919cb76f83fd",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_5347a9b5"
+      }
+    },
+    {
+      "segment_id": "be17ccc3",
+      "source_content": "Math operator datums are commonly nested:",
+      "source_content_hash": "dcc106c6b5e69a0e9da87b5e4e7a00e58a9570b29341b88e7e10bb5e1f3e1875",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "算術演算子datumは一般的にネストされます："
+      }
+    },
+    {
+      "segment_id": "ec1057e4",
+      "source_content": "<p><img src=\"/img/parameters/nested-random-example.png\"\n\talt=\"Change X by negative one, plus a random number between ten and fifty\"\nheight=\"50\" /></p>",
+      "source_content_hash": "8eab59ffb857fce235d15082d4f4b1868040581d75e1a5b1713e9676fc58aeda",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_ec1057e4"
+      }
+    },
+    {
+      "segment_id": "d58c5dc0",
+      "source_content": "```json\n{\n\t\"block_class\": \"method\",\n\t\"description\": \"Change X by\",\n\t\"type\": 27,\n\t\"parameters\": [{\n\t\t\"value\": \"100\",\n\t\t\"defaultValue\": \"100\",\n\t\t\"key\": \"\",\n\t\t\"type\": 57, // MultiPurposeNumberDefault: parameter\n\t\t\"datum\": {\n\t\t\t\"keyboardName\": \"Add\",\n\t\t\t\"block_class\": \"operator\",\n\t\t\t\"type\": 4000, // MathOperatorAdd: block\n\t\t\t\"description\": \"+\",\n\t\t\t\"params\": [{\n\t\t\t\t\"defaultValue\": \"2\",\n\t\t\t\t\"value\": \"-1\",\n\t\t\t\t\"key\": \"\",\n\t\t\t\t\"type\": 57 // MultiPurposeNumberDefault: parameter\n\t\t\t}, {\n\t\t\t\t\"defaultValue\": \"3\",\n\t\t\t\t\"value\": \"3\",\n\t\t\t\t\"key\": \"+\",\n\t\t\t\t\"type\": 57, // MultiPurposeNumberDefault: parameter\n\t\t\t\t\"datum\": {\n\t\t\t\t\t\"block_class\": \"operator\",\n\t\t\t\t\t\"type\": 4004, // MathOperatorRandom: parameter\n\t\t\t\t\t\"description\": \"Random\",\n\t\t\t\t\t\"params\": [{\n\t\t\t\t\t\t\"defaultValue\": \"1\",\n\t\t\t\t\t\t\"value\": \"10\",\n\t\t\t\t\t\t\"key\": \"\",\n\t\t\t\t\t\t\"type\": 45 // RandomLow: parameter\n\t\t\t\t\t}, {\n\t\t\t\t\t\t\"defaultValue\": \"100\",\n\t\t\t\t\t\t\"value\": \"50\",\n\t\t\t\t\t\t\"key\": \"to\",\n\t\t\t\t\t\t\"type\": 46 // RandomHigh: parameter\n\t\t\t\t\t}]\n\t\t\t\t}\n\t\t\t}]\n\t\t}\n\t}]\n}\n```",
+      "source_content_hash": "ed757a3b344b5b6627d9ca14c5da71b93764326f496f580eaabd18f403743c10",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_d58c5dc0"
+      }
+    },
+    {
+      "segment_id": "6ac93c98",
+      "source_content": "### Color Operator Blocks",
+      "source_content_hash": "5c0b85cda3d505eccd811b5548c2d70d51b3e5f4a719940603336dbe6795b1b3",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### カラー演算子ブロック"
+      }
+    },
+    {
+      "segment_id": "a9de5d69",
+      "source_content": "#### Plain colors",
+      "source_content_hash": "36fad12cfc713160e09588c1a6ad6b230969942c1cdb3dbcfdce0b9d9116df48",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "#### 単色"
+      }
+    },
+    {
+      "segment_id": "e6ac016e",
+      "source_content": "Colors picked from the editor's color palette **do not use datums.**",
+      "source_content_hash": "833eae520513c122a2edc3768226a38a0c04f18a8b2f5cac9490ec39771e1a33",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "エディタのカラーパレットから選択された色は**datumを使用しません。**"
+      }
+    },
+    {
+      "segment_id": "e6432e52",
+      "source_content": ":::note\n\n<Undocumented />\n{/* Move this to a better place. */}\nThe `value` property can be edited. Changes are reflected in the editor view accordingly.\n\nHowever, if a datum is added, this value will be overridden.\n\n:::",
+      "source_content_hash": "8d186aabd6dee926969a883dbd5e53d36d93277e62b8b40693bb904db1073174",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "ja": ":::note\n\n<Undocumented />\n{/* この部分はより適切な場所に移動する必要があります。 */}\n`value`プロパティは編集可能です。変更はエディタビューに反映されます。\n\nただし、datumが追加された場合、この値は上書きされます。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "d3321879",
+      "source_content": "<p><img src=\"/img/parameters/plain-trail-color.png\"\n\talt=\"Set trail color to pure black\"\nheight=\"50\" /></p>",
+      "source_content_hash": "bdd099ef6e0e095f5a053acce5aece99eea60d3b838c52ece7a65f893b1d6bb4",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_d3321879"
+      }
+    },
+    {
+      "segment_id": "93bf74a6",
+      "source_content": "```json\n{\n\t\"block_class\": \"method\",\n\t\"description\": \"Set Trail Color\",\n\t\"type\": 32,\n\t\"parameters\": [{\n\t\t\"defaultValue\": \"HSB(288,57,43)\",\n\t\t\"value\": \"HSB(0,0,0)\",\n\t\t\"key\": \"to\",\n\t\t\"type\": 44 // LineColor: parameter\n\t}]\n}\n```",
+      "source_content_hash": "3f6c74cc584b7495964a4c6e2dfe5e227e6ab6461f8ec3e549f036a60202c038",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_93bf74a6"
+      }
+    },
+    {
+      "segment_id": "263073b1",
+      "source_content": "#### Random colors",
+      "source_content_hash": "baa19851f92d17969b9b8400763938359433db98c9a7493273dc50e36f5f6c3c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "#### ランダムカラー"
+      }
+    },
+    {
+      "segment_id": "0d9801dd",
+      "source_content": "<p><img src=\"/img/parameters/random-trail-color.png\"\n\talt=\"Set trail color to a random one\"\nheight=\"50\" /></p>",
+      "source_content_hash": "6cacabebe53795926f7f27a186c24925704603d835cd246bd8fe91134b22c091",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_0d9801dd"
+      }
+    },
+    {
+      "segment_id": "43c34a84",
+      "source_content": "```json\n{\n\t\"block_class\": \"method\",\n\t\"description\": \"Set Trail Color\",\n\t\"type\": 32,\n\t\"parameters\": [{\n\t\t\"defaultValue\": \"HSB(288,57,43)\",\n\t\t\"value\": \"HSB(353,96,83)\", // plain color value is overridden by datum\n\t\t\"key\": \"to\",\n\t\t\"type\": 44, // LineColor: parameter\n\t\t\"datum\": {\n\t\t\t\"type\": 5000, // ColorOperatorRandom: block\n\t\t\t\"block_class\": \"operator\",\n\t\t\t\"description\": \"Random\"\n\t\t}\n\t}]\n}\n```",
+      "source_content_hash": "b971cde45c11942d5de6581d0f3a8d225e58eb51a82241c0cf808e9a220efd6e",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_43c34a84"
+      }
+    },
+    {
+      "segment_id": "99e592b0",
+      "source_content": "#### RGB colors",
+      "source_content_hash": "9f00f044aba5fac976d7fc69a25105c7b162aeff7bbf5478bd8503dc00d7d707",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "#### RGBカラー"
+      }
+    },
+    {
+      "segment_id": "6088d88d",
+      "source_content": "<p><img src=\"/img/parameters/set-trail-color-rgb.png\"\n\talt=\"Set RGB color to magenta\"\nheight=\"50\" /></p>",
+      "source_content_hash": "446600a1ea494b366947515b78d1a418520a9ce27e1e9a2ae8f2889bb82aca5c",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_6088d88d"
+      }
+    },
+    {
+      "segment_id": "e55bb1a1",
+      "source_content": "```json\n{\n\t\"block_class\": \"method\",\n\t\"description\": \"Set Trail Color\",\n\t\"type\": 32,\n\t\"parameters\": [{\n\t\t\"defaultValue\": \"HSB(288,57,43)\",\n\t\t\"value\": \"HSB(288,57,43)\", // plain color value is overridden by datum\n\t\t\"key\": \"to\",\n\t\t\"type\": 44, // LineColor: parameter\n\t\t\"datum\": {\n\t\t\t\"type\": 5001, // ColorOperatorRGB: block\n\t\t\t\"block_class\": \"operator\",\n\t\t\t\"description\": \"RGB\",\n\t\t\t\"params\": [{\n\t\t\t\t\"value\": \"255\",\n\t\t\t\t\"defaultValue\": \"34\",\n\t\t\t\t\"key\": \"R\",\n\t\t\t\t\"type\": 57 // MultiPurposeNumberDefault: parameter\n\t\t\t}, {\n\t\t\t\t\"value\": \"0\",\n\t\t\t\t\"defaultValue\": \"246\",\n\t\t\t\t\"key\": \"G\",\n\t\t\t\t\"type\": 57 // MultiPurposeNumberDefault: parameter\n\t\t\t}, {\n\t\t\t\t\"value\": \"255\",\n\t\t\t\t\"defaultValue\": \"217\",\n\t\t\t\t\"key\": \"B\",\n\t\t\t\t\"type\": 57 // MultiPurposeNumberDefault: parameter\n\t\t\t}]\n\t\t}\n\t}]\n}\n```",
+      "source_content_hash": "1816df2a616a1266e6abb21620bbe3efabd9bb2b27e31949683d895feff84803",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_e55bb1a1"
+      }
+    },
+    {
+      "segment_id": "052c158b",
+      "source_content": "#### HSB colors",
+      "source_content_hash": "f3e57265dec64766420bec85c5caae7d3bb42909a0563964232fbfd84e13d226",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "#### HSBカラー"
+      }
+    },
+    {
+      "segment_id": "c80643de",
+      "source_content": "<p><img src=\"/img/parameters/set-trail-color-hsb.png\"\n\talt=\"Set HSB color to magenta\"\nheight=\"50\" /></p>",
+      "source_content_hash": "7178468465935a0dc7748535c6301b4a70c6b6ace1d4cabdaf51849a0e71ff45",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_c80643de"
+      }
+    },
+    {
+      "segment_id": "fa163a68",
+      "source_content": "```json\n{\n\t\"block_class\": \"method\",\n\t\"description\": \"Set Trail Color\",\n\t\"type\": 32,\n\t\"parameters\": [{\n\t\t\"defaultValue\": \"HSB(288,57,43)\",\n\t\t\"value\": \"HSB(288,57,43)\", // plain color value is overridden by datum\n\t\t\"key\": \"to\",\n\t\t\"type\": 44, // LineColor: parameter\n\t\t\"datum\": {\n\t\t\t\"type\": 5002, // ColorOperatorHSB: block\n\t\t\t\"block_class\": \"operator\",\n\t\t\t\"description\": \"HSB\",\n\t\t\t\"params\": [{\n\t\t\t\t\"value\": \"172\",\n\t\t\t\t\"defaultValue\": \"172\",\n\t\t\t\t\"key\": \"H\",\n\t\t\t\t\"type\": 57 // MultiPurposeNumberDefault: parameter\n\t\t\t}, {\n\t\t\t\t\"value\": \"86\",\n\t\t\t\t\"defaultValue\": \"86\",\n\t\t\t\t\"key\": \"S\",\n\t\t\t\t\"type\": 57 // MultiPurposeNumberDefault: parameter\n\t\t\t}, {\n\t\t\t\t\"value\": \"96\",\n\t\t\t\t\"defaultValue\": \"96\",\n\t\t\t\t\"key\": \"B\",\n\t\t\t\t\"type\": 57 // MultiPurposeNumberDefault: parameter\n\t\t\t}]\n\t\t}\n\t}]\n}\n```",
+      "source_content_hash": "a2c12572cb2600bd4806907a1d932770020d76b3fbfff0717d757656d0a56fcb",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_fa163a68"
+      }
+    },
+    {
+      "segment_id": "12e415c2",
+      "source_content": "### Variable References",
+      "source_content_hash": "3c03b0d5e54e60302bc90f0dc96409b225d0dac8b17f650581afe36da3d4c2ea",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### 変数参照"
+      }
+    },
+    {
+      "segment_id": "fb020fb7",
+      "source_content": "#### Local variables",
+      "source_content_hash": "daf3ff779ddc7f7c8a3a8c7e7dd0ad07e580d9280623860a1c73c175b63dc555",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "#### ローカル変数"
+      }
+    },
+    {
+      "segment_id": "dbd18971",
+      "source_content": "Local variables are fully scoped within the datum, bypassing the need for a\n[variable](/wiki/spec/variable) reference:",
+      "source_content_hash": "aa1bbb94b7d81d5f7f1c7b5c39da6c8bd77f48cc79dc3710440f08892ecd3d7e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "ローカル変数はdatum内で完全にスコープされ、\n[variable](/wiki/spec/variable)参照を必要としません:"
+      }
+    },
+    {
+      "segment_id": "98a1242e",
+      "source_content": "<p><img src=\"/img/parameters/set-local-var.png\"\n\talt=\"Set local variable to 10\"\nheight=\"50\" /></p>",
+      "source_content_hash": "7fe2143c42defce4a13f4bf416efb4bdc8b7ea4d5a1030fc035199215dffc6d7",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_98a1242e"
+      }
+    },
+    {
+      "segment_id": "b9ddb766",
+      "source_content": "```json\n{\n\t\"block_class\": \"method\",\n\t\"type\": 45, // SetVariable: block\n\t\"description\": \"Set\",\n\t\"parameters\": [{\n\t\t\"value\": \"\",\n\t\t\"defaultValue\": \"\",\n\t\t\"key\": \"\",\n\t\t\"type\": 47, // Variable: parameter\n\t\t\"datum\": {\n\t\t\t\"type\": 8009, // Scoped: block\n\t\t\t\"description\": \"Local Variable\",\n\t\t\t\"name\": \"localVar\"\n\t\t}\n\t}, {\n\t\t\"value\": \"10\",\n\t\t\"defaultValue\": \"10\",\n\t\t\"key\": \"to\",\n\t\t\"type\": 48 // VariableValue: parameter\n\t}]\n}\n```",
+      "source_content_hash": "42ec73e5f2a2e230c76c15c5b4d8a09aef485ceaa83db21d2386883e4f0492d7",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_b9ddb766"
+      }
+    },
+    {
+      "segment_id": "5176651f",
+      "source_content": "#### Other variables",
+      "source_content_hash": "4df342b769ffcb6db8ff57d9ef824f08db672b2f33112295834c3c4065ef4299",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "#### その他の変数"
+      }
+    },
+    {
+      "segment_id": "475959f2",
+      "source_content": "Object, Self and Global variables store a reference to an external [variable](/wiki/spec/variable).",
+      "source_content_hash": "21034760000ce49dee81d5c3ef9e44ebd0794b09c6ff7556c6147605a69268b1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "オブジェクト変数、Self変数、グローバル変数は外部の[variable](/wiki/spec/variable)への参照を保持します。"
+      }
+    },
+    {
+      "segment_id": "4da1b99c",
+      "source_content": "The `object` property is only included in object variables.\nIt is a reference to the [object](/wiki/spec/object) the variable is stored in.",
+      "source_content_hash": "dbb2b51f283ee35a7c4ded3392e72973b2445aa4e0896eb6b9173a398caf4ec8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "`object`プロパティはオブジェクト変数にのみ含まれます。\nこれは変数が格納されている[object](/wiki/spec/object)への参照です。"
+      }
+    },
+    {
+      "segment_id": "32abc404",
+      "source_content": "<p><img src=\"/img/parameters/set-heart-object-var.png\"\n\talt=\"Set heart object variable to 30\"\nheight=\"50\" /></p>",
+      "source_content_hash": "f8105f1adc512fb8a6ba3e618cb8934a54aafcc559ce15e79f1c1b9fbbad7014",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_32abc404"
+      }
+    },
+    {
+      "segment_id": "92fa9171",
+      "source_content": "```json\n{\n\t\"block_class\": \"method\",\n\t\"type\": 45, // SetVariable: block\n\t\"description\": \"Set\",\n\t\"parameters\": [{\n\t\t\"value\": \"\",\n\t\t\"defaultValue\": \"\",\n\t\t\"key\": \"\",\n\t\t\"type\": 47, // Variable: parameter\n\t\t\"datum\": {\n\t\t\t\"variable\": \"9A4C3DCD-5C4A-B35C-6C32-0D519B578B9E\",\n\t\t\t\"description\": \"Variable\",\n\t\t\t// The variable type here can be the following:\n\t\t\t// 8000, Object: block\n\t\t\t// 8003, Game: block\n\t\t\t// 8004, Self: block\n\t\t\t\"type\": 8000, // Object: block\n\t\t\t\"object\": \"83217D2E-F034-4457-3BCB-48B715AFA3AD\"\n\t\t}\n\t}, {\n\t\t\"value\": \"30\",\n\t\t\"defaultValue\": \"10\",\n\t\t\"key\": \"to\",\n\t\t\"type\": 48 // VariableValue: parameter\n\t}]\n}\n```",
+      "source_content_hash": "880b9d06e6359f12cd00f2637aff91cf6fc2e86a4e1e249b920c9a5dc1d50244",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_92fa9171"
+      }
+    },
+    {
+      "segment_id": "52c6a5e7",
+      "source_content": "### Traits",
+      "source_content_hash": "03dce4ea01dd45ee2fbbd7f0855bf07479137e3ce244251b1afaba267e9bd769",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### 特性(Traits)"
+      }
+    },
+    {
+      "segment_id": "07d6fcff",
+      "source_content": "<Undocumented message=\"Coming soon!\" />",
+      "source_content_hash": "92704a62f35d64b4d059f4d6fcafcf88204e452605a1d337048d39c70598f75d",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_07d6fcff"
+      }
+    },
+    {
+      "segment_id": "8afa0643",
+      "source_content": "### Nested Datums",
+      "source_content_hash": "d4e03b01a37e7228c1953de4440c5f45d1327097e536751a63fbd6e80c95d84c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### ネストされたDatums"
+      }
+    },
+    {
+      "segment_id": "7e0b49a3",
+      "source_content": "The following example is the JSON structure for this block,\nwhich includes a variety of datums:",
+      "source_content_hash": "2db845511cd9f9b7e70ef8d50d5a3600b734895b94fed044a5397f012fd6f264",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "以下の例は、様々なdatumを含むこのブロックのJSON構造です:"
+      }
+    },
+    {
+      "segment_id": "9ff7ec86",
+      "source_content": "<p><img src=\"/img/parameters/nested-datums-example.png\"\n\talt=\"Turn degrees block, with the parameter 90 plus the sine of variable gameVar\"\nheight=\"50\" /></p>",
+      "source_content_hash": "0e62082e607efb150b5531dbb394ac3a8be54aab07130515b98592d74e284ac7",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_9ff7ec86"
+      }
+    },
+    {
+      "segment_id": "7b99423a",
+      "source_content": "```json\n{\n\t\"block_class\": \"method\",\n\t\"type\": 24,\n\t\"description\": \"Turn\",\n\t\"parameters\": [{\n\t\t\"value\": \"90\",\n\t\t\"defaultValue\": \"90\",\n\t\t\"key\": \"degrees\",\n\t\t\"type\": 57,\n\t\t\"datum\": {\n\t\t\t\"keyboardName\": \"Add\",\n\t\t\t\"block_class\": \"operator\",\n\t\t\t\"type\": 4000,\n\t\t\t\"description\": \"+\",\n\t\t\t\"params\": [{\n\t\t\t\t\"defaultValue\": \"2\",\n\t\t\t\t\"value\": \"90\",\n\t\t\t\t\"key\": \"\",\n\t\t\t\t\"type\": 57\n\t\t\t}, {\n\t\t\t\t\"defaultValue\": \"3\",\n\t\t\t\t\"value\": \"3\",\n\t\t\t\t\"key\": \"+\",\n\t\t\t\t\"type\": 57,\n\t\t\t\t\"datum\": {\n\t\t\t\t\t\"keyboardName\": \"Sine\",\n\t\t\t\t\t\"block_class\": \"operator\",\n\t\t\t\t\t\"type\": 4007,\n\t\t\t\t\t\"description\": \"Sin\",\n\t\t\t\t\t\"params\": [{\n\t\t\t\t\t\t\"defaultValue\": \"45\",\n\t\t\t\t\t\t\"value\": \"3\",\n\t\t\t\t\t\t\"key\": \"\",\n\t\t\t\t\t\t\"type\": 57,\n\t\t\t\t\t\t\"datum\": {\n\t\t\t\t\t\t\t\"variable\": \"D9D0EA2D-C656-7C7A-8843-EF5716D2909C\",\n\t\t\t\t\t\t\t\"description\": \"Variable\",\n\t\t\t\t\t\t\t\"type\": 8003\n\t\t\t\t\t\t}\n\t\t\t\t\t}]\n\t\t\t\t}\n\t\t\t}]\n\t\t}\n\t}]\n}\n```",
+      "source_content_hash": "25cdf90ba371011d07b2554c08a6fdc58b0cc18512a53228cd3c11e218bdbef0",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_7b99423a"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/02-spec/parameter.mdx",
+  "last_updated_timestamp": "2025-06-06T09:44:52.878294+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "ja": "22ad97892732654d72aa4c3eb8a5670e00fcd6b379a4f20dbc6d862fdefb43e7"
+  }
+}

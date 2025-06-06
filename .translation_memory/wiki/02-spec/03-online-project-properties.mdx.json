@@ -1,0 +1,232 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "wiki/02-spec/03-online-project-properties.mdx",
+  "source_file_content_hash": "a2dcac1af4b0a37981e12a624f9c3716045af75755a907cbc14d15dd7803fd5e",
+  "segments": [
+    {
+      "segment_id": "a9b642df",
+      "source_content": "import Undocumented from '/src/components/Undocumented.tsx';\nimport {PropertyData} from '/src/components/PropertyData.tsx';\nimport Note from '/src/components/Note.tsx';",
+      "source_content_hash": "89091049caf732dba4fc688e8b9b403812d81e0e5c4e8c05839461853e27e8c6",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_a9b642df"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "# Online Project Properties",
+      "source_content_hash": "5e804388df5f8013eb49af5f5b644fc4a9e2e8f99927defa4e3a27930fe5822a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "# オンラインプロジェクトプロパティ"
+      }
+    },
+    {
+      "segment_id": "37387e33",
+      "source_content": "<Undocumented message=\"Coming soon!\" />",
+      "source_content_hash": "92704a62f35d64b4d059f4d6fcafcf88204e452605a1d337048d39c70598f75d",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_37387e33"
+      }
+    },
+    {
+      "segment_id": "8a5f6a7b",
+      "source_content": "## Metadata",
+      "source_content_hash": "5f36ef31f13617511304433b9e9e4763415441830683815b42490db5074914cd",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## メタデータ"
+      }
+    },
+    {
+      "segment_id": "ba4f48ff",
+      "source_content": "### `user`",
+      "source_content_hash": "51cf2e3d46ae172f1e789b169f6279b665ad6e3aef643a10bc3f8116c16e96de",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `user`"
+      }
+    },
+    {
+      "segment_id": "4b7cc23c",
+      "source_content": "<PropertyData type=\"object\" />",
+      "source_content_hash": "d25f96e79ff52a1fe839c831dcf0fdd39e14940a06eae2d9b2be99cb3a5a6243",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_4b7cc23c"
+      }
+    },
+    {
+      "segment_id": "aee0e40d",
+      "source_content": "### `uuid`",
+      "source_content_hash": "cbebd9cb1864f343766eaf53a2d7646515d07736620c664ace2927721bdb18c0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `uuid`"
+      }
+    },
+    {
+      "segment_id": "1485a88b",
+      "source_content": "<PropertyData type=\"string\" />",
+      "source_content_hash": "5a914b4a6d6fb58cc4e0a720243742dcd538cf38cf44c91ffb71a8c2d6a93971",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_1485a88b"
+      }
+    },
+    {
+      "segment_id": "2fdadb08",
+      "source_content": "Project UUIDs are short identifiers for projects. They are assigned at the end of a project's URL, when it is published online.",
+      "source_content_hash": "25db6ec49713e2bd77b2cd8f5ab615d97a9470464a97239045ecd4b5c5ade1fc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "プロジェクトUUIDはプロジェクトの短い識別子です。プロジェクトがオンラインで公開されるとき、URLの末尾に割り当てられます。"
+      }
+    },
+    {
+      "segment_id": "3569d545",
+      "source_content": "```\nhttps://c.gethopscotch.com/p/xjerz8lre\n        |    project slug ─┘  uuid ─┘\n        └─ community subdomain\n```",
+      "source_content_hash": "e21f3e01ca4341c0eb11a5f1b7b0028c302aed78d00fecd770b3cc28fbfd927f",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_3569d545"
+      }
+    },
+    {
+      "segment_id": "c6dea11f",
+      "source_content": "- Project UUIDs are calculated by Hopscotch's servers when a project is uploaded.\n- UUIDs are calculated by taking the current unix timestamp in seconds, multiplied by `65536`, then converted to Base36.\n- Significantly older projects use a different UUID format. Projects newer than around late 2014<Note note=\"needs research\" /> will usually follow the current format.",
+      "source_content_hash": "2003a0a3dae718466f334ee314f58b3a31ecbbb44e2824e47be72a1b8d71b2b1",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "ja": "- プロジェクトUUIDは、プロジェクトがアップロードされるときにHopscotchのサーバーによって計算されます。\n- UUIDは、現在のUNIXタイムスタンプ（秒単位）を65536倍し、Base36に変換して計算されます。\n- かなり古いプロジェクトは異なるUUIDフォーマットを使用しています。2014年後半以降のプロジェクト<Note note=\"要調査\" />は通常現在のフォーマットに従います。"
+      }
+    },
+    {
+      "segment_id": "ef6eebef",
+      "source_content": "```json\n\"uuid\": \"xjerz8lre\"\n```",
+      "source_content_hash": "32d511b87aa4701b5f2ef9cfc30f61b4ba3c81d9a4ae429f33e39973c09df1ca",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_ef6eebef"
+      }
+    },
+    {
+      "segment_id": "782c902a",
+      "source_content": "## Metadata (Remix)",
+      "source_content_hash": "a5e3050e83167fbd40917849890cf65d726039678f3b79c8b31e0fa4200b0352",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "## メタデータ（リミックス）"
+      }
+    },
+    {
+      "segment_id": "50746522",
+      "source_content": "These properties only exist in remixed projects.",
+      "source_content_hash": "3f81c5f63518072521433920a7abd8d79802e5047a9bce52fb8769a51a0f8568",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "これらのプロパティはリミックスされたプロジェクトにのみ存在します。"
+      }
+    },
+    {
+      "segment_id": "95e9ba12",
+      "source_content": "Editing these properties will update the remixed draft locally, displaying the edited remix badge in the Hopscotch app's draft menu.\nHowever, upon publishing the remix online, these properties are overwritten by Hopscotch's server.",
+      "source_content_hash": "0539e12344b8408edea313f4810750d4b0d4cf403d0cc556cc51952413d54bd9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "これらのプロパティを編集すると、リミックスのドラフトがローカルで更新され、Hopscotchアプリのドラフトメニューに編集されたリミックスバッジが表示されます。\nただし、リミックスをオンラインで公開すると、これらのプロパティはHopscotchのサーバーによって上書きされます。"
+      }
+    },
+    {
+      "segment_id": "f44c1398",
+      "source_content": "### `original_user`",
+      "source_content_hash": "4a1ec22aea5e37b33924c7a249b5363d09a20efb4915b3eccb225158bef98869",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `original_user`"
+      }
+    },
+    {
+      "segment_id": "6127963f",
+      "source_content": "<PropertyData type=\"object\" />",
+      "source_content_hash": "d25f96e79ff52a1fe839c831dcf0fdd39e14940a06eae2d9b2be99cb3a5a6243",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_6127963f"
+      }
+    },
+    {
+      "segment_id": "c504c207",
+      "source_content": "Contains a [user object](/wiki/spec/online-project-properties#user) describing the original creator of the remixed project.",
+      "source_content_hash": "65435d33a0b2a7d83d203e4c74edd5117b7e0ec538b70d1a8229239967fe57af",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "リミックス元のプロジェクトの作成者を記述した[ユーザーオブジェクト](/wiki/spec/online-project-properties#user)を含みます。"
+      }
+    },
+    {
+      "segment_id": "98d26038",
+      "source_content": "Used for displaying the remix badge in the drafts menu.",
+      "source_content_hash": "de57b07fde1ca728068863df3c3e7f47426173288e6e6c5254085d3f8ded10cb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "ドラフトメニューでリミックスバッジを表示するために使用されます。"
+      }
+    },
+    {
+      "segment_id": "2c1b51df",
+      "source_content": "### `previous_project_uuid`",
+      "source_content_hash": "60e26952f050f32fe64eaaa47c32f9d4080cb6de82d2b234e221a0480a55f5d8",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "### `previous_project_uuid`"
+      }
+    },
+    {
+      "segment_id": "6214d3c2",
+      "source_content": "<PropertyData type=\"string\" />",
+      "source_content_hash": "5a914b4a6d6fb58cc4e0a720243742dcd538cf38cf44c91ffb71a8c2d6a93971",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "ja": "@@untranslatable_placeholder_6214d3c2"
+      }
+    },
+    {
+      "segment_id": "40158b4b",
+      "source_content": "Contains the [UUID](#uuid) of the project that was remixed to create this one.",
+      "source_content_hash": "7bbccb0d5d9a8ddb71649454326c2fd61b34128d954a16d64c807d01d869031c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "このプロジェクトを作成するためにリミックスされた元プロジェクトの[UUID](#uuid)を含みます。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/02-spec/03-online-project-properties.mdx",
+  "last_updated_timestamp": "2025-06-06T09:44:52.877930+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "ja": "a2dcac1af4b0a37981e12a624f9c3716045af75755a907cbc14d15dd7803fd5e"
+  }
+}

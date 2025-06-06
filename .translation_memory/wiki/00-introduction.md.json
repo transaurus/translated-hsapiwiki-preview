@@ -1,0 +1,42 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "wiki/00-introduction.md",
+  "source_file_content_hash": "58fcdcc2ad34242b71fb6d0d3fe5aad4d8a477c5900b5c7b7b05a9dcad368b1c",
+  "segments": [
+    {
+      "segment_id": "76e4a56a",
+      "source_content": "# Introduction",
+      "source_content_hash": "1cfabb9fbf64272210f460dda2e83849fc87153cd78f2a983507fc8c332e19fd",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "ja": "# はじめに"
+      }
+    },
+    {
+      "segment_id": "faebdc62",
+      "source_content": "HSAPI is a low-level transpiler for parsing and writing `.hopscotch` project files.",
+      "source_content_hash": "26d890a263795425949dd95d8a3084381dca83833d3443e643229aa1cb2549af",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "HSAPIは、`.hopscotch`プロジェクトファイルを解析および書き込むための低レベルトランスパイラです。"
+      }
+    },
+    {
+      "segment_id": "e7ec8f99",
+      "source_content": "Currently, it is still undergoing heavy development.\nYou can track development progress on the [HSAPI Forum Thread](https://forum.gethopscotch.com/t/hsapi-planning/67073).",
+      "source_content_hash": "49da8f42f061be7a986bf30830fac4b5805485c371baa6ed798b2a30bd346da6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "ja": "現在、まだ大幅な開発が進行中です。\n開発の進捗状況は[HSAPIフォーラムスレッド](https://forum.gethopscotch.com/t/hsapi-planning/67073)で確認できます。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/00-introduction.md",
+  "last_updated_timestamp": "2025-06-06T09:44:52.874143+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "ja": "58fcdcc2ad34242b71fb6d0d3fe5aad4d8a477c5900b5c7b7b05a9dcad368b1c"
+  }
+}
